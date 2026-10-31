@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAGISTRATURA 2027 — Bektas</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1a2b;--panel2:#102238;--line:#203b59;--text:#eef7ff;--muted:#8fa6bd;--cyan:#67e8f9;--violet:#8b5cf6;--green:#34d399;--yellow:#fbbf24;--red:#fb7185}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 Inter,system-ui,Segoe UI,sans-serif}
+.wrap{max-width:1500px;margin:auto;padding:24px}.hero{padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,#10243a,#151d3c);margin-bottom:16px}
+h1{margin:0 0 7px;font-size:34px}h2{margin:0 0 12px;font-size:19px}.muted{color:var(--muted)}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.tag,.badge{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px}.tag{background:#0b1a2c;color:#afc5da}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.kpi,.panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:16px}
+.kpi b{font-size:28px;display:block;margin-top:4px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{margin-bottom:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}input,select{background:#081829;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+input{flex:1;min-width:220px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:16px}
+.top{display:flex;justify-content:space-between;gap:12px}.top h3{margin:3px 0;font-size:16px}.small{font-size:11px;color:var(--muted)}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.box{background:var(--panel2);border-radius:10px;padding:8px;font-size:11px}
+.progress{height:7px;border-radius:10px;background:#18314b;overflow:hidden;margin-top:7px}.bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet))}
+.next{border-left:2px solid var(--cyan);padding-left:10px;color:#c6d5e4;font-size:12px}.note{background:#0c2034;border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0;color:#c3d4e4}
+.red{color:#ffd0d7;border-color:#8e3549;background:#3b1822}.yellow{color:#ffe7a4;border-color:#80651e;background:#322b16}.green{color:#b8f8dd;border-color:#236650;background:#15352c}.blue{color:#c9e0ff;border-color:#2b5684;background:#132b46}
+.section{margin-top:22px}a{color:var(--cyan);text-decoration:none}@media(max-width:900px){.kpis,.grid,.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="small" style="color:var(--cyan);font-weight:800;letter-spacing:.12em">INTAKE 2027/28 · UPDATED 31 OCT 2026</div>
+<h1>MAGISTRATURA 2027</h1>
+<div class="muted">Bektas Mukhambetov · AI / Data Science / Machine Learning · funding-first admissions dashboard</div>
+<div class="tags"><span class="tag">AITU · BSc Computer Science</span><span class="tag">GPA 3.45 / 4.0</span><span class="tag">Rank 8 / 179</span><span class="tag">BIT exchange · GPA 3.7</span><span class="tag">Expected graduation Jun 2027</span></div>
+</div>
+
+<div class="kpis">
+<div class="kpi"><span class="muted">Tracked</span><b id="all">0</b><span class="small">programmes/routes</span></div>
+<div class="kpi"><span class="muted">P1 targets</span><b id="p1">0</b><span class="small">highest priority</span></div>
+<div class="kpi"><span class="muted">Bolashak-list</span><b id="bol">0</b><span class="small">2024–2026 list</span></div>
+<div class="kpi"><span class="muted">Next deadline</span><b id="days">—</b><span class="small" id="nextname">—</span></div>
+</div>
+
+<div class="grid">
+<div class="panel"><h2>Сейчас</h2>
+<div class="note"><b>Manchester MSc AI:</b> документы готовы. Загрузить transcript + final CV и submit.</div>
+<div class="note"><b>Glasgow DS & AI:</b> закончить supporting documents/referee и submit.</div>
+<div class="note"><b>Padua:</b> закрыть Translation task выбором “already issued in English”, подготовить 2 motivation letters в одном PDF.</div>
+<div class="note"><b>Aalborg:</b> P1 full-funding target; подготовить заявку к открытию портала.</div>
+</div>
+<div class="panel"><h2>Funding-first strategy</h2>
+<div class="note"><b>Full/near-full:</b> KAUST · Erasmus Mundus · CSC China · Aalborg Danish Government Scholarship.</div>
+<div class="note"><b>Bolashak route:</b> Manchester · Glasgow · UVA · Ghent · Hamburg · Tübingen · Edinburgh · Leeds · Aalto.</div>
+<div class="note"><b>Rule:</b> expensive application fees only after eligibility/funding route is clear.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Applications</h2>
+<div class="filters">
+<input id="q" placeholder="Поиск по университету или программе…">
+<select id="country"><option value="">Все страны</option></select>
+<select id="priority"><option value="">Все приоритеты</option><option>P1</option><option>P2</option><option>P3</option></select>
+<select id="status"><option value="">Все статусы</option><option>Ready to submit</option><option>Preparing</option><option>Waiting</option><option>Researching</option><option>Not started</option></select>
+<select id="bolf"><option value="">Bolashak: все</option><option value="yes">В списке</option><option value="no">Не подтверждено</option></select>
+</div>
+<div class="cards" id="cards"></div>
+</div>
+</div>
+
+<script>
+const DATA=[
+{p:"P1",country:"UK",uni:"University of Manchester",prog:"MSc Artificial Intelligence",deadline:"2026-11-06",fee:"£0",fund:"Bolashak / university funding",bol:true,status:"Ready to submit",ready:95,next:"Upload Academic Transcript + final CV, validate and submit."},
+{p:"P1",country:"UK",uni:"University of Glasgow",prog:"MSc Data Science & Artificial Intelligence",deadline:"2026-11-05",fee:"£0",fund:"Bolashak / university scholarships",bol:true,status:"Preparing",ready:78,next:"Finish supporting docs, referee and submit."},
+{p:"P1",country:"Italy",uni:"University of Padua",prog:"MSc Data Science",deadline:"2026-11-15",fee:"€30",fund:"Padua scholarships / regional funding",bol:false,status:"Preparing",ready:72,next:"Complete translation task + motivation letter."},
+{p:"P2",country:"Italy",uni:"University of Padua",prog:"MSc Computer Science",deadline:"2026-11-15",fee:"same application",fund:"Padua scholarships / regional funding",bol:false,status:"Preparing",ready:68,next:"Second motivation letter; combine both into one PDF."},
+{p:"P1",country:"Italy",uni:"Politecnico di Milano",prog:"MSc Computer Science and Engineering — AI",deadline:"2026-12-01",fee:"€50 Early Bird",fund:"Merit scholarship",bol:false,status:"Not started",ready:18,next:"Start after Padua."},
+{p:"P2",country:"UAE",uni:"MBZUAI",prog:"MSc Artificial Intelligence",deadline:"2026-12-15",fee:"AED 200 / possible waiver",fund:"Merit / faculty RA/TA",bol:false,status:"Preparing",ready:25,next:"Prepare screening exam, SOP and referees."},
+{p:"P1",country:"Saudi Arabia",uni:"KAUST",prog:"MS Computer Science — AI/ML",deadline:"2027-01-03",fee:"$0",fund:"KAUST Fellowship",bol:false,status:"Preparing",ready:30,next:"SOP, CV and 3 referees."},
+{p:"P1",country:"Erasmus",uni:"DEAI Consortium",prog:"Data Engineering and Artificial Intelligence",deadline:"2027-01-11",fee:"€0",fund:"Full Erasmus Mundus scholarship",bol:false,status:"Preparing",ready:48,next:"Self-evaluation Excel + internship proof + cover letter."},
+{p:"P1",country:"Erasmus",uni:"EDISS Consortium",prog:"Engineering of Data-Intensive Intelligent Software Systems",deadline:"2027-01-12",fee:"verify",fund:"Full Erasmus Mundus scholarship",bol:false,status:"Preparing",ready:30,next:"EDISS CV, evidence PDFs, 2 LORs and video."},
+{p:"P1",country:"Denmark",uni:"Aalborg University",prog:"MSc Computer Science (IT) — Machine Intelligence / Data",deadline:"2027-01-15",fee:"€150",fund:"Danish Government Scholarship: tuition + stipend",bol:true,status:"Not started",ready:12,next:"Prepare application; scholarship consideration automatic for non-EU applicants."},
+{p:"P1",country:"China",uni:"Nanjing University",prog:"MSc Artificial Intelligence + CSC Type B",deadline:"2027-01-20",fee:"RMB 600",fund:"CSC full scholarship",bol:false,status:"Researching",ready:16,next:"Confirm 3-year AITU + graduation timing."},
+{p:"P1",country:"USA",uni:"University of Virginia",prog:"MCS / MS Computer Science",deadline:"2027-01-30",fee:"$0",fund:"Bolashak / limited internal funding",bol:true,status:"Not started",ready:12,next:"Prepare statement and prerequisite mapping."},
+{p:"P1",country:"Erasmus",uni:"IPCVAI Consortium",prog:"AI for Image Processing & Computer Vision",deadline:"2027-02-02",fee:"€0",fund:"Full Erasmus Mundus scholarship",bol:false,status:"Not started",ready:16,next:"Europass CV + transcript + motivation."},
+{p:"P1",country:"Erasmus",uni:"AISS Consortium",prog:"Artificial Intelligence for Sustainable Societies",deadline:"2027-02-02",fee:"TBA",fund:"Erasmus Mundus scholarship",bol:false,status:"Not started",ready:10,next:"Prepare CV, portfolio/video and verify final call."},
+{p:"P1",country:"China",uni:"Beijing Institute of Technology",prog:"Master’s + CSC Type B",deadline:null,fee:"600 CNY previous cycle",fund:"CSC full scholarship",bol:false,status:"Preparing",ready:40,next:"Follow up Che; contact Jin Fusheng and Zhi Gao."},
+{p:"P1",country:"Belgium",uni:"Ghent University",prog:"MSc Computer Science Engineering",deadline:"2027-04-01",fee:"€0",fund:"Bolashak / Master Mind",bol:true,status:"Researching",ready:14,next:"Verify GRE and degree verification."},
+{p:"P1",country:"Germany",uni:"University of Hamburg",prog:"MSc Data Science & Artificial Intelligence",deadline:"2027-03-31",fee:"€0",fund:"Bolashak / tuition-free",bol:true,status:"Not started",ready:8,next:"Math/statistics + CS ECTS audit."},
+{p:"P1",country:"Germany",uni:"University of Tübingen",prog:"MSc Machine Learning",deadline:"2027-04-30",fee:"€0",fund:"Bolashak / external",bol:true,status:"Not started",ready:8,next:"ECTS audit + English requirement."},
+{p:"P2",country:"UK",uni:"University of Edinburgh",prog:"MSc Artificial Intelligence",deadline:"2027-03-30",fee:"£0",fund:"Bolashak / external",bol:true,status:"Not started",ready:10,next:"Prepare statement + reference."},
+{p:"P2",country:"Finland",uni:"Aalto University",prog:"ML, Data Science and AI",deadline:"2027-01-05",fee:"€100",fund:"Bolashak / tuition waiver",bol:true,status:"Researching",ready:8,next:"Use mainly as Bolashak route; own scholarship does not cover living."}
+];
+const $=s=>document.querySelector(s);
+const days=d=>{if(!d)return null;const n=new Date();n.setHours(0,0,0,0);return Math.ceil((new Date(d+"T23:59:59")-n)/86400000)};
+const badge=d=>d===null?["TBA","blue"]:d<0?["past","red"]:d<=14?[d+"d","red"]:d<=45?[d+"d","yellow"]:[d+"d","green"];
+function render(){
+ const q=$("#q").value.toLowerCase(),c=$("#country").value,p=$("#priority").value,s=$("#status").value,b=$("#bolf").value;
+ const arr=DATA.filter(x=>{const hay=(x.uni+" "+x.prog+" "+x.country+" "+x.fund).toLowerCase();return(!q||hay.includes(q))&&(!c||x.country===c)&&(!p||x.p===p)&&(!s||x.status===s)&&(!b||(b==="yes"&&x.bol)||(b==="no"&&!x.bol))}).sort((a,b)=>a.deadline&&b.deadline?new Date(a.deadline)-new Date(b.deadline):a.deadline?-1:b.deadline?1:0);
+ $("#cards").innerHTML=arr.map(x=>{const [bt,bc]=badge(days(x.deadline));return `<div class="card"><div class="top"><div><div class="small">${x.country} · ${x.p}${x.bol?" · BOLASHAK 24–26":""}</div><h3>${x.uni}</h3><div class="small">${x.prog}</div></div><span class="badge ${bc}">${bt}</span></div><div class="meta"><div class="box"><b>Deadline</b><br>${x.deadline||"TBA"}</div><div class="box"><b>Fee</b><br>${x.fee}</div><div class="box"><b>Status</b><br>${x.status}</div></div><div class="small"><b>Funding:</b> ${x.fund}</div><div class="progress"><div class="bar" style="width:${x.ready}%"></div></div><div class="small" style="margin-top:5px">Readiness: ${x.ready}%</div><div class="next" style="margin-top:10px">${x.next}</div></div>`}).join("");
+}
+function init(){
+ $("#all").textContent=DATA.length;$("#p1").textContent=DATA.filter(x=>x.p==="P1").length;$("#bol").textContent=DATA.filter(x=>x.bol).length;
+ const u=DATA.filter(x=>x.deadline&&days(x.deadline)>=0).sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))[0];if(u){$("#days").textContent=days(u.deadline)+"d";$("#nextname").textContent=u.uni}
+ [...new Set(DATA.map(x=>x.country))].sort().forEach(c=>{const o=document.createElement("option");o.value=o.textContent=c;$("#country").appendChild(o)});
+ ["q","country","priority","status","bolf"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",render));render();
+}init();
+</script>
+</body></html>
