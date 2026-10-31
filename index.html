@@ -19,7 +19,14 @@ input{flex:1;min-width:220px}.cards{display:grid;grid-template-columns:repeat(2,
 .progress{height:7px;border-radius:10px;background:#18314b;overflow:hidden;margin-top:7px}.bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet))}
 .next{border-left:2px solid var(--cyan);padding-left:10px;color:#c6d5e4;font-size:12px}.note{background:#0c2034;border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0;color:#c3d4e4}
 .red{color:#ffd0d7;border-color:#8e3549;background:#3b1822}.yellow{color:#ffe7a4;border-color:#80651e;background:#322b16}.green{color:#b8f8dd;border-color:#236650;background:#15352c}.blue{color:#c9e0ff;border-color:#2b5684;background:#132b46}
-.section{margin-top:22px}a{color:var(--cyan);text-decoration:none}@media(max-width:900px){.kpis,.grid,.cards{grid-template-columns:1fr}}
+.section{margin-top:22px}a{color:var(--cyan);text-decoration:none}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 16px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+button{background:#102a43;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer;font-weight:700}
+button:hover{border-color:var(--cyan)}
+.state-msg{font-size:11px;color:var(--muted);margin-left:auto}
+.status-edit{width:100%;font-size:11px;padding:6px 7px;margin-top:4px}
+.ready-edit{width:100%;accent-color:#67e8f9;margin-top:7px}
+@media(max-width:900px){.kpis,.grid,.cards{grid-template-columns:1fr}.state-msg{width:100%;margin-left:0}}
 </style>
 </head>
 <body>
@@ -29,6 +36,13 @@ input{flex:1;min-width:220px}.cards{display:grid;grid-template-columns:repeat(2,
 <h1>MAGISTRATURA 2027</h1>
 <div class="muted">Bektas Mukhambetov · AI / Data Science / Machine Learning · funding-first admissions dashboard</div>
 <div class="tags"><span class="tag">AITU · BSc Computer Science</span><span class="tag">GPA 3.45 / 4.0</span><span class="tag">Rank 8 / 179</span><span class="tag">BIT exchange · GPA 3.7</span><span class="tag">Expected graduation Jun 2027</span></div>
+</div>
+
+<div class="controls">
+  <button id="syncBtn">Sync to GitHub</button>
+  <button id="loadBtn">Load latest from GitHub</button>
+  <button id="resetBtn">Reset local changes</button>
+  <span class="state-msg" id="stateMsg">Changes are saved automatically on this device.</span>
 </div>
 
 <div class="kpis">
@@ -89,18 +103,127 @@ const DATA=[
 {p:"P2",country:"Finland",uni:"Aalto University",prog:"ML, Data Science and AI",deadline:"2027-01-05",fee:"€100",fund:"Bolashak / tuition waiver",bol:true,status:"Researching",ready:8,next:"Use mainly as Bolashak route; own scholarship does not cover living."}
 ];
 const $=s=>document.querySelector(s);
+const REPO="55AIAI/masters-2027-dashboard";
+const STORAGE_KEY="masters2027dashboardStateV1";
+const STATUS_OPTIONS=["Not started","Researching","Preparing","Ready to submit","Submitted","Waiting","Offer","Rejected","Hold"];
+
+function keyFor(x){return x.uni+"|||"+x.prog}
+function baseState(){
+  const out={};
+  DATA.forEach(x=>out[keyFor(x)]={status:x.status,ready:x.ready});
+  return out;
+}
+function loadLocal(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
+    DATA.forEach(x=>{
+      const v=saved[keyFor(x)];
+      if(v){
+        if(v.status) x.status=v.status;
+        if(Number.isFinite(Number(v.ready))) x.ready=Math.max(0,Math.min(100,Number(v.ready)));
+      }
+    });
+  }catch(e){}
+}
+function saveLocal(){
+  const state={};
+  DATA.forEach(x=>state[keyFor(x)]={status:x.status,ready:x.ready});
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  $("#stateMsg").textContent="Saved locally · "+new Date().toLocaleString();
+}
+function statePayload(){
+  const state={updated_at:new Date().toISOString(),applications:{}};
+  DATA.forEach(x=>state.applications[keyFor(x)]={status:x.status,ready:x.ready});
+  return state;
+}
+function applyPayload(payload){
+  if(!payload||!payload.applications) throw new Error("Invalid state");
+  DATA.forEach(x=>{
+    const v=payload.applications[keyFor(x)];
+    if(v){
+      if(v.status) x.status=v.status;
+      if(Number.isFinite(Number(v.ready))) x.ready=Math.max(0,Math.min(100,Number(v.ready)));
+    }
+  });
+  saveLocal(); render(); updateKpis();
+}
 const days=d=>{if(!d)return null;const n=new Date();n.setHours(0,0,0,0);return Math.ceil((new Date(d+"T23:59:59")-n)/86400000)};
 const badge=d=>d===null?["TBA","blue"]:d<0?["past","red"]:d<=14?[d+"d","red"]:d<=45?[d+"d","yellow"]:[d+"d","green"];
+
 function render(){
  const q=$("#q").value.toLowerCase(),c=$("#country").value,p=$("#priority").value,s=$("#status").value,b=$("#bolf").value;
  const arr=DATA.filter(x=>{const hay=(x.uni+" "+x.prog+" "+x.country+" "+x.fund).toLowerCase();return(!q||hay.includes(q))&&(!c||x.country===c)&&(!p||x.p===p)&&(!s||x.status===s)&&(!b||(b==="yes"&&x.bol)||(b==="no"&&!x.bol))}).sort((a,b)=>a.deadline&&b.deadline?new Date(a.deadline)-new Date(b.deadline):a.deadline?-1:b.deadline?1:0);
- $("#cards").innerHTML=arr.map(x=>{const [bt,bc]=badge(days(x.deadline));return `<div class="card"><div class="top"><div><div class="small">${x.country} · ${x.p}${x.bol?" · BOLASHAK 24–26":""}</div><h3>${x.uni}</h3><div class="small">${x.prog}</div></div><span class="badge ${bc}">${bt}</span></div><div class="meta"><div class="box"><b>Deadline</b><br>${x.deadline||"TBA"}</div><div class="box"><b>Fee</b><br>${x.fee}</div><div class="box"><b>Status</b><br>${x.status}</div></div><div class="small"><b>Funding:</b> ${x.fund}</div><div class="progress"><div class="bar" style="width:${x.ready}%"></div></div><div class="small" style="margin-top:5px">Readiness: ${x.ready}%</div><div class="next" style="margin-top:10px">${x.next}</div></div>`}).join("");
+ $("#cards").innerHTML=arr.map(x=>{
+   const [bt,bc]=badge(days(x.deadline));
+   const k=encodeURIComponent(keyFor(x));
+   return `<div class="card">
+    <div class="top"><div><div class="small">${x.country} · ${x.p}${x.bol?" · BOLASHAK 24–26":""}</div><h3>${x.uni}</h3><div class="small">${x.prog}</div></div><span class="badge ${bc}">${bt}</span></div>
+    <div class="meta">
+      <div class="box"><b>Deadline</b><br>${x.deadline||"TBA"}</div>
+      <div class="box"><b>Fee</b><br>${x.fee}</div>
+      <div class="box"><b>Status</b>
+        <select class="status-edit" data-key="${k}">${STATUS_OPTIONS.map(o=>`<option${o===x.status?" selected":""}>${o}</option>`).join("")}</select>
+      </div>
+    </div>
+    <div class="small"><b>Funding:</b> ${x.fund}</div>
+    <div class="progress"><div class="bar" style="width:${x.ready}%"></div></div>
+    <div class="small" style="margin-top:5px">Readiness: <b class="ready-label">${x.ready}%</b></div>
+    <input class="ready-edit" type="range" min="0" max="100" step="1" value="${x.ready}" data-key="${k}">
+    <div class="next" style="margin-top:10px">${x.next}</div>
+   </div>`
+ }).join("");
+
+ document.querySelectorAll(".status-edit").forEach(el=>el.addEventListener("change",e=>{
+   const key=decodeURIComponent(e.target.dataset.key); const x=DATA.find(v=>keyFor(v)===key);
+   if(x){x.status=e.target.value;saveLocal();updateKpis();}
+ }));
+ document.querySelectorAll(".ready-edit").forEach(el=>el.addEventListener("input",e=>{
+   const key=decodeURIComponent(e.target.dataset.key); const x=DATA.find(v=>keyFor(v)===key);
+   if(x){x.ready=Number(e.target.value);const card=e.target.closest(".card");card.querySelector(".bar").style.width=x.ready+"%";card.querySelector(".ready-label").textContent=x.ready+"%";saveLocal();}
+ }));
+}
+function updateKpis(){
+ $("#all").textContent=DATA.length;$("#p1").textContent=DATA.filter(x=>x.p==="P1").length;$("#bol").textContent=DATA.filter(x=>x.bol).length;
+ const u=DATA.filter(x=>x.deadline&&days(x.deadline)>=0&& !["Rejected","Hold"].includes(x.status)).sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))[0];
+ if(u){$("#days").textContent=days(u.deadline)+"d";$("#nextname").textContent=u.uni}else{$("#days").textContent="—";$("#nextname").textContent="—"}
+}
+function syncToGitHub(){
+ const payload=statePayload();
+ const body="DASHBOARD_STATE_JSON\n\n```json\n"+JSON.stringify(payload,null,2)+"\n```\n\nGenerated from the live admissions dashboard.";
+ const title="Dashboard State Sync — "+new Date().toISOString().slice(0,10);
+ const url="https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body);
+ $("#stateMsg").textContent="Opening GitHub. Submit the prefilled issue to complete sync.";
+ window.open(url,"_blank");
+}
+async function loadFromGitHub(){
+ $("#stateMsg").textContent="Loading latest synced state from GitHub…";
+ try{
+   const r=await fetch("https://api.github.com/repos/"+REPO+"/issues?state=all&per_page=50");
+   if(!r.ok) throw new Error("GitHub API "+r.status);
+   const issues=await r.json();
+   const issue=issues.find(i=>!i.pull_request && i.title && i.title.startsWith("Dashboard State Sync"));
+   if(!issue) throw new Error("No synced state found yet");
+   const m=(issue.body||"").match(/DASHBOARD_STATE_JSON[\s\S]*?```json\s*([\s\S]*?)\s*```/);
+   if(!m) throw new Error("Latest sync issue has no readable state");
+   applyPayload(JSON.parse(m[1]));
+   $("#stateMsg").textContent="Loaded from GitHub issue #"+issue.number+" · "+new Date(issue.updated_at).toLocaleString();
+ }catch(e){$("#stateMsg").textContent="Could not load GitHub state: "+e.message}
+}
+function resetLocal(){
+ localStorage.removeItem(STORAGE_KEY);
+ const original=baseState();
+ DATA.forEach(x=>{const v=original[keyFor(x)];x.status=v.status;x.ready=v.ready});
+ location.reload();
 }
 function init(){
- $("#all").textContent=DATA.length;$("#p1").textContent=DATA.filter(x=>x.p==="P1").length;$("#bol").textContent=DATA.filter(x=>x.bol).length;
- const u=DATA.filter(x=>x.deadline&&days(x.deadline)>=0).sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))[0];if(u){$("#days").textContent=days(u.deadline)+"d";$("#nextname").textContent=u.uni}
+ loadLocal();
  [...new Set(DATA.map(x=>x.country))].sort().forEach(c=>{const o=document.createElement("option");o.value=o.textContent=c;$("#country").appendChild(o)});
- ["q","country","priority","status","bolf"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",render));render();
-}init();
+ ["q","country","priority","status","bolf"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",render));
+ $("#syncBtn").addEventListener("click",syncToGitHub);
+ $("#loadBtn").addEventListener("click",loadFromGitHub);
+ $("#resetBtn").addEventListener("click",()=>{if(confirm("Reset local status/readiness changes on this device?"))resetLocal()});
+ updateKpis();render();
+}
+init();
 </script>
 </body></html>
