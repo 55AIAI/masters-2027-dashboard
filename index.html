@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="color-scheme" content="light"/><title>МАГА · Application OS 2027/28 — v6</title><style>:root{--bg:#f5f7fb;--panel:#fff;--panel2:#f8fafc;--ink:#14233b;--sub:#64748b;--muted:#91a0b5;--line:#e5eaf2;--side:#0d172a;--sideText:#a9b8ce;--accent:#397af5;--accentDark:#245fd6;--mint:#0ca783;--mintBg:#e7f8f1;--amber:#d58419;--amberBg:#fff5e4;--red:#cf5460;--redBg:#fff0f1;--purple:#7e65d7;--purpleBg:#f3efff;--shadow:0 4px 22px rgba(30,47,80,.055)}
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="color-scheme" content="light"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><title>МАГА · Application OS 2027/28 — v7</title><style>:root{--bg:#f5f7fb;--panel:#fff;--panel2:#f8fafc;--ink:#14233b;--sub:#64748b;--muted:#91a0b5;--line:#e5eaf2;--side:#0d172a;--sideText:#a9b8ce;--accent:#397af5;--accentDark:#245fd6;--mint:#0ca783;--mintBg:#e7f8f1;--amber:#d58419;--amberBg:#fff5e4;--red:#cf5460;--redBg:#fff0f1;--purple:#7e65d7;--purpleBg:#f3efff;--shadow:0 4px 22px rgba(30,47,80,.055)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.5}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}input,select,textarea{min-width:0;outline:none}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(57,122,245,.32);outline-offset:2px}
 button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:244px;background:var(--side);color:#eff7ff;display:flex;flex-direction:column;padding:24px 15px 18px;z-index:30}.brand{display:flex;align-items:center;gap:11px;margin:4px 7px 32px}.brandlogo{height:38px;width:38px;display:grid;place-items:center;background:linear-gradient(140deg,#60d5d5,#76aaff);color:#102238;font-size:22px;font-weight:900;border-radius:12px;box-shadow:0 7px 18px #3d7ed044}.brandtitle{font-weight:780;letter-spacing:-.5px;font-size:17px;line-height:1.2}.brandtitle small{display:block;font-size:10px;font-weight:700;color:#92a8c4;letter-spacing:1.9px;margin-top:4px}.navlabel{padding:0 14px;color:#637b9c;font-size:10px;text-transform:uppercase;letter-spacing:1.4px;font-weight:800;margin:0 0 9px}.nav{display:grid;gap:4px}.navbtn{display:flex;align-items:center;text-align:left;gap:12px;border:1px solid transparent;color:var(--sideText);font-weight:620;border-radius:11px;padding:12px 13px;background:transparent;width:100%;transition:.17s}.navbtn:hover{background:#1a2940;color:white}.navbtn.active{color:#fff;background:#243955;border:1px solid #334b6c}.navIcon{width:20px;height:20px;display:grid;place-items:center;font-size:19px;line-height:1}.navName{flex:1}.navCount{min-width:24px;font-size:11px;border-radius:7px;text-align:center;padding:2px 6px;color:#bfd5ef;background:#243a58}.sidebottom{margin-top:auto;padding:14px 7px 0}.sideprofile{display:flex;align-items:center;gap:10px;border-top:1px solid #24334a;padding-top:18px}.avatar{display:grid;place-items:center;color:#11365b;background:#a7d9ff;width:38px;height:38px;border-radius:12px;font-size:12px;font-weight:850}.sideprofile strong{font-size:13px}.sideprofile small{font-size:11px;color:#7e98b5;display:block}.mainwrap{margin-left:244px;width:calc(100% - 244px);min-width:0}.topbar{height:74px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 clamp(20px,3vw,46px);border-bottom:1px solid var(--line);background:rgba(255,255,255,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}.breadcrumb{display:flex;align-items:center;gap:10px;color:#8191a5;font-size:13px;font-weight:600}.breadcrumb strong{color:#233550}.topright{display:flex;align-items:center;gap:10px}.topdate{color:var(--sub);font-size:12px}.content{max-width:1480px;margin:auto;padding:30px clamp(20px,3vw,46px) 60px}.page{display:none;animation:fadeIn .18s ease}.page.active{display:block}@keyframes fadeIn{from{opacity:.55;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 .h1{font-size:clamp(25px,2.5vw,33px);line-height:1.2;font-weight:820;letter-spacing:-1.1px;margin:0 0 7px}.eyebrow{font-size:11px;letter-spacing:1.65px;color:var(--accent);text-transform:uppercase;font-weight:830;margin-bottom:8px}.lead{color:var(--sub);font-size:14px;max-width:800px;margin:0}.pagehead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}.row{display:flex;gap:12px}.row.between{justify-content:space-between}.row.center{align-items:center}.wrap{flex-wrap:wrap}.grow{flex:1;min-width:0}.small{font-size:12px}.tiny{font-size:11px}.muted{color:var(--sub)}.dim{color:var(--muted)}.strong{font-weight:760}.right{text-align:right}.margin0{margin:0}.mt{margin-top:20px}.mt12{margin-top:12px}.mb{margin-bottom:18px}.mlauto{margin-left:auto}
@@ -48,12 +48,14 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
 .emItemFoot .deadline-pill{white-space:normal}
 .emFact .deadlineValue{display:block;font-size:15px}
 @media(max-width:650px){.topright>.capsule{display:none}.topbar{padding-left:12px;padding-right:12px}.deadlineQuick{gap:6px}.quickFilter{padding:8px 10px;font-size:11px}.deadlineQuickLabel{width:100%;margin:0}.deadline-pill{font-size:10px}}
+
+.guideCard{margin-top:15px;padding:0!important;overflow:hidden}.guideCard summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:16px 18px;font-weight:750}.guideCard summary::-webkit-details-marker{display:none}.guideCard summary:before{content:'+';color:var(--accent);font-size:20px}.guideCard[open] summary:before{content:'−'}.guideBody{border-top:1px solid var(--line);padding:14px 18px 18px;font-size:13px}.guideBody p{margin:10px 0;line-height:1.6}.eitTableWrap{overflow-x:auto;margin:12px 0}.eitTable{width:100%;border-collapse:collapse;min-width:570px}.eitTable th{font-size:11px;text-align:left;background:#f3f7fe;color:#47617d}.eitTable th,.eitTable td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top}.eitTable td:first-child{font-weight:650}.guideSteps{padding-left:22px}.guideSteps li{padding-bottom:8px}.refQuick{display:grid;grid-template-columns:1fr 1fr;gap:12px}.refQuick>div{border:1px solid var(--line);border-radius:11px;padding:12px;background:var(--panel2)}.refQuick p{font-size:12px}.guideCard .cap-red{white-space:nowrap}@media(max-width:650px){.refQuick{grid-template-columns:1fr}.guideCard summary{align-items:flex-start}.guideCard summary .capsule{font-size:10px}}
 </style></head><body>
 <div class="shell">
-<aside class="sidebar" id="sidebar" aria-label="Навигация"><div class="brand"><div class="brandlogo">✦</div><div class="brandtitle">МАГА <small>APPLICATION OS · 2027/28</small></div></div><div class="navlabel">Рабочее пространство</div><nav class="nav" id="nav">
+<aside class="sidebar" id="sidebar" aria-label="Навигация"><div class="brand"><div class="brandlogo">✦</div><div class="brandtitle">МАГА <small>APPLICATION OS · 2027/28 · v7</small></div></div><div class="navlabel">Рабочее пространство</div><nav class="nav" id="nav">
 <button class="navbtn active" data-page="overview" type="button"><span class="navIcon">◫</span><span class="navName">Обзор</span></button>
 <button class="navbtn" data-page="applications" type="button"><span class="navIcon">▦</span><span class="navName">Университеты</span><span class="navCount" id="sideAppsCount">—</span></button>
-<button class="navbtn" data-page="erasmus" type="button"><span class="navIcon">◎</span><span class="navName">Erasmus</span><span class="navCount">9</span></button>
+<button class="navbtn" data-page="erasmus" type="button"><span class="navIcon">◎</span><span class="navName">Erasmus</span><span class="navCount">8</span></button>
 <button class="navbtn" data-page="bolashak" type="button"><span class="navIcon">▤</span><span class="navName">Болашак</span></button>
 <button class="navbtn" data-page="calendar" type="button"><span class="navIcon">▣</span><span class="navName">Календарь</span></button>
 <button class="navbtn" data-page="tasks" type="button"><span class="navIcon">☑</span><span class="navName">Мои задачи</span><span class="navCount" id="sideTaskCount">—</span></button>
@@ -61,9 +63,9 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
 <button class="navbtn" data-page="funding" type="button"><span class="navIcon">◇</span><span class="navName">Гранты</span></button>
 <button class="navbtn" data-page="research" type="button"><span class="navIcon">⌘</span><span class="navName">Research & Contacts</span></button>
 </nav><div class="sidebottom"><div class="navlabel">Данные и помощь</div><button class="navbtn" data-page="sync" type="button"><span class="navIcon">⇄</span><span class="navName">Синхронизация</span></button><div class="sideprofile"><div class="avatar">BM</div><div><strong>Bektas Mukhambetov</strong><small>AITU · Fall 2027</small></div></div></div></aside>
-<div class="mainwrap"><header class="topbar"><div class="row center"><button class="mobilemenu iconbtn" id="mobilemenu" aria-label="Открыть меню">☰</button><div class="breadcrumb">МАГА <span>›</span> <strong id="breadcrumbTitle">Обзор</strong></div></div><div class="topright"><span class="topdate" id="topdate"></span><span class="capsule cap-green">● Локально сохранено</span><button class="btn sm" id="topBackup" type="button">↓ <span class="btnText">Резервная копия</span></button></div></header>
+<div class="mainwrap"><header class="topbar"><div class="row center"><button class="mobilemenu iconbtn" id="mobilemenu" aria-label="Открыть меню">☰</button><div class="breadcrumb">МАГА <span>›</span> <strong id="breadcrumbTitle">Обзор</strong></div></div><div class="topright"><span class="topdate" id="topdate"></span><span class="capsule cap-green">● Локально сохранено</span><button class="btn sm" id="refreshMaga" type="button" title="Обновить сайт, обходя кэш">↻ <span class="btnText">Обновить v7</span></button><button class="btn sm" id="topBackup" type="button">↓ <span class="btnText">Резервная копия</span></button></div></header>
 <main class="content">
-<section class="page active" id="page-overview" aria-labelledby="overviewHeading"><div class="pagehead"><div><div class="eyebrow">Персональный центр поступления</div><h1 class="h1" id="overviewHeading">План на осень 2027 года</h1><p class="lead">Только то, что требует твоего внимания. Подробности университетов и грантов — в отдельных разделах.</p></div><button class="btn" data-go="calendar">▣ Все дедлайны</button></div>
+<section class="page active" id="page-overview" aria-labelledby="overviewHeading"><div class="pagehead"><div><div class="eyebrow">Персональный центр поступления · версия v7 / 13.11.2026</div><h1 class="h1" id="overviewHeading">План на осень 2027 года</h1><p class="lead">Только то, что требует твоего внимания. Подробности университетов и грантов — в отдельных разделах.</p></div><button class="btn" data-go="calendar">▣ Все дедлайны</button></div>
 <div class="alertline" id="overviewAlert"><span>⚑</span><div><b>Главный приоритет:</b> Polimi — Early Bird до 1 декабря, MBZUAI — до 15 декабря. Проверяй отправку рекомендаций для Strathclyde.</div></div>
 <div class="hero"><div><div class="heroKicker">Фокус до 15 декабря</div><h2>Сначала дедлайны.<br/>Потом новые возможности.</h2><p>Polimi → MBZUAI → CoDaS → DEAI / EDISS. Дедлайны подтверждённых программ выделены красным, а сомнительные даты помечены отдельно.</p><button class="btn" style="background:#fff;color:#153358;border:0" data-go="tasks">Открыть план задач →</button></div><div class="heroSide"><small>Ближайшая цель</small><div class="heroNum" id="heroDays">—</div><small id="heroDescription">дней до дедлайна</small></div></div>
 <div class="grid metrics" id="overviewMetrics"></div>
@@ -76,11 +78,34 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
 <div class="toolbar"><input id="appSearch" class="field search" type="search" placeholder="⌕  Университет, программа, NLP, CV, ML…"/><select id="appRegion" class="field"><option value="">Все регионы</option><option value="Europe">Европа</option><option value="Erasmus">Erasmus Mundus</option><option value="UK">Великобритания</option><option value="Hong Kong">Гонконг</option><option value="Asia">Азия</option><option value="Scholarships">Стипендии</option></select><select id="appPriority" class="field"><option value="">Все приоритеты</option><option value="P1">P1 · Высокий</option><option value="P2">P2 · Второй</option><option value="P3">P3 · Резерв</option></select><select id="appStatus" class="field"><option value="">Все статусы</option><option value="Submitted">Отправлено</option><option value="Preparing">Готовлю</option><option value="Researching">Изучаю</option><option value="Waiting">Жду ответ</option><option value="Offer">Есть offer</option><option value="Hold">Отложено</option></select><select id="appFunding" class="field"><option value="">Любое финансирование</option><option value="full">Полный конкурс</option><option value="studentship">MPhil studentship</option><option value="potential">Потенциальный грант</option><option value="tuition">Только tuition</option><option value="external">Только внешнее</option></select></div><div class="deadlineQuick" aria-label="Быстрые фильтры заявок"><span class="deadlineQuickLabel">Быстрый просмотр:</span><button class="quickFilter" type="button" data-appquick="all" aria-pressed="true">Все</button><button class="quickFilter" type="button" data-appquick="soon" aria-pressed="false">🔴 До 45 дней</button><button class="quickFilter" type="button" data-appquick="submitted" aria-pressed="false">Отправлены</button><button class="quickFilter" type="button" data-appquick="unknown" aria-pressed="false">Без даты</button><button class="quickFilter quickFilterReset" type="button" id="resetAppFilters">Сбросить фильтры ↺</button></div><div class="appsGrid" id="applicationsGrid"></div><div id="noApps" class="empty" style="display:none">Ничего не найдено. Попробуй убрать часть фильтров.</div></section>
 
 <section class="page" id="page-erasmus">
- <div class="pagehead"><div><div class="eyebrow">9 программ · проверка на 13.11.2026</div><h1 class="h1">Erasmus и EIT</h1><p class="lead">Отдельный реестр грантовых программ. Выбери программу слева — справа появятся документы, сроки, финансирование и твой чек-лист.</p></div><span class="capsule cap-green">Гранты ≠ гарантии</span></div>
- <div class="alertline"><span>ⓘ</span><div><b>Особые случаи:</b> 28DIGITAL (EIT) не является Erasmus Mundus. EMAI объявила только self-funded раунд на 2027–29; EMLDS пока не назвала даты и противоречиво описывает необходимость готового диплома.</div></div>
+ <div class="pagehead"><div><div class="eyebrow">8 программ · проверка на 13.11.2026</div><h1 class="h1">Erasmus и 28DIGITAL (EIT)</h1><p class="lead">Отдельный реестр грантовых программ. Выбери программу слева — справа появятся документы, сроки, финансирование и твой чек-лист.</p></div><span class="capsule cap-green">Гранты ≠ гарантии</span></div>
+ <div class="alertline"><span>ⓘ</span><div><b>Особые случаи:</b> 28DIGITAL (EIT) — платная double-degree программа, НЕ Erasmus Mundus; полного финансирования проживания для Казахстана не подтверждено. EMAI в 2027/29 пока публикует self-funded раунд.</div></div>
  <div class="grid metrics" id="erasmusMetrics"></div>
  <div class="toolbar"><input class="field search" type="search" id="erasmusSearch" placeholder="Поиск: NLP, ML, vision, documents..."/><select class="field" id="erasmusPrior"><option value="">Все приоритеты</option><option>P1</option><option>P2</option><option>P3</option></select><select class="field" id="erasmusFunding"><option value="">Все</option><option value="funded">Есть EMJM грант</option><option value="reserve">Резерв / ограничение</option></select></div>
  <div class="erasmusLayout"><div class="emMenu" id="erasmusMenu"></div><div class="card emDetails" id="erasmusDetails" aria-live="polite"></div></div>
+
+ <details class="card guideCard"><summary><span>📚 EIT Digital / 28DIGITAL: какие специальности есть и стоит ли подаваться?</span><span class="capsule cap-red">€75 / заявка</span></summary>
+ <div class="guideBody"><p class="small muted">2027/28 · первая волна до <b class="deadlineValue">31 января 2027, 23:59 CET</b>. Все направления платные: €18 000/год до waiver для граждан non-EU, при принятии offer депозит €250. Merit-based full/half tuition waiver доступен иностранным кандидатам, но гарантированного гранта на проживание для Казахстана нет. Для non-EU отдельно указан ELTE scholarship до €10 000/год (+ возможный €1 000 travel grant), однако он не совмещается с основным 28DIGITAL scholarship и не заменяет гарантированного полного финансирования.</p>
+ <div class="eitTableWrap"><table class="eitTable"><thead><tr><th>Направление 28DIGITAL</th><th>Совпадение с твоими интересами</th><th>Мой приоритет</th></tr></thead><tbody>
+ <tr><td><a href="https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing" target="_blank" rel="noopener">AI with Affective Computing (AIAC)</a></td><td>NLP, CV, Deep Learning, эмоции/мультимодальные модели</td><td>Лучшее совпадение, но платно</td></tr>
+ <tr><td><a href="https://masterschool.28digital.eu/data-science" target="_blank" rel="noopener">Data Science (DSC)</a></td><td>ML, data mining, вероятностные методы; нужно проверить ≥60 ECTS CS и ≥30 ECTS Mathematics</td><td>Высокое совпадение</td></tr>
+ <tr><td><a href="https://masterschool.28digital.eu/autonomous-systems-and-intelligent-robots" target="_blank" rel="noopener">Autonomous Systems &amp; Intelligent Robots (AUSIR)</a></td><td>Computer Vision, Reinforcement Learning, Robotics, control</td><td>Интересно, если выберешь CV/robotics</td></tr>
+ <tr><td><a href="https://masterschool.28digital.eu/cloud-and-networking-infrastructure-and-hpc" target="_blank" rel="noopener">Cloud, Networking Infrastructure &amp; HPC</a></td><td>Облачные системы, HPC, инженерия AI-инфраструктуры</td><td>Среднее совпадение</td></tr>
+ </tbody></table></div>
+ <p class="small muted">Есть также Cyber Security, Fintech, Fintech for Business, HCI/XR, Intelligent Chips and Systems и Master of Business Excellence — они менее близки к твоей основной цели в ML/NLP/CV. Уточняй связку entry+exit universities: курсы и языковые исключения отличаются.</p>
+ <p class="small"><a href="https://masterschool.28digital.eu/admissions" target="_blank" rel="noopener">Дедлайны и языковые требования ↗</a> · <a href="https://masterschool.28digital.eu/admissions/fees" target="_blank" rel="noopener">Стоимость и гранты ↗</a> · <a href="https://masterschool.28digital.eu/admissions/required-documents" target="_blank" rel="noopener">Документы ↗</a></p>
+ </div></details>
+ <details class="card guideCard" id="hIndexGuide"><summary><span>🎓 Рекомендатели и h-index: что делать для DEAI?</span><span class="capsule cap-amber">Важно для отбора</span></summary>
+ <div class="guideBody">
+ <p>Для <b>DEAI</b> принимают от <b>0 до 3</b> рекомендаций; h-index в анкете <b>необязателен</b>, но репутация рекомендателя и текст письма учитываются в оценке. Для <b>EDISS</b> нужны <b>2 подписанных академических письма</b>, оценка основана на содержании (до 5 баллов), отдельного h-index в критериях нет.</p>
+ <ol class="guideSteps"><li>Спроси <b>Aoqian Zhang</b> и <b>Nurlan Ismailov</b>, согласны ли они написать персональную рекомендацию и заполнить онлайн-формы DEAI.</li>
+ <li>Найди их идентифицированные страницы <b>Google Scholar / Scopus</b>. Проверь университет, область исследований и публикации, чтобы не перепутать однофамильцев.</li>
+ <li>Укажи <b>точный h-index и ссылку на страницу-источник</b>, если показатель подтверждён. Не усредняй Google Scholar и Scopus: базы дают разные значения.</li>
+ <li>В анкете DEAI заполни full name, position, homepage, academic email, phone, postal address, country. Отправь приглашение, затем проверь, загрузили ли преподаватели письма до специального срока для references.</li>
+ <li>Сильнее всего работает письмо с конкретными примерами твоих оценок, аналитических способностей, проектов и исследовательского вклада; большой h-index не заменяет содержательную рекомендацию.</li></ol>
+ <div class="refQuick"><div><b>Nurlan Ismailov (AITU)</b><p>Scopus h-index <b>7</b> по публичной редакционной странице AITU. Проверить актуальность перед отправкой.</p><a target="_blank" rel="noopener" href="https://www.journal.astanait.edu.kz/index.php/ojs/about/editorialTeam">Официальный источник AITU ↗</a></div><div><b>Aoqian Zhang (BIT)</b><p>Точный h-index не подтверждён. Есть персональный профиль BIT и научные публикации; уточни актуальную ссылку Scholar/Scopus у самого преподавателя.</p><a target="_blank" rel="noopener" href="https://cs.bit.edu.cn/szdw/jsml2/sjkxyzsgcyjs2/bf81e55817734eae9490503c63213dc2.htm">Профиль BIT ↗</a></div></div>
+ <p class="small muted">Источники: <a target="_blank" rel="noopener" href="https://deai.ulb.be/home/students/admission/">DEAI selection criteria</a>, <a target="_blank" rel="noopener" href="https://deai.ulb.be/files/application_manual_deai.pdf">DEAI Application Manual §6.1.3</a>, <a target="_blank" rel="noopener" href="https://www.master-ediss.eu/evaluation-criteria/">EDISS evaluation criteria</a>. Участие другого преподавателя с более высоким h-index имеет смысл лишь при содержательной личной оценке твоей работы.</p>
+ </div></details>
  <p class="small muted mt12">Источники: ссылки на официальные страницы внутри каждой программы. Если программа ещё не открыла call, дата не подменяется сроком предыдущего набора.</p>
 </section>
 <section class="page" id="page-bolashak">
@@ -807,7 +832,7 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
     {
       "id": "eit",
       "uni": "28DIGITAL / EIT Digital Master School",
-      "program": "AI with Affective Computing / Emotion AI",
+      "program": "Artificial Intelligence with Affective Computing (AIAC)",
       "region": "Erasmus",
       "country": "Европа",
       "track": "Affective Computing / AI",
@@ -817,12 +842,12 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
       "deadline": "2027-01-31",
       "deadlineKind": "official",
       "deadlineTime": "23:59 CET",
-      "fee": "€75 application fee; €250 deposit при offer",
+      "fee": "€75 · €250 при offer · €18 000/год (non-EU; до waiver)",
       "fund": "tuition",
-      "funding": "Полный tuition waiver возможен; stipend для Казахстана не подтверждён",
+      "funding": "Полный/половинный tuition waiver для non-EU возможен; отдельный living grant не подтверждён",
       "link": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
-      "action": "Отложить до подтверждения полного финансирования.",
-      "risk": "Не EMJM. Опубликованная центральная стипендия 28DIGITAL ограничена соответствующими EU/EEA/associated citizenship. Для Казахстана полноценный stipend не подтверждён.",
+      "action": "Рассматривать только после подтверждения финансирования проживания; изучить альтернативные EIT-треки на странице Erasmus.",
+      "risk": "Платная 28DIGITAL (не EMJM); living allowance из специальных грантов недоступна по базовому механизму для граждан Казахстана.",
       "notes": "",
       "topics": [
         "AI",
@@ -831,34 +856,6 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
         "DL"
       ],
       "evidence": "Финансирование надо подтвердить",
-      "target": null
-    },
-    {
-      "id": "emlds",
-      "uni": "European Master in Linguistic Data Science",
-      "program": "EMLDS NLP / Language Models",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "NLP / Computational Linguistics",
-      "degree": "EMJM",
-      "priority": "P2",
-      "status": "Researching",
-      "deadline": null,
-      "deadlineKind": "unconfirmed",
-      "deadlineTime": "",
-      "fee": "€0 — по данным программы; уточнить при открытии",
-      "fund": "full",
-      "funding": "15 из 25 мест с EMJM scholarship (не гарантия); opening и deadline TBA",
-      "link": "https://emlds.fcsh.unl.pt/for-applicants/how-to-apply/",
-      "action": "Уточнить можно ли подаваться без готового диплома и актуальный call.",
-      "risk": "Один официальный раздел требует готовый диплом уже при подаче; другой указывает дату завершения как TBA. Без письменного ответа не считать eligible.",
-      "notes": "",
-      "topics": [
-        "NLP",
-        "LLM",
-        "GenAI"
-      ],
-      "evidence": "Eligibility требует уточнения",
       "target": null
     },
     {
@@ -1427,9 +1424,12 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
       "id": "rzhang",
       "name": "Aoqian Zhang",
       "inst": "Beijing Institute of Technology",
-      "title": "Assistant Professor, School of CS",
+      "title": "Associate Professor, School of Computer Science and Technology",
       "state": "listed",
-      "note": "В Strathclyde указан; подтверждение отправки письма отсутствует. В письме от 3 ноября сообщил, что запрос ещё не пришёл."
+      "note": "В Strathclyde указан; подтверждение отправки письма отсутствует. В письме от 3 ноября сообщил, что запрос ещё не пришёл.",
+      "hIndex": "Не подтверждён — спросить преподавателя или проверить именной Scopus/Scholar профиль",
+      "hSource": "https://cs.bit.edu.cn/szdw/jsml2/sjkxyzsgcyjs2/bf81e55817734eae9490503c63213dc2.htm",
+      "hNote": "Профиль BIT подтверждает работу и публикации, но не цифровой h-index."
     },
     {
       "id": "rismailov",
@@ -1437,7 +1437,10 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
       "inst": "Astana IT University",
       "title": "Associate Professor, AI & Data Science",
       "state": "listed",
-      "note": "В Strathclyde указан; letterhead-версия подготовлена, submission не подтверждён."
+      "note": "В Strathclyde указан; letterhead-версия подготовлена, submission не подтверждён.",
+      "hIndex": "7 (Scopus; опубликовано научным журналом AITU, перепроверь дату обновления)",
+      "hSource": "https://www.journal.astanait.edu.kz/index.php/ojs/about/editorialTeam",
+      "hNote": "Источник — AITU; не указывать как Google Scholar h-index."
     }
   ],
   "calendar": [
@@ -2024,13 +2027,13 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
       "done": false
     },
     {
-      "id": "emlds-admission",
-      "title": "EMLDS: запросить подтверждение возможности подать без диплома",
-      "app": "emlds",
-      "due": "2026-12-07",
-      "category": "Декабрь",
+      "id": "deai-reference-hindex",
+      "title": "DEAI: проверить h-index и персональные страницы рекомендателей",
+      "app": "deai",
+      "due": "2026-12-03",
+      "category": "Рекомендации",
       "priority": "P2",
-      "detail": "Две официальные страницы расходятся в формулировке. Ответ Admissions обязателен.",
+      "detail": "Nurlan Ismailov: Scopus h-index 7 по публичному источнику AITU. Aoqian Zhang: запросить актуальный профиль Scopus/Google Scholar и показатель; не выдумывать. Получить согласие и проверить адреса.",
       "done": false
     }
   ],
@@ -4199,7 +4202,9 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
     "bolashakSource": "https://docs.google.com/spreadsheets/d/1hz8eqckP5rEzn7vZ1Sl4bsHENdJDEX2J9YxAcfizFh4/edit",
     "bolashakCaptured": "2026-11-13",
     "bolashakSheetLastEdited": "2026-11-09",
-    "sourceProfileMismatch": true
+    "sourceProfileMismatch": true,
+    "verifiedEitDate": "2026-11-13",
+    "dashboardRelease": "v7"
   },
   "erasmus": [
     {
@@ -4258,9 +4263,11 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
         "Паспорт / фотография",
         "Подтверждение английского: IELTS или MOI",
         "Подтверждения стажировки / проектов",
-        "Рекомендации (необязательные, но полезны)"
+        "Рекомендации (необязательные, но полезны)",
+        "Рекомендатели: официальный профиль / Scopus / Google Scholar, h-index при наличии и ссылка на источник"
       ],
       "warnings": [
+        "DEAI оценивает рекомендации по тексту и репутации преподавателя, в том числе h-index; поле h-index необязательно, число подтверждать ссылкой на источник.",
         "Нельзя менять формулы Self-Evaluation Excel.",
         "Нужно отдельно проверить признание трёхлетнего диплома и ECTS."
       ],
@@ -4393,65 +4400,35 @@ button:disabled{opacity:.5;cursor:default}.shell{display:flex;min-height:100vh}.
     },
     {
       "id": "eit",
-      "name": "28DIGITAL (EIT)",
+      "name": "28DIGITAL · AIAC",
       "full": "AI with Affective Computing / Emotion AI",
-      "label": "NLP + CV + Multimodal",
+      "label": "NLP + CV + Multimodal · платная подача",
       "deadline": "2027-01-31",
       "time": "23:59 CET",
       "confidence": "official",
-      "secondary": "Период 2 до 18.04.2027 для части кандидатов",
-      "fee": "€75 application + €250 deposit при зачислении",
+      "secondary": "Period 2: 18.04.2027 (non-EU есть риск не успеть с визой); Period 3 только для тех, кому не требуется разрешение.",
+      "fee": "€75 за программу · €250 депозит при принятии offer · tuition €18 000/год non-EU (до waiver)",
       "priority": "P3",
-      "chance": "Академический fit высокий, но полное финансирование для тебя не подтверждено",
-      "fund": "Внутренние стипендии 28DIGITAL имеют ограничения по гражданству; проверить local awards",
-      "language": "IELTS Academic, отдельные секционные требования зависят от entry/exit university",
-      "eligibility": "Бакалавриат CS подходит при подтверждении пререквизитов. Для Казахстана нет доказанного tuition+living гранта.",
+      "chance": "По академическим курсам соответствует; без отдельного финансирования проживание не покрыто",
+      "fund": "Merit-based full/half tuition waiver возможен и для Казахстана, но выплата на проживание не подтверждена; специальные Excellence grants ограничены гражданством.",
+      "language": "IELTS Academic ≥6.5 overall, Writing/Speaking ≥6.5, Listening/Reading ≥6.0; AITU MOI не даёт общего освобождения",
+      "eligibility": "CS AITU подходит как профиль, но степень должна быть эквивалентна 180 ECTS. Условная подача до получения диплома допускается; окончательный документ до зачисления.",
       "docs": [
-        "Транскрипт AITU и справка об ожидаемом выпуске",
+        "Паспорт, транскрипт AITU с печатью и переводом при необходимости",
+        "Student Status / Expected Graduation 30.06.2027",
         "CV",
         "Мотивационное письмо до 2 страниц",
-        "IELTS/English proof",
-        "Паспорт",
-        "Выбор entry/exit university",
-        "Документы для scholarship selection (если доступны)",
-        "Дополнительная заявка в partner university при необходимости"
+        "IELTS Academic (W/S≥6.5, остальные≥6.0)",
+        "Выбор entry и exit universities, проверка их особых требований",
+        "Документы в Scholarship tab 4 (если претендуешь на tuition waiver)"
       ],
       "warnings": [
-        "ЭТО НЕ Erasmus Mundus Joint Master scholarship.",
-        "€75 не возмещается; полный stipend по общему 28DIGITAL call гражданам Казахстана не обещан."
+        "28DIGITAL / EIT Digital ≠ Erasmus Mundus Joint Master (EMJM). У ELTE есть отдельный конкурс для non-EU: до €10 000/год без совмещения с основным 28DIGITAL tuition waiver — правила сочетания проверить.",
+        "€75 за КАЖДУЮ поданную программу; при зачислении €250 невозвратный депозит; при ≥50% waiver возможен дополнительный обеспечительный депозит €500.",
+        "Scholarships of Excellence с ежемесячной выплатой не подтверждены для граждан Казахстана; не оплачивать только в надежде получить полный грант.",
+        "Первые 2027/28 заявки для non-EU: до 31.01.2027, 23:59 CET."
       ],
       "url": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing"
-    },
-    {
-      "id": "emlds",
-      "name": "EMLDS",
-      "full": "European Master in Linguistic Data Science (NLP / Language Models)",
-      "label": "NLP + Language Models",
-      "deadline": null,
-      "time": "Дата ещё не объявлена",
-      "confidence": "unconfirmed",
-      "secondary": "15 EMJM scholarships из 25 мест (объявлено)",
-      "fee": "€0 по доступной информации; проверить при открытии",
-      "priority": "P2",
-      "chance": "Высокий NLP fit, но eligibility при выпуске июнь 2027 не подтверждена",
-      "fund": "15 из 25 студентов получают EMJM scholarship (конкурс)",
-      "language": "B2.2 / IELTS 6.5 либо официальный English-medium degree MOI",
-      "eligibility": "Официальные страницы расходятся: одна требует финальный диплом при подаче, другая пишет окончить до даты TBA.",
-      "docs": [
-        "Финальный диплом или подтверждённое исключение",
-        "Официальный transcript + grading scale",
-        "CV",
-        "Motivation Letter до 500 слов",
-        "2 академические рекомендации",
-        "Сертификат английского или MOI",
-        "Паспорт",
-        "Подтверждения академического опыта"
-      ],
-      "warnings": [
-        "НЕЛЬЗЯ пока считать гарантированно eligible для AITU с выпуском 30.06.2027.",
-        "2027–29 opening/deadline ещё не опубликованы."
-      ],
-      "url": "https://emlds.fcsh.unl.pt/for-applicants/how-to-apply/"
     },
     {
       "id": "emai",
@@ -4531,7 +4508,7 @@ function showPage(page,skipHistory=false){if(!PAGE_NAMES[page])page='overview';c
  if(page==='overview')renderOverview();else if(page==='applications')renderApplications();else if(page==='calendar')renderCalendar();else if(page==='tasks')renderTasks();else if(page==='documents')renderDocuments();else if(page==='funding')renderFunding();else if(page==='research')renderResearch();}
 document.querySelectorAll('[data-page],[data-go]').forEach(n=>n.addEventListener('click',()=>showPage(n.dataset.page||n.dataset.go)));
 window.addEventListener('hashchange',()=>showPage(location.hash.slice(1),true));
-el('mobilemenu').addEventListener('click',()=>el('sidebar').classList.toggle('mobileOpen'));
+el('mobilemenu').addEventListener('click',()=>el('sidebar').classList.toggle('mobileOpen'));document.getElementById('refreshMaga')?.addEventListener('click',()=>{const url=new URL(location.href);url.searchParams.set('build','v7');url.searchParams.set('refresh',String(Date.now()));location.replace(url.toString());});
 function renderAll(){el('sideAppsCount').textContent=BASE.apps.length;el('sideTaskCount').textContent=allTasks().filter(t=>!taskIsDone(t)).length;renderOverview();if(currentPage!=='overview')showPage(currentPage,true)}
 function setTaskDone(id,yes){state.tasksDone[id]=yes;save();renderAll()}
 
@@ -4615,10 +4592,10 @@ function renderFunding(){let relevant=BASE.apps.filter(a=>!['Submitted','Offer']
  el('fundingOverview').innerHTML=groupStats.map(s=>`<div class="card fundCard"><span class="capsule ${s.cls}">${esc(s.label)}</span><div class="count">${relevant.filter(a=>a.fund===s.fund).length}</div><p>${esc(s.desc)}</p></div>`).join('');const f=el('fundFilter').value;let filtered=BASE.apps.filter(a=>!f||a.fund===f).sort(sortApps);el('fundPrograms').innerHTML=filtered.map(a=>`<div class="fundRow"><div class="grow"><b>${esc(a.uni)}</b><p>${esc(a.program)} · <span style="color:#66809e">${esc(a.fee)}</span></p><p>${esc(a.funding)}</p></div><div class="right">${fundBadge(a.fund)}<div style="margin-top:7px"><button class="btn sm" data-fundapp="${esc(a.id)}">Детали →</button></div></div></div>`).join('');el('fundPrograms').querySelectorAll('[data-fundapp]').forEach(n=>n.addEventListener('click',()=>openApp(n.dataset.fundapp)))}
 el('fundFilter').addEventListener('change',renderFunding);
 
-function renderResearch(){el('refCards').innerHTML=BASE.referees.map(r=>`<div class="listrow"><div class="avatar" style="background:#ebf1fb;color:#436c9c;flex:none">${esc(r.name.split(' ').map(x=>x[0]).join(''))}</div><div class="grow"><div class="strong" style="font-size:12px">${esc(r.name)}</div><div class="tiny muted">${esc(r.inst)}</div><div class="tiny muted">${esc(r.note)}</div><select class="field" data-ref="${esc(r.id)}" style="font-size:11px;max-width:190px;padding:6px;margin-top:7px"><option value="listed" ${((state.refStatuses[r.id]||r.state)==='listed')?'selected':''}>Добавлен, не отправлено</option><option value="sent" ${state.refStatuses[r.id]==='sent'?'selected':''}>Отправлено преподавателем</option><option value="received" ${state.refStatuses[r.id]==='received'?'selected':''}>Получено университетом</option></select></div></div>`).join('');el('refCards').querySelectorAll('[data-ref]').forEach(n=>n.addEventListener('change',e=>{state.refStatuses[n.dataset.ref]=e.target.value;save();toast('Статус рекомендаций обновлён')}));
+function renderResearch(){el('refCards').innerHTML=BASE.referees.map(r=>`<div class="listrow"><div class="avatar" style="background:#ebf1fb;color:#436c9c;flex:none">${esc(r.name.split(' ').map(x=>x[0]).join(''))}</div><div class="grow"><div class="strong" style="font-size:12px">${esc(r.name)}</div><div class="tiny muted">${esc(r.inst)}</div><div class="tiny muted">${esc(r.note)}</div><div class="tiny muted" style="margin-top:5px"><b>h-index:</b> ${esc(r.hIndex||"Не указан")} · <a href="${esc(r.hSource||"#")}" target="_blank" rel="noopener">источник ↗</a></div><select class="field" data-ref="${esc(r.id)}" style="font-size:11px;max-width:190px;padding:6px;margin-top:7px"><option value="listed" ${((state.refStatuses[r.id]||r.state)==='listed')?'selected':''}>Добавлен, не отправлено</option><option value="sent" ${state.refStatuses[r.id]==='sent'?'selected':''}>Отправлено преподавателем</option><option value="received" ${state.refStatuses[r.id]==='received'?'selected':''}>Получено университетом</option></select></div></div>`).join('');el('refCards').querySelectorAll('[data-ref]').forEach(n=>n.addEventListener('change',e=>{state.refStatuses[n.dataset.ref]=e.target.value;save();toast('Статус рекомендаций обновлён')}));
  el('profGrid').innerHTML=BASE.professors.map(p=>`<div class="prof"><div class="row between center"><b>${esc(p.name)}</b><span class="capsule cap-gray">${esc(p.uni)}</span></div><small>${esc(p.topics)}</small><p>${esc(p.note)}</p><div class="row between center wrap"><select class="field" data-prof="${esc(p.id)}"><option value="Researching" ${(state.profStatuses[p.id]||p.status)==='Researching'?'selected':''}>Изучаю</option><option value="To contact" ${(state.profStatuses[p.id]||p.status)==='To contact'?'selected':''}>Написать</option><option value="Contacted" ${(state.profStatuses[p.id]||p.status)==='Contacted'?'selected':''}>Написано</option><option value="Waiting reply" ${(state.profStatuses[p.id]||p.status)==='Waiting reply'?'selected':''}>Жду ответ</option><option value="Positive" ${(state.profStatuses[p.id]||p.status)==='Positive'?'selected':''}>Положительный ответ</option><option value="Recommendation agreed" ${(state.profStatuses[p.id]||p.status)==='Recommendation agreed'?'selected':''}>Согласился рекомендовать</option></select>${p.link?`<a href="${esc(p.link)}" target="_blank" rel="noopener noreferrer" class="small">Профиль ↗</a>`:''}</div></div>`).join('');el('profGrid').querySelectorAll('[data-prof]').forEach(n=>n.addEventListener('change',e=>{state.profStatuses[n.dataset.prof]=e.target.value;save();toast('Статус профессора сохранён')}));}
 
-function backupJson(){return JSON.stringify({format:'maga-v4',version:5,exportedAt:new Date().toISOString(),state},null,2)}
+function backupJson(){return JSON.stringify({format:'maga-v4',version:7,exportedAt:new Date().toISOString(),state},null,2)}
 function downloadBackup(){const blob=new Blob([backupJson()],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);let a=document.createElement('a');a.download=`maga_progress_${today()}.json`;a.href=url;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Резервная копия скачана')}
 function mergePatch(data){if(!data||typeof data!=='object'||Array.isArray(data))throw Error('Ожидался JSON-объект');let s=data.format==='maga-v4'&&data.state?data.state:data;const out=structuredClone(state);
  const keys=['appStatuses','appPriorities','appNotes','tasksDone','docsStatus','profStatuses','refStatuses','erasmusDocs','bolashakFavorites'];
@@ -4640,8 +4617,8 @@ let chosenEm='codas',chosenBolCountry='Великобритания',chosenBolId
 const BOL_COUNTRY_NAMES=[...new Set(BASE.bolashak.map(x=>x.country))];
 function erasmusDone(id,i){return !!state.erasmusDocs[id+'-'+i]}
 function renderErasmus(){const q=el('erasmusSearch').value.trim().toLowerCase(),priority=el('erasmusPrior').value,f=el('erasmusFunding').value;
- const arr=BASE.erasmus.filter(a=>(!q||[a.name,a.full,a.label,a.language,a.eligibility,a.docs.join(' ')].join(' ').toLowerCase().includes(q))&&(!priority||a.priority===priority)&&(!f||(f==='funded'?!['eit','emai'].includes(a.id):['eit','emai','emlds'].includes(a.id))));
- el('erasmusMetrics').innerHTML=[['Программы',BASE.erasmus.length,'Включая 28DIGITAL'],['P1 заявки',BASE.erasmus.filter(x=>x.priority==='P1').length,'Дедлайны январь–февраль'],['Без даты',BASE.erasmus.filter(x=>!x.deadline).length,'EMLDS — ждём объявления'],['Документы',BASE.erasmus.reduce((n,a)=>n+a.docs.length,0),'Отдельные требования']].map(m=>`<div class="card metric"><div class="kLabel">${esc(m[0])}</div><div class="kVal">${m[1]}</div><div class="kDesc">${esc(m[2])}</div></div>`).join('');
+ const arr=BASE.erasmus.filter(a=>(!q||[a.name,a.full,a.label,a.language,a.eligibility,a.docs.join(' ')].join(' ').toLowerCase().includes(q))&&(!priority||a.priority===priority)&&(!f||(f==='funded'? !['eit','emai'].includes(a.id) : ['eit','emai'].includes(a.id))));
+ el('erasmusMetrics').innerHTML=[['Программы',BASE.erasmus.length,'Включая 28DIGITAL'],['P1 заявки',BASE.erasmus.filter(x=>x.priority==='P1').length,'Дедлайны январь–февраль'],['Ключевые сроки',BASE.erasmus.filter(x=>x.deadline&&x.priority==='P1').length,'Подать P1 до января–февраля'],['Документы',BASE.erasmus.reduce((n,a)=>n+a.docs.length,0),'Отдельные требования']].map(m=>`<div class="card metric"><div class="kLabel">${esc(m[0])}</div><div class="kVal">${m[1]}</div><div class="kDesc">${esc(m[2])}</div></div>`).join('');
  if(!arr.some(a=>a.id===chosenEm))chosenEm=arr[0]?.id;
  el('erasmusMenu').innerHTML=arr.length?arr.map(a=>`<button type="button" class="emItem ${chosenEm===a.id?'selected':''}" data-em="${esc(a.id)}"><div class="emItemTitle"><span>${esc(a.name)}</span><span class="capsule ${a.priority==='P1'?'cap-green':a.priority==='P2'?'cap-amber':'cap-gray'}">${esc(a.priority)}</span></div><p>${esc(a.label)} · ${esc(a.full)}</p><div class="emItemFoot"><span class="capsule ${a.deadline?'deadline-pill':'cap-amber'}">${a.deadline?'● '+fmt(a.deadline):'Дата TBA'}</span><span class="capsule cap-gray">${esc(a.fee.split(';')[0])}</span></div></button>`).join(''):'<div class="empty">Программы не найдены</div>';
  el('erasmusMenu').querySelectorAll('[data-em]').forEach(n=>n.addEventListener('click',()=>{chosenEm=n.dataset.em;renderErasmus()}));
@@ -4655,7 +4632,7 @@ function renderErasmus(){const q=el('erasmusSearch').value.trim().toLowerCase(),
  ${a.warnings.length?`<div class="divider"></div><b class="small">Важные ограничения и риски</b><ul class="emWarnings">${a.warnings.map(w=>`<li>${esc(w)}</li>`).join('')}</ul>`:''}
  <div class="row wrap" style="margin-top:17px"><button class="btn sm" id="emOpenApp">Открыть в списке заявок</button><button class="btn sm" id="emAddTask">＋ Добавить задачу</button></div>`;
  el('erasmusDetails').querySelectorAll('[data-emdoc]').forEach(n=>n.addEventListener('change',e=>{state.erasmusDocs[a.id+'-'+n.dataset.emdoc]=e.target.checked;save();renderErasmus()}));
- el('emOpenApp').addEventListener('click',()=>{showPage('applications');openApp(a.id)});
+ el('emOpenApp').addEventListener('click',()=>{showPage('applications');if(appById(a.id))openApp(a.id);else toast('Этот маршрут пока только в справочнике')});
  el('emAddTask').addEventListener('click',()=>{showPage('tasks');openTaskModal(a.id)})
 }
 ['erasmusSearch','erasmusPrior','erasmusFunding'].forEach(id=>el(id).addEventListener(id==='erasmusSearch'?'input':'change',renderErasmus));
