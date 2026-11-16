@@ -158,7 +158,7 @@ textarea.field{width:100%;min-height:96px;resize:vertical}
 .cover{display:inline-flex;gap:2px 12px;flex-wrap:wrap}
 .facts .cover{display:flex;flex-direction:column}
 .cv{display:inline-flex;align-items:center;gap:5px}
-.cardFoot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;font-size:12px;color:var(--muted)}
+.appStatus{font-size:13px;max-width:100%;width:100%;cursor:pointer}.cardFoot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;font-size:12px;color:var(--muted)}
 
 /* table */
 .tableWrap{overflow:auto;border:1px solid var(--line);border-radius:var(--r3);background:var(--panel);box-shadow:var(--shadow);max-height:72vh}
@@ -424,8 +424,8 @@ const BASE=JSON.parse(document.getElementById('catalog').textContent);
 const KEY='maga_application_os_2027_v4';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const STATUS={Researching:'Изучаю',Preparing:'Готовлю',Submitted:'Отправлено',Waiting:'Жду ответ',Offer:'Offer',Hold:'Отложено'};
-const STATUS_T={Researching:'t-sky',Preparing:'t-warn',Submitted:'t-ok',Waiting:'t-vio',Offer:'t-ok',Hold:'t-gray'};
+const STATUS={Researching:'Изучаю',Preparing:'Готовлю',Submitted:'Отправлено',Waiting:'Жду ответ',Offer:'Получен offer',Conditional:'Условный offer',Accepted:'Принято',Rejected:'Отказ',Withdrawn:'Отозвано',Hold:'Отложено'};
+const STATUS_T={Researching:'t-sky',Preparing:'t-warn',Submitted:'t-ok',Waiting:'t-vio',Offer:'t-ok',Conditional:'t-warn',Accepted:'t-ok',Rejected:'t-bad',Withdrawn:'t-gray',Hold:'t-gray'};
 const DOC={missing:'Нужно',draft:'Черновик',ready:'Готово',requested:'Запрошено'};
 const COVER={yes:['Да','var(--ok)'],partial:['Частично','var(--warn)'],cond:['Условно','var(--vio)'],no:['Нет','var(--bad)'],'?':['Не ясно','var(--muted)']};
 const COVER_HINT={yes:'покрывается, если стипендия присуждена',partial:'частично',cond:'зависит от доходов семьи или научного руководителя',no:'не покрывается','?':'не подтверждено'};
@@ -441,6 +441,8 @@ S.personal={referees:[],professors:[],appNotes:{},...(S.personal||{})};
 S.customTasks=(S.customTasks||[]).map(t=>({...t,custom:true}));S.emPick=S.emPick||{};
 S.profile={...(BASE.profile||{}),...(S.profile||{})};
 let saveTimer;
+// Apply the confirmed first-round submission once, without overwriting later decisions.
+if(!S.manchesterRound1Recorded){S.appStatuses=S.appStatuses||{};if(!S.appStatuses.manchester||['Researching','Preparing'].includes(S.appStatuses.manchester))S.appStatuses.manchester='Submitted';S.manchesterRound1Recorded=true;save();}
 function save(){S.lastSaved=new Date().toISOString();try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){toast('Не удалось сохранить: память браузера недоступна');}}
 function saveSoon(){clearTimeout(saveTimer);saveTimer=setTimeout(save,250);}
 function toast(t){const n=$('toast');n.textContent=t;n.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>n.classList.remove('on'),2200);}
@@ -469,7 +471,10 @@ function astana(date,time){
 
 /* ---------- helpers ---------- */
 const apps=BASE.apps;const appById=id=>apps.find(a=>a.id===id);
-const st=a=>S.appStatuses[a.id]||a.status;
+const st=a=>Object.hasOwn(STATUS,S.appStatuses[a.id])?S.appStatuses[a.id]:a.status;
+const applied=s=>['Submitted','Waiting','Offer','Conditional','Accepted','Rejected','Withdrawn'].includes(s);
+function statusSelect(a){return `<select class="field appStatus" data-status-app="${esc(a.id)}" aria-label="Статус: ${esc(a.uni)}">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${st(a)===k?'selected':''}>${esc(v)}</option>`).join('')}</select>`;}
+function setAppStatus(id,value){if(!appById(id)||!Object.hasOwn(STATUS,value))return;S.appStatuses[id]=value;save();refresh();if(drawerApp===id)openApp(id);toast('Статус сохранён: '+STATUS[value]);}
 const pr=a=>S.appPriorities[a.id]||a.priority;
 const allTasks=()=>[...BASE.tasks,...S.customTasks];
 const taskDone=t=>S.tasksDone[t.id]??t.done??false;
@@ -490,8 +495,8 @@ function ieltsCheck(a){const e=a.english;if(!e)return{state:'unknown',text:'Не
   return{state:ok?(why?'pending':'ok'):'need',text:req,req,why};}
 function coverHtml(a){const c=a.cover||{tuition:'?',living:'?'};return `<span class="cover"><span class="cv" title="Обучение: ${esc(COVER_HINT[c.tuition])}"><i class="dot" style="background:${COVER[c.tuition][1]}"></i>Обучение: ${COVER[c.tuition][0].toLowerCase()}</span><span class="cv" title="Проживание: ${esc(COVER_HINT[c.living])}"><i class="dot" style="background:${COVER[c.living][1]}"></i>Жизнь: ${COVER[c.living][0].toLowerCase()}</span></span>`;}
 const fullCover=a=>a.cover&&a.cover.tuition==='yes'&&a.cover.living==='yes';
-function dlClass(a){const n=days(a.deadline);if(st(a)==='Submitted')return't-ok';if(n===null)return't-gray';if(n<0)return't-gray';if(n<=14)return't-bad';if(n<=45)return't-warn';return't-sky';}
-function dlText(a){if(st(a)==='Submitted')return'Отправлено';if(!a.deadline)return'Срок не подтверждён';const n=days(a.deadline);return n<0?`Прошёл ${fmt(a.deadline)}`:`${fmt(a.deadline)} · ${rel(a.deadline)}`;}
+function dlClass(a){const n=days(a.deadline);if(applied(st(a)))return STATUS_T[st(a)];if(n===null)return't-gray';if(n<0)return't-gray';if(n<=14)return't-bad';if(n<=45)return't-warn';return't-sky';}
+function dlText(a){if(applied(st(a)))return STATUS[st(a)];if(!a.deadline)return'Срок не подтверждён';const n=days(a.deadline);return n<0?`Прошёл ${fmt(a.deadline)}`:`${fmt(a.deadline)} · ${rel(a.deadline)}`;}
 const verifiedTxt=a=>a.verified?`Проверено ${fmt(a.verified)}`:'Не проверено';
 const stale=a=>a.verified&&days(a.verified)<-30;
 
@@ -540,7 +545,7 @@ function renderOverview(){
   const p=S.profile||{};const h=new Date().getHours();
   const hi=h<5?'Доброй ночи':h<12?'Доброе утро':h<18?'Добрый день':'Добрый вечер';
   const first=(p.name||'').split(' ')[0];
-  const next=events().find(e=>e.date>=TODAY&&e.type==='deadline'&&!(e.app&&appById(e.app)&&st(appById(e.app))==='Submitted'));
+  const next=events().find(e=>e.date>=TODAY&&e.type==='deadline'&&!(e.app&&appById(e.app)&&applied(st(appById(e.app)))));
   $('greet').textContent=`${hi}${first?', '+first:''}. Сегодня ${fmt(TODAY)}.`+(next?` Следующий дедлайн — ${next.title.split(' — ')[0]}, ${rel(next.date)}.`:'');
   $('profileBanner').innerHTML=p.name?'':`<div class="banner"><p>Профиль пуст: личные данные больше не хранятся в публичном файле. Импортируйте <b>maga-personal.json</b> или заполните профиль.</p><button class="btn sm" data-go="profile">Открыть профиль</button></div>`;
   // board
@@ -548,13 +553,13 @@ function renderOverview(){
   $('boardRows').innerHTML=rows.length?rows.map(e=>{
     const a=e.app&&appById(e.app);const n=days(e.date);const digits=String(n).padStart(2,'0').split('');
     const at=astana(e.date,e.time);const sub=a?`${a.program}`:(e.note||'');
-    const s=a?st(a):null;const hot=n<=14&&e.type==='deadline'&&s!=='Submitted';
-    const label=s==='Submitted'?'Отправлено':e.type==='deadline'?(e.confidence==='official'?'Официально':'Уточнить'):e.type==='opening'?'Открытие':e.type==='target'?'Моя цель':'Событие';
+    const s=a?st(a):null;const hot=n<=14&&e.type==='deadline'&&!applied(s);
+    const label=applied(s)?STATUS[s]:e.type==='deadline'?(e.confidence==='official'?'Официально':'Уточнить'):e.type==='opening'?'Открытие':e.type==='target'?'Моя цель':'Событие';
     return `<button class="brow" ${a?`data-app="${a.id}"`:''}><span class="bdate">${new Date(e.date+'T12:00').getDate()} ${MON[new Date(e.date+'T12:00').getMonth()]}<small>${['вс','пн','вт','ср','чт','пт','сб'][new Date(e.date+'T12:00').getDay()]}</small></span>
       <span class="bdays"><span class="flap" aria-label="${n} дней">${digits.map(x=>`<i>${x}</i>`).join('')}</span><small>${plural(n,'день','дня','дней')}</small></span>
       <span class="btitle"><b>${esc(e.title)}</b><span>${esc(sub)}</span></span>
       <span class="btime num">${at?`${at}<small>по Астане</small>`:(e.time?esc(e.time):'<small>время не указано</small>')}</span>
-      <span class="bstat"><span class="tag ${s==='Submitted'?'done':hot?'hot':''}">${label}</span></span></button>`;}).join(''):`<div class="boardEmpty">Ближайших событий нет.</div>`;
+      <span class="bstat"><span class="tag ${applied(s)?'done':hot?'hot':''}">${label}</span></span></button>`;}).join(''):`<div class="boardEmpty">Ближайших событий нет.</div>`;
   // english
   const m=myIelts();const checks=apps.filter(a=>a.english&&a.english.ielts&&!a.english.moi&&st(a)!=='Hold');
   const res=checks.map(a=>({a,c:ieltsCheck(a)}));const okN=res.filter(r=>r.c.state==='ok').length;const pend=res.filter(r=>r.c.state==='pending').length;
@@ -591,7 +596,7 @@ function renderEmPanel(){
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(!b)return;S.emPick[b.dataset.pick]=!S.emPick[b.dataset.pick];save();if(page==='overview')renderEmPanel();if(page==='erasmus')renderErasmus();if(drawerApp&&b.closest('#drawer'))openApp(drawerApp);const n=Object.values(S.emPick).filter(Boolean).length;if(n>3)toast('Выбрано больше трёх программ Erasmus Mundus');});
 document.querySelectorAll('[data-board]').forEach(b=>b.addEventListener('click',()=>{boardMode=b.dataset.board;document.querySelectorAll('[data-board]').forEach(x=>x.setAttribute('aria-pressed',x===b));renderOverview();}));
-document.addEventListener('click',e=>{const r=e.target.closest('[data-app]');if(r&&!e.target.closest('input,select,textarea,a,[data-pick]'))openApp(r.dataset.app);});
+document.addEventListener('click',e=>{const r=e.target.closest('[data-app]');if(r&&!e.target.closest('input,select,textarea,a,label,[data-pick]'))openApp(r.dataset.app);});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-app][role="button"],tr[data-app]')){e.preventDefault();openApp(e.target.dataset.app);}});
 
 /* ---------- tasks ---------- */
@@ -625,7 +630,7 @@ function initPrograms(){
 function filtered(){
   const q=$('q').value.trim().toLowerCase(),c=$('fCountry').value,s=$('fStatus').value,so=$('fSort').value;
   let l=apps.filter(a=>(!q||[a.uni,a.program,a.country,a.track,(a.topics||[]).join(' ')].join(' ').toLowerCase().includes(q))&&(!c||a.country===c)&&(!s||st(a)===s));
-  const f={full:fullCover,ielts:a=>['ok','pending'].includes(ieltsCheck(a).state),em:a=>a.emjm,soon:a=>a.deadline&&days(a.deadline)>=0&&days(a.deadline)<=45&&st(a)!=='Submitted',submitted:a=>st(a)==='Submitted',stale:a=>stale(a)||a.deadlineKind!=='official'&&a.deadlineKind!=='completed',hold:a=>st(a)==='Hold'}[quick];
+  const f={full:fullCover,ielts:a=>['ok','pending'].includes(ieltsCheck(a).state),em:a=>a.emjm,soon:a=>a.deadline&&days(a.deadline)>=0&&days(a.deadline)<=45&&!applied(st(a)),submitted:a=>applied(st(a)),stale:a=>stale(a)||a.deadlineKind!=='official'&&a.deadlineKind!=='completed',hold:a=>st(a)==='Hold'}[quick];
   if(f)l=l.filter(f);else l=l.filter(a=>st(a)!=='Hold'||quick==='all');
   const key={deadline:a=>(a.deadline&&days(a.deadline)>=0?a.deadline:'9999'),priority:a=>(PRIO_ORDER[pr(a)]||9)+(a.deadline||'9999'),name:a=>a.uni,verified:a=>a.verified||'0'}[so];
   return l.sort((x,y)=>so==='verified'?key(y).localeCompare(key(x)):String(key(x)).localeCompare(String(key(y))));
@@ -637,14 +642,14 @@ function renderPrograms(){
   const l=filtered();
   if(!l.length){$('programs').innerHTML='<div class="empty">По этим фильтрам ничего не найдено. Сбросьте поиск или выберите «Все».</div>';return;}
   if(S.view==='table'){
-    $('programs').innerHTML=`<div class="tableWrap"><table><thead><tr><th>Программа</th><th>Страна</th><th>Дедлайн</th><th>По Астане</th><th>Покрытие</th><th>Английский</th><th>Взнос</th><th>Статус</th><th>Проверено</th></tr></thead><tbody>${l.map(a=>`<tr data-app="${a.id}" tabindex="0"><td><b>${esc(a.uni)}</b><br><span class="muted">${esc(a.program)}</span></td><td>${FLAG[a.country]||''} ${esc(a.country)}</td><td class="num"><span class="tag ${dlClass(a)}">${esc(a.deadline?fmt(a.deadline):'—')}</span><br><span class="muted small">${a.deadline?rel(a.deadline):''}</span></td><td class="num">${astana(a.deadline,a.deadlineTime)||'—'}</td><td>${coverHtml(a).replace('class="cover"','class="cover" style="flex-direction:column;gap:2px"')}</td><td>${ieltsTag(a)}</td><td>${esc(a.fee||'—')}</td><td><span class="tag ${STATUS_T[st(a)]}">${STATUS[st(a)]}</span></td><td class="muted num">${a.verified?fmt(a.verified):'—'}</td></tr>`).join('')}</tbody></table></div>`;
+    $('programs').innerHTML=`<div class="tableWrap"><table><thead><tr><th>Программа</th><th>Страна</th><th>Дедлайн</th><th>По Астане</th><th>Покрытие</th><th>Английский</th><th>Взнос</th><th>Статус</th><th>Проверено</th></tr></thead><tbody>${l.map(a=>`<tr data-app="${a.id}" tabindex="0"><td><b>${esc(a.uni)}</b><br><span class="muted">${esc(a.program)}</span></td><td>${FLAG[a.country]||''} ${esc(a.country)}</td><td class="num"><span class="tag ${dlClass(a)}">${esc(a.deadline?fmt(a.deadline):'—')}</span><br><span class="muted small">${a.deadline?rel(a.deadline):''}</span></td><td class="num">${astana(a.deadline,a.deadlineTime)||'—'}</td><td>${coverHtml(a).replace('class="cover"','class="cover" style="flex-direction:column;gap:2px"')}</td><td>${ieltsTag(a)}</td><td>${esc(a.fee||'—')}</td><td>${statusSelect(a)}</td><td class="muted num">${a.verified?fmt(a.verified):'—'}</td></tr>`).join('')}</tbody></table></div>`;
   }else{
     $('programs').innerHTML=`<div class="cards">${l.map(a=>{const at=astana(a.deadline,a.deadlineTime);return `<div class="card" role="button" tabindex="0" data-app="${a.id}">
       <div class="cardTop"><span>${FLAG[a.country]||''} ${esc(a.country)} · ${esc(a.degree||'MSc')}${a.emjm?' · Erasmus Mundus':''}</span><span style="display:flex;gap:4px"><span class="tag ${pr(a)==='P1'?'t-gold':'t-gray'}">${pr(a)}</span><span class="tag ${STATUS_T[st(a)]}">${STATUS[st(a)]}</span></span></div>
       <h3>${esc(a.uni)}</h3><p class="prog">${esc(a.program)}</p>
-      <div class="dl"><span class="tag ${dlClass(a)}">${esc(dlText(a))}</span>${at&&st(a)!=='Submitted'&&days(a.deadline)>=0?`<span class="tz num">до ${at} по Астане</span>`:''}</div>
+      <div class="dl"><span class="tag ${dlClass(a)}">${esc(dlText(a))}</span>${at&&!applied(st(a))&&days(a.deadline)>=0?`<span class="tz num">до ${at} по Астане</span>`:''}</div>
       <dl class="facts"><dt>Покрытие</dt><dd>${coverHtml(a)}</dd><dt>Английский</dt><dd>${ieltsTag(a)}</dd><dt>Взнос</dt><dd>${esc(a.fee||'—')}</dd></dl>
-      <div class="cardFoot"><span style="${stale(a)?'color:var(--warn)':''}">${verifiedTxt(a)}${a.deadlineKind&&a.deadlineKind!=='official'&&a.deadlineKind!=='completed'?' · срок не подтверждён':''}</span><span>Подробнее</span></div></div>`;}).join('')}</div>`;
+      <label class="small muted">Статус заявки ${statusSelect(a)}</label><div class="cardFoot"><span style="${stale(a)?'color:var(--warn)':''}">${verifiedTxt(a)}${a.deadlineKind&&a.deadlineKind!=='official'&&a.deadlineKind!=='completed'?' · срок не подтверждён':''}</span><span>Подробнее</span></div></div>`;}).join('')}</div>`;
   }
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;quick=b.dataset.q;renderPrograms();});
@@ -673,10 +678,11 @@ function openApp(id){
     <div class="dSec"><h3>Мои заметки</h3><textarea class="field" id="dNote" placeholder="Сохраняются в этом браузере">${esc(S.appNotes[id]||'')}</textarea></div>
     ${tasks.length?sec('Задачи',`<ul class="tasklist">${tasks.map(taskLi).join('')}</ul>`):''}
     ${sec('Источник',`<p class="small muted">${esc(a.evidence||'')} ${a.evidence?'· ':''}${verifiedTxt(a)}</p>`)}`);
-  $('dStatus').addEventListener('change',e=>{S.appStatuses[id]=e.target.value;save();refresh();toast('Статус: '+STATUS[e.target.value]);});
+  $('dStatus').addEventListener('change',e=>setAppStatus(id,e.target.value));
   $('dPrio').addEventListener('change',e=>{S.appPriorities[id]=e.target.value;save();refresh();});
   $('dNote').addEventListener('input',e=>{S.appNotes[id]=e.target.value;saveSoon();});
 }
+document.addEventListener('change',e=>{const s=e.target.closest('[data-status-app]');if(s)setAppStatus(s.dataset.statusApp,s.value);});
 function refresh(){R[page]&&R[page]();renderNav();}
 
 /* ---------- erasmus ---------- */
