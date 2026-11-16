@@ -165,7 +165,15 @@ textarea.field{width:100%;min-height:96px;resize:vertical}
 table{width:100%;border-collapse:collapse;font-size:13px}
 #programs table{min-width:1180px}
 #programs td:first-child{min-width:240px}
-#p-bolashak table{min-width:980px}
+#p-bolashak table{min-width:1100px}
+.bolHero{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.bolHero h2{font-size:21px;margin:0 0 5px}.bolHero p{margin:0}
+.bolHighlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.bolHighlight{border:1px solid var(--line);background:var(--panel2);border-radius:var(--r2);padding:14px;overflow-wrap:anywhere}
+.bolHighlight strong{display:block;font-size:17px;margin-top:6px}.bolDetailGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.bolDetailGrid p{margin:4px 0 0;overflow-wrap:anywhere}.bolSelected{background:var(--skyBg)!important}
+#bolDetails{scroll-margin-top:14px;margin-bottom:16px}.bolUni{margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bolUni select{max-width:100%}
+@media(max-width:650px){.bolHighlights,.bolDetailGrid{grid-template-columns:1fr}}
 th,td{padding:10px 12px;border-bottom:1px solid var(--line2);text-align:left;vertical-align:top}
 th{position:sticky;top:0;background:var(--panel2);font-weight:600;color:var(--sub);z-index:1;white-space:nowrap}
 tbody tr{cursor:pointer}
@@ -360,7 +368,10 @@ dialog .form{grid-template-columns:1fr}
       <div class="top"><div><h1 id="h-bolashak">Болашак</h1><p id="bolNote"></p></div></div>
       <div class="tabs" id="bolTabs" role="group" aria-label="Страна"></div>
       <div class="toolbar"><input class="field search" type="search" id="bq" placeholder="Поиск по вузам и программам" aria-label="Поиск"><select class="field" id="bTier" aria-label="Уровень"><option value="">Все уровни</option><option>Reach</option><option>Target</option><option>Safety</option></select><button class="chip" id="bFav" aria-pressed="false">★ Избранное</button></div>
-      <div class="tableWrap"><table><thead><tr><th></th><th>Программа</th><th>Уровень</th><th>Требования</th><th>Дедлайн</th><th>Стоимость</th></tr></thead><tbody id="bolBody"></tbody></table></div>
+      <div class="bolUni"><label for="bolUni">Университет:</label><select class="field" id="bolUni" aria-label="Выбрать университет"></select></div>
+      <div class="panel" id="bolDetails" aria-live="polite"></div>
+      <div class="ph" style="margin:14px 0"><h2 style="margin:0;font-size:18px">Список программ</h2><span class="small muted" id="bolCount"></span></div>
+      <div class="tableWrap"><table><thead><tr><th></th><th>Программа</th><th>Уровень</th><th>Дедлайн подачи</th><th>Application fee</th><th>Стоимость / финансирование</th><th>Требования</th></tr></thead><tbody id="bolBody"></tbody></table></div>
     </section>
 
     <section class="page" id="p-contacts" aria-labelledby="h-contacts">
@@ -669,10 +680,10 @@ function openApp(id){
   openDrawer(a.uni,`${FLAG[a.country]||''} ${a.program}`,`
     <div class="dSec"><div class="ctrl"><label>Статус<select class="field" id="dStatus">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${st(a)===k?'selected':''}>${v}</option>`).join('')}</select></label><label>Приоритет<select class="field" id="dPrio">${['P1','P2','P3'].map(p=>`<option ${pr(a)===p?'selected':''}>${p}</option>`).join('')}</select></label></div>
       <div class="topActions mt">${a.link?`<a class="btn pri" href="${esc(a.link)}" target="_blank" rel="noopener">Официальная страница ↗</a>`:''}${a.emjm?`<button class="btn" data-pick="${a.id}" aria-pressed="${!!S.emPick[a.id]}">${S.emPick[a.id]?'В тройке Erasmus':'Добавить в тройку Erasmus'}</button>`:''}</div></div>
-    ${sec('Сроки',`<p><span class="tag ${dlClass(a)}">${esc(dlText(a))}</span></p>${a.deadlineTime?`<p class="small">${esc(a.deadlineTime)}${at?` = <b>${at}</b> по Астане`:''}</p>`:''}${evs.length?`<ul class="checks">${evs.map(e=>`<li><span class="num" style="min-width:64px">${fmt(e.date)}</span><span>${esc(e.title)}${e.time?` · ${esc(e.time)}`:''}</span></li>`).join('')}</ul>`:''}`)}
+    ${sec('Дедлайн подачи заявки',`<p><b>${esc(a.deadline?fmt(a.deadline):'Не подтверждён — уточнить')}</b> <span class="tag ${dlClass(a)}">${esc(dlText(a))}</span></p>${a.deadlineTime?`<p class="small">${esc(a.deadlineTime)}${at?` = <b>${at}</b> по Астане`:''}</p>`:''}${evs.length?`<ul class="checks">${evs.map(e=>`<li><span class="num" style="min-width:64px">${fmt(e.date)}</span><span>${esc(e.title)}${e.time?` · ${esc(e.time)}`:''}</span></li>`).join('')}</ul>`:''}`)}
     ${sec('Финансирование',`${coverHtml(a)}<p class="small mt" style="margin-top:8px">${esc(a.funding||'')}</p>`)}
     ${sec('Английский',`<p>${ieltsTag(a)}</p>${a.english?.note?`<p class="small muted">${esc(a.english.note)}</p>`:''}${!a.english?'<p class="small muted">Требование ещё не проверено по официальной странице.</p>':''}`)}
-    ${sec('Взнос за подачу',esc(a.fee||''))}
+    ${sec('Application fee · плата за подачу',esc(a.fee||'Не указано — уточнить'))}
     ${sec('Следующее действие',a.action?`<p>${esc(a.action)}</p>`:'')}
     ${sec('Риски',a.risk?`<p>${esc(a.risk)}</p>`:'')}
     ${sec('Заметки',(a.notes?`<p class="small">${esc(a.notes)}</p>`:'')+(pn?`<p class="small"><b>Личное:</b> ${esc(pn)}</p>`:''))}
@@ -730,17 +741,43 @@ function renderDocs(){
 document.addEventListener('click',e=>{const b=e.target.closest('[data-doc]');if(!b)return;S.docsStatus[b.dataset.doc]=b.dataset.v;save();renderDocs();});
 
 /* ---------- bolashak ---------- */
-const bolCountries=[...new Set(BASE.bolashak.map(b=>b.country))];let bolC=bolCountries[0],bolFav=false;
+const bolCountries=[...new Set(BASE.bolashak.map(b=>b.country))];let bolC=bolCountries[0],bolFav=false,bolUni='',bolSelected=null;
+const bolUniversity=b=>String(b.name||'').split(' — ')[0].trim();
+function bolFee(b){
+  if(b.application_fee)return b.application_fee;
+  const parts=String(b.fee||'').split('·').map(x=>x.trim());
+  const p=parts.find(x=>/(?:подача|application fee|uni-assist|сниженный взнос)/i.test(x));
+  if(!p||/подача напрямую$/i.test(p))return 'Не указано — уточнить';
+  return p.replace(/,\s*до\s+~?[^,]+$/i,'').replace(/;\s*иностранцам.*$/i,'');
+}
+function renderBolDetail(b){
+  if(!b){$('bolDetails').innerHTML='<p class="muted">Нет программ по выбранным фильтрам.</p>';return;}
+  const detail=(title,value)=>`<div><b>${esc(title)}</b><p class="small muted">${esc(value||'Не указано')}</p></div>`;
+  $('bolDetails').innerHTML=`<div class="bolHero"><div><span class="tag ${b.tier==='Reach'?'t-bad':b.tier==='Target'?'t-warn':'t-ok'}">${esc(b.tier)}</span><h2>${esc(b.name)}</h2><p class="muted">${esc(b.city||'')} · ${esc(b.rank||'Рейтинг не указан')}</p></div><button class="btn" data-fav="${esc(b.id)}" aria-pressed="${!!S.bolashakFavorites[b.id]}">${S.bolashakFavorites[b.id]?'★ В избранном':'☆ В избранное'}</button></div>
+  <div class="bolHighlights"><div class="bolHighlight"><span class="small muted">Дедлайн подачи заявки</span><strong>${esc(b.deadline||'Не подтверждён — уточнить')}</strong></div><div class="bolHighlight"><span class="small muted">Application fee · плата за подачу</span><strong>${esc(bolFee(b))}</strong></div></div>
+  <div class="bolDetailGrid">${detail('Стоимость обучения / финансирование',b.fee)}${detail('Требования',b.requirements)}${detail('Возможности AI / CS',b.opportunities)}${detail('Преподаватели',b.professors)}${detail('Направление в списке',b.list)}${detail('Проверка источника',b.verified)}${detail('Риски и примечания',b.risk)}</div>
+  <div class="topActions mt">${b.sheet?`<a class="btn pri" href="${esc(b.sheet)}" target="_blank" rel="noopener">Исходная таблица ↗</a>`:''}<a class="btn" href="https://bolashak.gov.kz/" target="_blank" rel="noopener">Правила Болашак ↗</a></div>`;
+}
 function renderBolashak(){
   const meta=BASE.meta||{};$('bolNote').textContent=`Справочная таблица (снимок ${fmt(meta.bolashakCaptured)}). Это не официальный перечень «Болашак» на 2027 год; требования и сроки сверяйте на сайтах вузов.`;
   $('bolTabs').innerHTML=bolCountries.map(c=>`<button class="chip" data-bc="${esc(c)}" aria-pressed="${c===bolC&&!bolFav}">${FLAG[c]||''} ${esc(c)} <span class="num">${BASE.bolashak.filter(b=>b.country===c).length}</span></button>`).join('');
   $('bFav').setAttribute('aria-pressed',bolFav);
   const q=$('bq').value.trim().toLowerCase(),t=$('bTier').value;
-  const rows=BASE.bolashak.filter(b=>(bolFav?S.bolashakFavorites[b.id]:b.country===bolC)&&(!t||b.tier===t)&&(!q||[b.name,b.city,b.requirements,b.opportunities].join(' ').toLowerCase().includes(q)));
-  $('bolBody').innerHTML=rows.length?rows.map(b=>`<tr><td><button class="fav" data-fav="${b.id}" aria-pressed="${!!S.bolashakFavorites[b.id]}" aria-label="В избранное">★</button></td><td><b>${esc(b.name)}</b><br><span class="muted">${esc(b.city||'')}${b.rank?' · '+esc(b.rank):''}</span>${b.opportunities?`<br><span class="small muted">${esc(b.opportunities)}</span>`:''}</td><td><span class="tag ${b.tier==='Reach'?'t-bad':b.tier==='Target'?'t-warn':'t-ok'}">${esc(b.tier)}</span></td><td class="small">${esc(b.requirements||'')}</td><td class="small">${esc(b.deadline||'')}<br><span class="muted">${esc(b.verified||'')}</span></td><td class="small">${esc(b.fee||'')}</td></tr>`).join(''):`<tr><td colspan="6"><div class="empty">${bolFav?'В избранном пока ничего нет.':'Ничего не найдено.'}</div></td></tr>`;
+  const scoped=BASE.bolashak.filter(b=>(bolFav?S.bolashakFavorites[b.id]:b.country===bolC)&&(!t||b.tier===t)&&(!q||[b.name,b.city,b.requirements,b.opportunities,b.deadline,b.fee].join(' ').toLowerCase().includes(q)));
+  const universities=[...new Set(scoped.map(bolUniversity))].sort((x,y)=>x.localeCompare(y));
+  if(!universities.includes(bolUni))bolUni='';
+  $('bolUni').innerHTML='<option value="">Все университеты</option>'+universities.map(u=>`<option value="${esc(u)}" ${u===bolUni?'selected':''}>${esc(u)}</option>`).join('');
+  const rows=scoped.filter(b=>!bolUni||bolUniversity(b)===bolUni);
+  if(!rows.some(b=>b.id===bolSelected))bolSelected=rows[0]?.id||null;
+  renderBolDetail(rows.find(b=>b.id===bolSelected));
+  $('bolCount').textContent=rows.length+' программ';
+  $('bolBody').innerHTML=rows.length?rows.map(b=>`<tr data-bolrow="${esc(b.id)}" tabindex="0" class="${b.id===bolSelected?'bolSelected':''}" aria-label="Подробнее: ${esc(b.name)}"><td><button class="fav" data-fav="${esc(b.id)}" aria-pressed="${!!S.bolashakFavorites[b.id]}" aria-label="В избранное">★</button></td><td><b>${esc(b.name)}</b><br><span class="muted">${esc(b.city||'')}${b.rank?' · '+esc(b.rank):''}</span></td><td><span class="tag ${b.tier==='Reach'?'t-bad':b.tier==='Target'?'t-warn':'t-ok'}">${esc(b.tier)}</span></td><td class="small">${esc(b.deadline||'Уточнить')}<br><span class="muted">${esc(b.verified||'')}</span></td><td class="small">${esc(bolFee(b))}</td><td class="small">${esc(b.fee||'Уточнить')}</td><td class="small">${esc(b.requirements||'')}</td></tr>`).join(''):`<tr><td colspan="7"><div class="empty">Ничего не найдено.</div></td></tr>`;
 }
-document.addEventListener('click',e=>{const b=e.target.closest('[data-bc]');if(b){bolC=b.dataset.bc;bolFav=false;renderBolashak();}const f=e.target.closest('[data-fav]');if(f){S.bolashakFavorites[f.dataset.fav]=!S.bolashakFavorites[f.dataset.fav];save();renderBolashak();}});
-$('bq').addEventListener('input',renderBolashak);$('bTier').addEventListener('change',renderBolashak);$('bFav').addEventListener('click',()=>{bolFav=!bolFav;renderBolashak();});
+function chooseBolRow(id){bolSelected=id;renderBolashak();$('bolDetails').scrollIntoView({block:'start',behavior:'smooth'});}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-bc]');if(b){bolC=b.dataset.bc;bolFav=false;bolUni='';bolSelected=null;renderBolashak();}const f=e.target.closest('[data-fav]');if(f){S.bolashakFavorites[f.dataset.fav]=!S.bolashakFavorites[f.dataset.fav];save();renderBolashak();return;}const row=e.target.closest('[data-bolrow]');if(row)chooseBolRow(row.dataset.bolrow);});
+document.addEventListener('keydown',e=>{if(e.target.matches('[data-bolrow]')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();chooseBolRow(e.target.dataset.bolrow);}});
+$('bolUni').addEventListener('change',e=>{bolUni=e.target.value;bolSelected=null;renderBolashak();});
+$('bq').addEventListener('input',renderBolashak);$('bTier').addEventListener('change',renderBolashak);$('bFav').addEventListener('click',()=>{bolFav=!bolFav;bolUni='';bolSelected=null;renderBolashak();});
 
 /* ---------- contacts ---------- */
 const PROF_ST={Researching:'Изучаю','Waiting reply':'Жду ответа','Recommendation agreed':'Согласен на рекомендацию',Declined:'Отказ'};
