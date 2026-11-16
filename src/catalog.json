@@ -218,7 +218,7 @@
    "target": "2026-12-27",
    "english": {
     "ielts": 6.5,
-    "minBand": 6.0,
+    "minBand": 6,
     "moi": false,
     "note": "Только IELTS/TOEFL, online-версии не принимаются",
     "src": "official"
@@ -679,7 +679,7 @@
    "evidence": "Проверить 2027 rules",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "moi": false,
     "note": "Сертификат не старше 3 лет, досылать нельзя",
     "src": "official"
@@ -754,7 +754,7 @@
    "evidence": "Дата по прежнему shortlist",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "moi": true,
     "note": "C1; англоязычный диплом признанного вуза принимается",
     "src": "official"
@@ -936,7 +936,7 @@
    "english": {
     "ielts": 6.5,
     "writing": 6.5,
-    "minBand": 6.0,
+    "minBand": 6,
     "moi": false,
     "note": "Writing/Speaking ≥ 6.5",
     "src": "snapshot"
@@ -1068,7 +1068,7 @@
    "track": "Artificial Intelligence",
    "degree": "MSc",
    "priority": "P2",
-   "status": "Researching",
+   "status": "Submitted",
    "deadline": "2027-01-01",
    "deadlineKind": "official",
    "deadlineTime": "",
@@ -1076,9 +1076,9 @@
    "fund": "potential",
    "funding": "Обучение £41 400/год; merit-стипендии частичные",
    "link": "https://www.manchester.ac.uk/study/masters/courses/list/21574/msc-artificial-intelligence/",
-   "action": "Сверить IELTS 7.0 / все секции 6.5 и scholarship rules.",
+   "action": "Ожидать решение первого раунда; подготовить новый IELTS и проверить варианты финансирования.",
    "risk": "",
-   "notes": "Stage 2 — 01.01.2027, Stage 3 — 26.02.2027, Stage 4 — 21.05.2027.",
+   "notes": "Заявка подана в первом раунде (2027/28), статус в портале: Submitted. Stage 2 — 01.01.2027, Stage 3 — 26.02.2027, Stage 4 — 21.05.2027.",
    "topics": [
     "AI",
     "ML",
@@ -1088,7 +1088,7 @@
    "evidence": "Ранее изучено",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "minBand": 6.5,
     "moi": null,
     "note": "",
@@ -1375,7 +1375,7 @@
    "target": "2026-12-20",
    "english": {
     "ielts": 6.5,
-    "writing": 6.0,
+    "writing": 6,
     "moi": false,
     "note": "IELTS Online и UKVI принимаются; тест не раньше 01.12.2024",
     "src": "official"
