@@ -1354,6 +1354,81 @@
    },
    "emjm": true,
    "verified": "2026-11-16"
+  },
+  {
+   "id": "vilniustech",
+   "uni": "VILNIUS TECH",
+   "program": "MSc Engineering of Artificial Intelligence (запасной: Data Science and Statistics)",
+   "region": "Europe",
+   "country": "Литва",
+   "track": "AI / Data Science",
+   "degree": "MSc",
+   "priority": "P2",
+   "status": "Researching",
+   "deadline": "2027-04-20",
+   "deadlineKind": "provisional",
+   "deadlineTime": "",
+   "fee": "€100 взнос за заявку; €200 регистрационный сбор после зачисления",
+   "fund": "tuition",
+   "funding": "Tuition-free scholarship VILNIUS TECH (100% обучения; есть частичные 50%/25%) + отдельно госстипендия Литвы 592 €/мес (карточка «Госстипендия Литвы»)",
+   "link": "https://vilniustech.lt/en/scholarships",
+   "action": "Подать заявку на apply.vilniustech.lt (окно откроется ~в январе), дополнительно выбрать «Master scholarship» и приложить мотивационное письмо до ~20 апреля.",
+   "risk": "Нет в списке «Болашака». Стипендия требует ≥80% от максимального GPA (у вас 3.45/4 = 86%), но в условиях сказано «completed Bachelor's» — уточнить, примут ли транскрипт до диплома. Документы нужно легализовать (апостиль).",
+   "notes": "Обучение для не-ЕС: 6 450 €/год (Engineering of AI, 2 года, Master of Informatics Sciences, старт 1 сентября). Нужен бакалавриат в IT/CS. Стипендия за успеваемость: мотивационное письмо 1000–4000 знаков; в прошлом цикле было 30 мест, дедлайн 20.04.2026. Общий дедлайн подачи для не-ЕС — 15 июня (по циклу 2025/26). Data Science and Statistics (Master of Mathematical Sciences): ML, нейросети, Big Data, R/Python. В Литве также Vilnius University: 5 освобождений от оплаты + госстипендия.",
+   "topics": [
+    "AI",
+    "ML",
+    "DS",
+    "Big Data"
+   ],
+   "evidence": "Официальные страницы VILNIUS TECH 2026/27 + studyin.lt; даты 2027 по прошлому циклу",
+   "target": "2027-04-10",
+   "cover": {
+    "tuition": "yes",
+    "living": "partial"
+   },
+   "emjm": false,
+   "verified": "2026-11-18",
+   "english": {
+    "ielts": 6.0,
+    "moi": true,
+    "note": "B2: IELTS 6.0 / TOEFL 70, не старше 3 лет. Если бакалавриат на английском — сертификат не нужен (так в списке документов VILNIUS TECH; для магистратуры подтвердить).",
+    "src": "secondary"
+   }
+  },
+  {
+   "id": "ltstate",
+   "uni": "Госстипендия Литвы",
+   "program": "Lithuanian State Scholarship — магистратура (Education Exchanges Support Foundation)",
+   "region": "Scholarships",
+   "country": "Литва",
+   "track": "Любая магистратура в Литве",
+   "degree": "Scholarship",
+   "priority": "P2",
+   "status": "Researching",
+   "deadline": null,
+   "deadlineKind": "unconfirmed",
+   "deadlineTime": "",
+   "fee": "Бесплатно",
+   "fund": "partial",
+   "funding": "592 €/мес (8 базовых социальных сумм, 2026) + грант на обучение в пределах нормативной стоимости",
+   "link": "https://studyin.lt/scholarship/scholarships-for-full-time-master-degree-studies/",
+   "action": "После письма о зачислении (или предварительного) в литовский вуз подать отдельную заявку на госстипендию.",
+   "risk": "Не больше 10 стипендий на страну (всего 70). Нормативная стоимость может быть ниже платы VILNIUS TECH — разницу закрывает только стипендия вуза.",
+   "notes": "Казахстан в списке стран. Конкурс 2027 ещё не объявлен; в 2026 приём закрылся около 20 апреля (по данным агрегатора). Нужно письмо о зачислении или предварительном зачислении. Вместе с бесплатным обучением VILNIUS TECH даёт почти полное покрытие: жизнь в Вильнюсе ~500–750 €/мес.",
+   "topics": [
+    "AI",
+    "DS",
+    "CS"
+   ],
+   "evidence": "studyin.lt (2026), Vilnius University",
+   "target": null,
+   "cover": {
+    "tuition": "partial",
+    "living": "yes"
+   },
+   "emjm": false,
+   "verified": "2026-11-18"
   }
  ],
  "profile": {},
@@ -1930,6 +2005,36 @@
    "time": "",
    "app": "kaist",
    "note": ""
+  },
+  {
+   "id": "c-vt-open",
+   "date": "2027-01-05",
+   "title": "VILNIUS TECH — открытие приёма 2027/28 (ориентир)",
+   "type": "opening",
+   "confidence": "provisional",
+   "time": "",
+   "app": "vilniustech",
+   "note": "В прошлом цикле приём открылся 5 января."
+  },
+  {
+   "id": "c-lt-state",
+   "date": "2027-04-20",
+   "title": "Госстипендия Литвы — ожидаемый дедлайн",
+   "type": "deadline",
+   "confidence": "provisional",
+   "time": "",
+   "app": "ltstate",
+   "note": "По циклу 2026; нужен pre-acceptance от вуза."
+  },
+  {
+   "id": "c-vt-final",
+   "date": "2027-06-15",
+   "title": "VILNIUS TECH — общий дедлайн для не-ЕС (без стипендии)",
+   "type": "milestone",
+   "confidence": "provisional",
+   "time": "",
+   "app": "vilniustech",
+   "note": "По циклу 2025/26."
   }
  ],
  "tasks": [
@@ -2261,6 +2366,46 @@
    "category": "Язык",
    "priority": "P1",
    "detail": "Цель: ≥6.5 и каждая секция ≥6.0 (EDISS), Writing ≥6.0 (CoDaS). После результата — внести балл в «Профиль».",
+   "done": false
+  },
+  {
+   "id": "vt-email",
+   "title": "VILNIUS TECH: уточнить у приёмной комиссии про стипендию без диплома и справку о языке обучения",
+   "app": "vilniustech",
+   "due": "2026-12-15",
+   "category": "Декабрь",
+   "priority": "P2",
+   "detail": "Примут ли транскрипт выпускного курса для tuition-free scholarship и справку AITU о языке обучения вместо IELTS.",
+   "done": false
+  },
+  {
+   "id": "vt-apostille",
+   "title": "Литва: узнать порядок апостиля транскрипта и диплома",
+   "app": "vilniustech",
+   "due": "2027-01-31",
+   "category": "Январь",
+   "priority": "P2",
+   "detail": "VILNIUS TECH требует легализацию документов об образовании.",
+   "done": false
+  },
+  {
+   "id": "vt-apply",
+   "title": "VILNIUS TECH: подать заявку + отметить «Master scholarship» + мотивационное письмо",
+   "app": "vilniustech",
+   "due": "2027-04-10",
+   "category": "Подача",
+   "priority": "P2",
+   "detail": "Взнос €100. Письмо 1000–4000 знаков. Дедлайн стипендии ~20 апреля.",
+   "done": false
+  },
+  {
+   "id": "lt-state-apply",
+   "title": "Литва: подать на госстипендию после pre-acceptance",
+   "app": "ltstate",
+   "due": "2027-04-15",
+   "category": "Подача",
+   "priority": "P2",
+   "detail": "Отдельная заявка; лимит 10 мест на Казахстан.",
    "done": false
   }
  ],
@@ -4386,7 +4531,7 @@
   "sourceProfileMismatch": true,
   "verifiedEitDate": "2026-11-13",
   "dashboardRelease": "v11",
-  "dataVerified": "2026-11-16",
+  "dataVerified": "2026-11-18",
   "note": "Публичный каталог. Личные данные — только в браузере (localStorage) и в личном JSON-файле."
  },
  "erasmus": [
