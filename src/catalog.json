@@ -218,7 +218,7 @@
    "target": "2026-12-27",
    "english": {
     "ielts": 6.5,
-    "minBand": 6.0,
+    "minBand": 6,
     "moi": false,
     "note": "Только IELTS/TOEFL, online-версии не принимаются",
     "src": "official"
@@ -691,7 +691,7 @@
    "evidence": "Проверить 2027 rules",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "moi": false,
     "note": "Сертификат не старше 3 лет, досылать нельзя",
     "src": "official"
@@ -738,7 +738,7 @@
    "emjm": false,
    "verified": "2026-11-16",
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "moi": null,
     "note": "C1 (IELTS 7 — по вторичным источникам)",
     "src": "secondary"
@@ -772,7 +772,7 @@
    "evidence": "Дата по прежнему shortlist",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "moi": true,
     "note": "C1; англоязычный диплом признанного вуза принимается",
     "src": "official"
@@ -885,7 +885,7 @@
    "english": {
     "ielts": 6.5,
     "writing": 6.5,
-    "minBand": 6.0,
+    "minBand": 6,
     "moi": false,
     "note": "Writing/Speaking ≥ 6.5",
     "src": "snapshot"
@@ -956,7 +956,7 @@
    "fee": "€30 за заявку в MoveIN (по вторичным данным)",
    "fund": "potential",
    "funding": "Lazio DiSCo региональная стипендия по семейным финансам",
-   "link": "https://www.uniroma1.it/en/https%3A//www.uniroma1.it/en/admissions",
+   "link": "https://www.uniroma1.it/en/admissions",
    "action": "Проверить 2027 dates и admission requirements.",
    "risk": "",
    "notes": "Для визы нужен pre-acceptance через MoveIN. В 2026: открытие 22.12.2025, дедлайн для non-EU 15.05.2026. Даты 2027/28 не опубликованы.",
@@ -1037,7 +1037,7 @@
    "evidence": "Ранее изучено",
    "target": null,
    "english": {
-    "ielts": 7.0,
+    "ielts": 7,
     "minBand": 6.5,
     "moi": null,
     "note": "",
@@ -1085,8 +1085,8 @@
    "emjm": false,
    "verified": "2026-11-16",
    "english": {
-    "ielts": 7.0,
-    "minBand": 6.0,
+    "ielts": 7,
+    "minBand": 6,
     "moi": null,
     "note": "7.0; 6.5 в трёх секциях и не ниже 6.0 в одной; One Skill Retake не принимается",
     "src": "official"
@@ -1303,7 +1303,7 @@
    "target": "2026-12-20",
    "english": {
     "ielts": 6.5,
-    "writing": 6.0,
+    "writing": 6,
     "moi": false,
     "note": "IELTS Online и UKVI принимаются; тест не раньше 01.12.2024",
     "src": "official"
@@ -1373,7 +1373,7 @@
    "funding": "Tuition-free scholarship VILNIUS TECH (100% обучения; есть частичные 50%/25%) + отдельно госстипендия Литвы 592 €/мес (карточка «Госстипендия Литвы»)",
    "link": "https://vilniustech.lt/en/scholarships",
    "action": "Подать заявку на apply.vilniustech.lt (окно откроется ~в январе), дополнительно выбрать «Master scholarship» и приложить мотивационное письмо до ~20 апреля.",
-   "risk": "Нет в списке «Болашака». Стипендия требует ≥80% от максимального GPA (у вас 3.45/4 = 86%), но в условиях сказано «completed Bachelor's» — уточнить, примут ли транскрипт до диплома. Документы нужно легализовать (апостиль).",
+   "risk": "Нет в списке «Болашака». Стипендия требует ≥80% от максимального GPA, но в условиях сказано «completed Bachelor's» — уточнить, примут ли транскрипт до диплома. Документы нужно легализовать (апостиль).",
    "notes": "Обучение для не-ЕС: 6 450 €/год (Engineering of AI, 2 года, Master of Informatics Sciences, старт 1 сентября). Нужен бакалавриат в IT/CS. Стипендия за успеваемость: мотивационное письмо 1000–4000 знаков; в прошлом цикле было 30 мест, дедлайн 20.04.2026. Общий дедлайн подачи для не-ЕС — 15 июня (по циклу 2025/26). Data Science and Statistics (Master of Mathematical Sciences): ML, нейросети, Big Data, R/Python. В Литве также Vilnius University: 5 освобождений от оплаты + госстипендия.",
    "topics": [
     "AI",
@@ -1390,7 +1390,7 @@
    "emjm": false,
    "verified": "2026-11-18",
    "english": {
-    "ielts": 6.0,
+    "ielts": 6,
     "moi": true,
     "note": "B2: IELTS 6.0 / TOEFL 70, не старше 3 лет. Если бакалавриат на английском — сертификат не нужен (так в списке документов VILNIUS TECH; для магистратуры подтвердить).",
     "src": "secondary"
