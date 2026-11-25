@@ -898,49 +898,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "emai",
-      "uni": "EMAI Erasmus Mundus",
-      "program": "Master in Artificial Intelligence",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Artificial Intelligence",
-      "degree": "EMJM",
-      "priority": "P2",
-      "status": "Hold",
-      "deadline": "2027-06-05",
-      "deadlineKind": "official",
-      "deadlineTime": "23:59 CEST",
-      "fee": "Self-funded; размер подачи уточнить",
-      "fund": "unfunded",
-      "funding": "Опубликован только self-funded раунд на 2027–29; full grant не подтверждён",
-      "link": "https://www.upf.edu/web/emai/access-admission",
-      "action": "Возобновлять только при появлении funded round.",
-      "risk": "Academic fit сильный, но без подтверждённой full scholarship финансирование не соответствует цели.",
-      "notes": "",
-      "topics": [
-        "AI",
-        "ML",
-        "NLP",
-        "CV",
-        "DL"
-      ],
-      "evidence": "Нужно проверить financing",
-      "target": null,
-      "english": {
-        "ielts": 6.5,
-        "minBand": 6.5,
-        "moi": false,
-        "note": "",
-        "src": "snapshot"
-      },
-      "cover": {
-        "tuition": "?",
-        "living": "?"
-      },
-      "emjm": true,
-      "verified": "2026-11-13"
-    },
-    {
       "id": "sapienza",
       "uni": "Sapienza University of Rome",
       "program": "MSc Artificial Intelligence and Robotics",
@@ -1995,16 +1952,6 @@
       "note": "Рефери отправляют сами."
     },
     {
-      "id": "c-emai",
-      "date": "2027-06-05",
-      "title": "EMAI — self-funded international round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "23:59 CEST",
-      "app": "emai",
-      "note": "Это НЕ confirmed Erasmus grant deadline."
-    },
-    {
       "id": "kaust-dl",
       "date": "2027-01-03",
       "title": "KAUST — Fall 2027 MS",
@@ -2474,16 +2421,6 @@
       "category": "Подача",
       "priority": "P1",
       "detail": "Одна заявка в год. Fellowship рассматривается автоматически.",
-      "done": false
-    },
-    {
-      "id": "vt-email",
-      "title": "VILNIUS TECH: уточнить у приёмной комиссии про стипендию без диплома и справку о языке обучения",
-      "app": "vilniustech",
-      "due": "2026-12-15",
-      "category": "Декабрь",
-      "priority": "P2",
-      "detail": "Примут ли транскрипт выпускного курса для tuition-free scholarship и справку AITU о языке обучения вместо IELTS.",
       "done": false
     },
     {
@@ -4639,7 +4576,7 @@
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
     "dashboardRelease": "v11",
-    "dataVerified": "2026-11-22",
+    "dataVerified": "2026-11-26",
     "note": "Публичный каталог. Личные данные — только в браузере (localStorage) и в личном JSON-файле."
   },
   "erasmus": [
@@ -4879,38 +4816,6 @@
       ],
       "url": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
       "emjm": false,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "emai",
-      "name": "EMAI",
-      "full": "Erasmus Mundus Master in Artificial Intelligence",
-      "label": "ML + NLP + CV",
-      "deadline": "2027-06-05",
-      "time": "23:59 CEST",
-      "confidence": "official",
-      "secondary": "Только self-funded international round на 2027/29",
-      "fee": "Application fee уточнить; возможна tuition",
-      "priority": "P3",
-      "chance": "Сильный academic fit, но нет подтверждённой full scholarship",
-      "fund": "Грантовый call 2027 пока не подтверждён",
-      "language": "IELTS Academic ≥6.5 во всех секциях",
-      "eligibility": "Оценка bachelor/ECTS по математике, CS и программированию; условная подача возможна.",
-      "docs": [
-        "Transcript, grading scale, ECTS audit",
-        "CV ≤2 страницы",
-        "Motivation Letter 600–800 слов",
-        "Паспорт",
-        "IELTS",
-        "Рекомендательное письмо",
-        "Student Supplement Questionnaire",
-        "Справка об ожидаемом выпуске"
-      ],
-      "warnings": [
-        "5 июня — дедлайн SELF-FUNDED, не подтверждённый Erasmus scholarship round."
-      ],
-      "url": "https://www.upf.edu/web/emai/access-admission",
-      "emjm": true,
       "verified": "2026-11-16"
     }
   ]
