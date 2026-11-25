@@ -231,47 +231,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "ipcv",
-      "uni": "IPCVAI Erasmus Mundus",
-      "program": "Artificial Intelligence for Image Processing & Computer Vision",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Computer Vision / Deep Learning",
-      "degree": "EMJM",
-      "priority": "P1",
-      "status": "Researching",
-      "deadline": "2027-02-02",
-      "deadlineKind": "official",
-      "deadlineTime": "12:00 Paris",
-      "fee": "€0 по пути Erasmus Mundus; сверить в форме",
-      "fund": "full",
-      "funding": "Erasmus Mundus scholarship €1,400/мес и tuition — конкурс",
-      "link": "https://ipcv.eu/application-and-selection/apply-now/",
-      "action": "Europass CV, motivation ≤1000 слов, транскрипты, фото; рекомендации/видео на втором этапе.",
-      "risk": "IELTS 6.5 или подтверждённый MOI. Для выпускного курса диплом до начала обучения.",
-      "notes": "Окно 01.11.2026–02.02.2027. Видео и 2 письма — только на втором этапе.",
-      "topics": [
-        "CV",
-        "DL",
-        "AI",
-        "ML"
-      ],
-      "evidence": "Официальный IPCVAI call 2027–29",
-      "target": "2027-01-24",
-      "english": {
-        "ielts": 6.5,
-        "moi": true,
-        "note": "«English certificate or official university statement»",
-        "src": "official"
-      },
-      "cover": {
-        "tuition": "yes",
-        "living": "yes"
-      },
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
       "id": "aiss",
       "uni": "AISS Erasmus Mundus",
       "program": "Artificial Intelligence for Sustainable Societies",
@@ -898,49 +857,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "emai",
-      "uni": "EMAI Erasmus Mundus",
-      "program": "Master in Artificial Intelligence",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Artificial Intelligence",
-      "degree": "EMJM",
-      "priority": "P2",
-      "status": "Hold",
-      "deadline": "2027-06-05",
-      "deadlineKind": "official",
-      "deadlineTime": "23:59 CEST",
-      "fee": "Self-funded; размер подачи уточнить",
-      "fund": "unfunded",
-      "funding": "Опубликован только self-funded раунд на 2027–29; full grant не подтверждён",
-      "link": "https://www.upf.edu/web/emai/access-admission",
-      "action": "Возобновлять только при появлении funded round.",
-      "risk": "Academic fit сильный, но без подтверждённой full scholarship финансирование не соответствует цели.",
-      "notes": "",
-      "topics": [
-        "AI",
-        "ML",
-        "NLP",
-        "CV",
-        "DL"
-      ],
-      "evidence": "Нужно проверить financing",
-      "target": null,
-      "english": {
-        "ielts": 6.5,
-        "minBand": 6.5,
-        "moi": false,
-        "note": "",
-        "src": "snapshot"
-      },
-      "cover": {
-        "tuition": "?",
-        "living": "?"
-      },
-      "emjm": true,
-      "verified": "2026-11-13"
-    },
-    {
       "id": "sapienza",
       "uni": "Sapienza University of Rome",
       "program": "MSc Artificial Intelligence and Robotics",
@@ -1306,46 +1222,6 @@
         "writing": 6,
         "moi": false,
         "note": "IELTS Online и UKVI принимаются; тест не раньше 01.12.2024",
-        "src": "official"
-      },
-      "cover": {
-        "tuition": "yes",
-        "living": "yes"
-      },
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "intermaths",
-      "uni": "InterMaths Erasmus Mundus",
-      "program": "MSc Interdisciplinary Mathematics (MathMods / RealMaths network)",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Applied Mathematics / Optimization",
-      "degree": "EMJM",
-      "priority": "P2",
-      "status": "Researching",
-      "deadline": "2027-02-17",
-      "deadlineKind": "official",
-      "deadlineTime": "13:00 CET",
-      "fee": "€0",
-      "fund": "full",
-      "funding": "18 EMJM-стипендий по €1 400/мес.; участие €18 000 за 2 года, для стипендиатов — бесплатно",
-      "link": "https://www.intermaths.eu/apply",
-      "action": "Проверить количество math credits и заполнить специальный шаблон математических курсов; рефери до 3 марта.",
-      "risk": "Может не хватать углублённых mathematical analysis/differential equations. Нельзя считать автоматически подходящим CS bachelor.",
-      "notes": "Письма до 03.03.2027 13:00 CET. Нужна выписка математических курсов.",
-      "topics": [
-        "ML",
-        "Maths",
-        "Optimization"
-      ],
-      "evidence": "Официальный InterMaths 2027 call",
-      "target": "2027-02-05",
-      "english": {
-        "ielts": null,
-        "moi": true,
-        "note": "B2; MOI принимается при ≥1 года на английском; сертификат не старше 4 лет",
         "src": "official"
       },
       "cover": {
@@ -1776,14 +1652,6 @@
       "note": "Подготовить 2-минутное видео."
     },
     {
-      "id": "ipcvEuropass",
-      "name": "IPCVAI Europass CV",
-      "group": "Специальные",
-      "status": "missing",
-      "where": "",
-      "note": "Плюс motivation letter ≤1000 слов."
-    },
-    {
       "id": "fundFamily",
       "name": "Финансовые документы семьи для DSU / ER.GO / EDISU",
       "group": "Стипендии",
@@ -1895,16 +1763,6 @@
       "note": "€30, все файлы до дедлайна."
     },
     {
-      "id": "c-ipcv",
-      "date": "2027-02-02",
-      "title": "IPCVAI — Erasmus grant call",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "12:00 Paris",
-      "app": "ipcv",
-      "note": "CV Europass, letter, transcript, etc."
-    },
-    {
       "id": "c-aiss",
       "date": "2027-02-02",
       "title": "AISS — final application deadline",
@@ -1973,36 +1831,6 @@
       "time": "23:59 CET",
       "app": "eit",
       "note": "€75, полноценная стипендия для Казахстана не подтверждена."
-    },
-    {
-      "id": "c-intermaths",
-      "date": "2027-02-17",
-      "title": "InterMaths — full scholarship application",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "13:00 CET",
-      "app": "intermaths",
-      "note": "Бесплатная подача, 18 грантов, важен math audit."
-    },
-    {
-      "id": "c-intermaths-ref",
-      "date": "2027-03-03",
-      "title": "InterMaths — рекомендации",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "13:00 CET",
-      "app": "intermaths",
-      "note": "Рефери отправляют сами."
-    },
-    {
-      "id": "c-emai",
-      "date": "2027-06-05",
-      "title": "EMAI — self-funded international round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "23:59 CEST",
-      "app": "emai",
-      "note": "Это НЕ confirmed Erasmus grant deadline."
     },
     {
       "id": "kaust-dl",
@@ -2317,16 +2145,6 @@
       "done": false
     },
     {
-      "id": "ipcv-start",
-      "title": "IPCVAI: Europass CV и Motivation Letter",
-      "app": "ipcv",
-      "due": "2026-12-20",
-      "category": "Декабрь",
-      "priority": "P2",
-      "detail": "По этапам; видео и 2 LOR только при отборе в этап 2.",
-      "done": false
-    },
-    {
       "id": "pisa-start",
       "title": "Pisa: собрать PDF и проверить B2 / 180 ECTS",
       "app": "pisa",
@@ -2437,16 +2255,6 @@
       "done": false
     },
     {
-      "id": "intermath-audit",
-      "title": "InterMaths: проверить ECTS math и официальный шаблон курсов",
-      "app": "intermaths",
-      "due": "2026-12-28",
-      "category": "Декабрь",
-      "priority": "P2",
-      "detail": "Проверить Analysis, Linear Algebra, Calculus, Differential Equations и Probability.",
-      "done": false
-    },
-    {
       "id": "deai-reference-hindex",
       "title": "DEAI: проверить h-index и персональные страницы рекомендателей",
       "app": "deai",
@@ -2457,16 +2265,6 @@
       "done": false
     },
     {
-      "id": "em-three",
-      "title": "Выбрать не более 3 программ Erasmus Mundus",
-      "app": "deai",
-      "due": "2026-11-25",
-      "category": "Стратегия",
-      "priority": "P1",
-      "detail": "Кандидаты: CoDaS, DEAI, EDISS, IPCVAI, AISS, InterMaths. Либо письменно уточнить у DEAI, действует ли декларация.",
-      "done": false
-    },
-    {
       "id": "kaust-apply",
       "title": "KAUST: выбрать программу и подать до 3 января",
       "app": "kaust",
@@ -2474,16 +2272,6 @@
       "category": "Подача",
       "priority": "P1",
       "detail": "Одна заявка в год. Fellowship рассматривается автоматически.",
-      "done": false
-    },
-    {
-      "id": "vt-email",
-      "title": "VILNIUS TECH: уточнить у приёмной комиссии про стипендию без диплома и справку о языке обучения",
-      "app": "vilniustech",
-      "due": "2026-12-15",
-      "category": "Декабрь",
-      "priority": "P2",
-      "detail": "Примут ли транскрипт выпускного курса для tuition-free scholarship и справку AITU о языке обучения вместо IELTS.",
       "done": false
     },
     {
@@ -4639,7 +4427,7 @@
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
     "dashboardRelease": "v11",
-    "dataVerified": "2026-11-22",
+    "dataVerified": "2026-11-26",
     "note": "Публичный каталог. Личные данные — только в браузере (localStorage) и в личном JSON-файле."
   },
   "erasmus": [
@@ -4748,40 +4536,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "ipcv",
-      "name": "IPCVAI",
-      "full": "Artificial Intelligence for Image Processing & Computer Vision",
-      "label": "Computer Vision + Deep Learning",
-      "deadline": "2027-02-02",
-      "time": "12:00 Paris",
-      "confidence": "official",
-      "secondary": "Второй этап — видео и два рекомендателя по запросу",
-      "fee": "€0 (EMJM route; проверить форму)",
-      "priority": "P1",
-      "chance": "Хорошее академическое совпадение; профильного CV-исследования пока меньше",
-      "fund": "Erasmus Mundus €1,400/мес. и tuition — конкурс",
-      "language": "B2, пример IELTS overall ≥6.5; MOI при полностью англоязычном бакалавриате",
-      "eligibility": "CS / Engineering / Mathematics / Physics, 180 ECTS или эквивалент; диплом до старта 2027.",
-      "docs": [
-        "Europass CV",
-        "Транскрипты и оригиналы/переводы",
-        "Справка о будущем выпуске (если ещё нет диплома)",
-        "Motivation Letter ≤1000 слов",
-        "IELTS или официальный MOI",
-        "Фото паспортного формата",
-        "Паспорт",
-        "После shortlist: мотивационное видео",
-        "После shortlist: 2 рекомендательных письма"
-      ],
-      "warnings": [
-        "После финального Submit правки могут быть невозможны.",
-        "Информация FAQ об отдельных дедлайнах иногда относится к прошлому набору — основной 2027 подтверждён на Apply Now."
-      ],
-      "url": "https://ipcv.eu/application-and-selection/apply-now/",
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
       "id": "aiss",
       "name": "AISS",
       "full": "Artificial Intelligence for Sustainable Societies",
@@ -4811,39 +4565,6 @@
         "Self-Funding Plan нужен даже при намерении участвовать в конкурсе на грант."
       ],
       "url": "https://aissprogram.eu/how-to-apply/",
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "intermaths",
-      "name": "InterMaths",
-      "full": "Interdisciplinary Mathematics",
-      "label": "Applied Mathematics",
-      "deadline": "2027-02-17",
-      "time": "13:00 CET",
-      "confidence": "official",
-      "secondary": "Рекомендации до 03.03.2027",
-      "fee": "€0",
-      "priority": "P2",
-      "chance": "Условно: зависит от реальных ECTS по математике",
-      "fund": "18 EMJM grants (2027), €1,400/мес., tuition waiver",
-      "language": "B2 / IELTS или подходящая справка о языке обучения по правилам",
-      "eligibility": "CS допустим при достаточной подготовке по Calculus, Analysis, Linear Algebra, Differential Equations, Probability.",
-      "docs": [
-        "CV (желательно Europass)",
-        "Официальный транскрипт и диплом/справка о выпуске",
-        "Особый шаблон описания математических дисциплин",
-        "Letter of Intent (не более 1 страницы)",
-        "2 рекомендации через портал",
-        "Подтверждение B2 / MOI",
-        "Паспорт и фото",
-        "Подписанное заявление PDF загрузить обратно"
-      ],
-      "warnings": [
-        "18 грантов — на весь конкурс, не персональная квота.",
-        "Math eligibility нельзя оценить только по GPA."
-      ],
-      "url": "https://www.intermaths.eu/apply",
       "emjm": true,
       "verified": "2026-11-16"
     },
@@ -4879,38 +4600,6 @@
       ],
       "url": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
       "emjm": false,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "emai",
-      "name": "EMAI",
-      "full": "Erasmus Mundus Master in Artificial Intelligence",
-      "label": "ML + NLP + CV",
-      "deadline": "2027-06-05",
-      "time": "23:59 CEST",
-      "confidence": "official",
-      "secondary": "Только self-funded international round на 2027/29",
-      "fee": "Application fee уточнить; возможна tuition",
-      "priority": "P3",
-      "chance": "Сильный academic fit, но нет подтверждённой full scholarship",
-      "fund": "Грантовый call 2027 пока не подтверждён",
-      "language": "IELTS Academic ≥6.5 во всех секциях",
-      "eligibility": "Оценка bachelor/ECTS по математике, CS и программированию; условная подача возможна.",
-      "docs": [
-        "Transcript, grading scale, ECTS audit",
-        "CV ≤2 страницы",
-        "Motivation Letter 600–800 слов",
-        "Паспорт",
-        "IELTS",
-        "Рекомендательное письмо",
-        "Student Supplement Questionnaire",
-        "Справка об ожидаемом выпуске"
-      ],
-      "warnings": [
-        "5 июня — дедлайн SELF-FUNDED, не подтверждённый Erasmus scholarship round."
-      ],
-      "url": "https://www.upf.edu/web/emai/access-admission",
-      "emjm": true,
       "verified": "2026-11-16"
     }
   ]
