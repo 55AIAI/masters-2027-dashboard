@@ -774,49 +774,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "eit",
-      "uni": "28DIGITAL / EIT Digital Master School",
-      "program": "Artificial Intelligence with Affective Computing (AIAC)",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Affective Computing / AI",
-      "degree": "MSc",
-      "priority": "P3",
-      "status": "Hold",
-      "deadline": "2027-01-31",
-      "deadlineKind": "official",
-      "deadlineTime": "23:59 CET",
-      "fee": "€75 · €250 при offer · €18 000/год (non-EU; до waiver)",
-      "fund": "tuition",
-      "funding": "Стипендии 28DIGITAL — только для граждан ЕС/ЕЭЗ и стран, ассоциированных с Digital Europe; для Казахстана не подходят",
-      "link": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
-      "action": "Рассматривать только после подтверждения финансирования проживания; изучить альтернативные EIT-треки на странице Erasmus.",
-      "risk": "Без стипендии 28DIGITAL обучение платное.",
-      "notes": "",
-      "topics": [
-        "AI",
-        "CV",
-        "NLP",
-        "DL"
-      ],
-      "evidence": "Финансирование надо подтвердить",
-      "target": null,
-      "english": {
-        "ielts": 6.5,
-        "writing": 6.5,
-        "minBand": 6,
-        "moi": false,
-        "note": "Writing/Speaking ≥ 6.5",
-        "src": "snapshot"
-      },
-      "cover": {
-        "tuition": "no",
-        "living": "no"
-      },
-      "emjm": false,
-      "verified": "2026-11-16"
-    },
-    {
       "id": "sapienza",
       "uni": "Sapienza University of Rome",
       "program": "MSc Artificial Intelligence and Robotics",
@@ -1751,16 +1708,6 @@
       "time": "15:00 GMT+2",
       "app": "codas",
       "note": "Видео, IELTS, письма и приложения к уже поданной форме."
-    },
-    {
-      "id": "c-eit",
-      "date": "2027-01-31",
-      "title": "28DIGITAL AI Affective Computing — Period 1",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "23:59 CET",
-      "app": "eit",
-      "note": "€75, полноценная стипендия для Казахстана не подтверждена."
     },
     {
       "id": "kaust-dl",
@@ -3089,22 +3036,6 @@
       "professors": "Marcel van Gerven (нейро-ИИ); Sander Keemink",
       "list": "✓ Artificial Intelligence",
       "verified": "✓ треки и лаборатории: ru.nl (09.11.2026)",
-      "sheet": "https://docs.google.com/spreadsheets/d/1hz8eqckP5rEzn7vZ1Sl4bsHENdJDEX2J9YxAcfizFh4/edit#gid=104"
-    },
-    {
-      "id": "b-104-54",
-      "country": "Нидерланды",
-      "tier": "Target",
-      "name": "University of Twente — MSc Computer Science (Data Science & Technology)",
-      "city": "Enschede",
-      "rank": "~230",
-      "requirements": "Ориентир: IELTS 6.5; проверка соответствия диплома",
-      "deadline": "Зависит от гражданства (онлайн-инструмент); ориентир 01.05.2027",
-      "fee": "Ориентир ~€20k/год",
-      "opportunities": "Двойной диплом EIT Digital; проект с больницей ZGT",
-      "professors": "Maurice van Keulen (data science); Mariët Theune (NLP, диалог)",
-      "list": "✓ Computer Science",
-      "verified": "✓ специализация: utwente.nl (09.11.2026)",
       "sheet": "https://docs.google.com/spreadsheets/d/1hz8eqckP5rEzn7vZ1Sl4bsHENdJDEX2J9YxAcfizFh4/edit#gid=104"
     },
     {
@@ -4453,40 +4384,6 @@
       ],
       "url": "https://www.master-ediss.eu/admission/",
       "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "eit",
-      "name": "28DIGITAL · AIAC",
-      "full": "AI with Affective Computing / Emotion AI",
-      "label": "NLP + CV + Multimodal · платная подача",
-      "deadline": "2027-01-31",
-      "time": "23:59 CET",
-      "confidence": "official",
-      "secondary": "Period 2: 18.04.2027 (non-EU есть риск не успеть с визой); Period 3 только для тех, кому не требуется разрешение.",
-      "fee": "€75 за программу · €250 депозит при принятии offer · tuition €18 000/год non-EU (до waiver)",
-      "priority": "P3",
-      "chance": "По академическим курсам соответствует; без отдельного финансирования проживание не покрыто",
-      "fund": "Стипендии 28DIGITAL — только ЕС/ЕЭЗ/страны Digital Europe; Казахстан не подходит",
-      "language": "IELTS Academic ≥6.5 overall, Writing/Speaking ≥6.5, Listening/Reading ≥6.0; AITU MOI не даёт общего освобождения",
-      "eligibility": "CS AITU подходит как профиль, но степень должна быть эквивалентна 180 ECTS. Условная подача до получения диплома допускается; окончательный документ до зачисления.",
-      "docs": [
-        "Паспорт, транскрипт AITU с печатью и переводом при необходимости",
-        "Student Status / Expected Graduation 30.06.2027",
-        "CV",
-        "Мотивационное письмо до 2 страниц",
-        "IELTS Academic (W/S≥6.5, остальные≥6.0)",
-        "Выбор entry и exit universities, проверка их особых требований",
-        "Документы в Scholarship tab 4 (если претендуешь на tuition waiver)"
-      ],
-      "warnings": [
-        "28DIGITAL / EIT Digital ≠ Erasmus Mundus Joint Master (EMJM). У ELTE есть отдельный конкурс для non-EU: до €10 000/год без совмещения с основным 28DIGITAL tuition waiver — правила сочетания проверить.",
-        "€75 за КАЖДУЮ поданную программу; при зачислении €250 невозвратный депозит; при ≥50% waiver возможен дополнительный обеспечительный депозит €500.",
-        "Scholarships of Excellence с ежемесячной выплатой не подтверждены для граждан Казахстана; не оплачивать только в надежде получить полный грант.",
-        "Первые 2027/28 заявки для non-EU: до 31.01.2027, 23:59 CET."
-      ],
-      "url": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
-      "emjm": false,
       "verified": "2026-11-16"
     }
   ]
