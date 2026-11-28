@@ -1442,37 +1442,45 @@
     {
       "id": "nu",
       "uni": "Nazarbayev University",
-      "program": "MSc Data Science / Computer Science — выбрать в портале",
+      "program": "MSc Data Science (приоритет №1) / MSc Computer Science (вариант №2)",
       "region": "Kazakhstan",
       "country": "Казахстан",
-      "track": "Data Science / Computer Science",
+      "track": "SCAI: Data Science / Computer Science — 2-летние MSc",
       "degree": "MSc",
       "priority": "P1",
       "status": "Preparing",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
-      "fee": "Уточнить на портале NU",
+      "fee": "15 000 ₸ (ориентир по официальным правилам; перепроверить в портале перед оплатой)",
       "fund": "potential",
-      "funding": "Конкурсный государственный грант NU на обучение и ежемесячную стипендию; условия 2027 уточнить",
-      "link": "https://admissions.nu.edu.kz/",
-      "action": "Завершить CV, IELTS 7.5, cumulative GPA statement, подтверждение принятой RAG-статьи и рекомендации; проверить точный грантовый дедлайн 2027.",
-      "risk": "Точный грантовый дедлайн 2027 и требования каждой программы ещё проверить.",
-      "notes": "Одна карточка для MSc DS / CS, вместо дублей. Внутренняя цель по документам 12 декабря, ориентир подачи до 20 декабря; это не официальный дедлайн.",
+      "funding": "Конкурсный грант NU для граждан Казахстана: обучение и ежемесячная стипендия при полном гранте. Точную ставку и обязательства для 2027/28 уточнить; не путать грантовое и платное зачисление.",
+      "link": "https://nu.edu.kz/admissions/how-to-apply/masters/financial-aid-end-scholarships-masters/",
+      "action": "С 10 декабря загрузить новый официальный AITU transcript (ожидаемый CGPA 3.52; до выдачи считать 3.45), IELTS 7.5, CV и документы; MSc Data Science №1, CS №2, если допускаются две заявки. Проверить требования SCAI, 3-летний диплом и дедлайн гранта 2027/28.",
+      "risk": "Дедлайн гранта 2027/28 не опубликован на найденной странице. Дедлайн 13.02.2026 14:00 (Астана) относится к 2026/27 и НЕ должен попадать в календарь 2027. Проверить эквивалентность 3-летнего AITU bachelor и все условия полного гранта. Не считать 579 грантов полными.",
+      "notes": "Официальные программы: MSc Data Science https://scai.nu.edu.kz/msc-ds ; MSc Computer Science https://scai.nu.edu.kz/msc-cs . Ожидаемый новый GPA 3.52 на 10.12.2026, не официальный до получения транскрипта. Текущий GPA 3.45/4, академический рейтинг 8/179; IELTS Academic overall 7.5 (L 6.5/R 8.5/W 7.0/S 7.5). Research: accepted Graph-RAG paper, AMR ML, BIT exchange, AFM internship. Статистика всех MSc 2025: 2590 заявок, 653 зачислены (25.2%); из них 579 grant-based, в том числе частичные гранты, 74 fee-paying. SEDS: 1349 заявок / 275 зачислены (20.4%), НЕ отдельная статистика MSc DS/CS. Средние показатели поступивших MSc 2025 GPA 3.5 и IELTS 7.0. Источник https://nu.edu.kz/wp-content/uploads/2026/01/eng-master_s-programs-2021-2025.pdf . Срок 2026/27 гранта: 13.02.2026 14:00 Астана; 2027/28 TBA. Цель: пакет до 15 декабря; подача до 20 декабря — ВНУТРЕННИЙ ориентир, не официальный срок.",
       "topics": [
         "DS",
         "AI",
         "ML",
         "CS"
       ],
-      "evidence": "NU admissions portal; грантовые условия и программа уточняются",
+      "evidence": "NU official financial aid/regular admissions 2026/27 + official MSc DS and CS pages + NU admissions statistics 2021–2025; 2027/28 deadline not published in checked source",
       "target": "2026-12-20",
       "cover": {
         "tuition": "cond",
         "living": "cond"
       },
       "emjm": false,
-      "verified": "2026-11-28"
+      "verified": "2026-11-28",
+      "english": {
+        "ielts": 6,
+        "minBand": 5.5,
+        "writing": 6,
+        "moi": true,
+        "note": "Общий минимум NU; для MSc DS/CS подтвердить применимость требований SCAI.",
+        "src": "official"
+      }
     },
     {
       "id": "seoultech-scholarship",
@@ -2514,22 +2522,23 @@
     },
     {
       "id": "nu-uploads",
-      "title": "Nazarbayev University: загрузить IELTS, CV и академические документы",
+      "title": "NU: загрузить НОВЫЙ транскрипт GPA 3.52 после получения 10 декабря",
       "app": "nu",
-      "due": "2026-12-08",
+      "due": "2026-12-11",
       "category": "Декабрь",
       "priority": "P1",
-      "detail": "Транскрипт с cumulative GPA, CV, IELTS, принятую статью с подтверждением; подтвердить актуальные правила выбранной программы.",
+      "detail": "Не указывать 3.52 как подтверждённый до получения транскрипта. Загрузить текущие оценки, updated official transcript, IELTS 7.5/eTRF, CV, accepted Graph RAG paper, BIT transcript и Student Status; проверить ограничения на изменения после Submit.",
       "done": false
     },
     {
       "id": "nu-motivation",
-      "title": "Nazarbayev University: закончить мотивационное письмо и проверить грант",
+      "title": "NU: подготовить мотивационные письма под MSc Data Science и MSc Computer Science",
       "app": "nu",
       "due": "2026-12-12",
       "category": "Декабрь",
-      "priority": "Подстроить под MSc Data Science/Computer Science; проверить официальные дедлайны 2027 и необходимые рекомендации.",
-      "done": false
+      "priority": "P1",
+      "done": false,
+      "detail": "Data Science первым: ML для AMR, Graph RAG, AI for health; Computer Science вторым: IR, LLM systems, CS algorithms. Проверить, можно ли подать обе программы и нужна ли отдельная оплата."
     },
     {
       "id": "glsg-offer-decision",
@@ -2599,12 +2608,12 @@
     },
     {
       "id": "nu-grant-audit",
-      "title": "NU: проверить сроки 2027 на грант и комплект документов",
+      "title": "NU 2027/28: уточнить официальный дедлайн ПОЛНОГО гранта и требования SCAI",
       "app": "nu",
-      "due": "2026-12-10",
+      "due": "2026-12-05",
       "category": "Декабрь",
       "priority": "P1",
-      "detail": "Отдельно уточнить требования MSc DS или CS и срок подачи на финансирование; внутренний срок подготовки к 12 декабря.",
+      "detail": "На официальной странице сейчас видны даты 2026/27: грант до 13 февраля 2026 14:00; 2027/28 нельзя выводить из прошлой даты. Выяснить новый срок, 3-летний AITU bachelor, официальный IELTS, гарантии полной стипендии и условия отработки.",
       "done": false
     },
     {
@@ -2657,6 +2666,66 @@
       "category": "Декабрь",
       "priority": "P2",
       "detail": "Не считать QS CS Top-100 автоматическим подтверждением eligibility: нужен утверждённый список 2027 и правила конкурса.",
+      "done": false
+    },
+    {
+      "id": "nu-transcript-request",
+      "title": "NU: заказать обновлённый AITU transcript (ожидаемый GPA 3.52)",
+      "app": "nu",
+      "due": "2026-12-02",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Запросить в регистратуре выдачу к 10 декабря. До получения использовать только официальное 3.45; сохранить PDF с печатью/подписью.",
+      "done": false
+    },
+    {
+      "id": "nu-msc-choice",
+      "title": "NU: выбрать MSc Data Science №1 и проверить возможность MSc CS №2",
+      "app": "nu",
+      "due": "2026-12-04",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Проверить правила подачи до двух MSc и отдельные application fee. Две магистратуры SCAI, академический fit через Graph RAG и AMR.",
+      "done": false
+    },
+    {
+      "id": "nu-equivalence",
+      "title": "NU: уточнить признание 3-летнего 240 ECTS бакалавриата AITU",
+      "app": "nu",
+      "due": "2026-12-06",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Написать SCAI admissions, приложить описание структуры 3-летней программы и Expected Graduation Letter; не считать признание автоматическим.",
+      "done": false
+    },
+    {
+      "id": "nu-ielts-send",
+      "title": "NU: проверить официальный eTRF IELTS 7.5 и способ передачи результата",
+      "app": "nu",
+      "due": "2026-12-07",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Проверить официальный код NU и сроки электронной передачи; IELTS 7.5 L6.5/R8.5/W7.0/S7.5 соответствует опубликованным общим минимумам.",
+      "done": false
+    },
+    {
+      "id": "nu-references",
+      "title": "NU: проверить две рекомендации и статусы приглашений",
+      "app": "nu",
+      "due": "2026-12-09",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "BIT профессор Aoqian Zhang и преподаватель AITU; убедиться, что NU получил рекомендации, а не только что письма готовы.",
+      "done": false
+    },
+    {
+      "id": "nu-submission-audit",
+      "title": "NU: финально проверить заявку и грант, план подачи к 20 декабря",
+      "app": "nu",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Проверить новый транскрипт, IELTS, programme choice, ответы SCAI, полный грант, обязательства и заявку до нажатия Pay and Submit. 20 декабря — внутренний ориентир, не дедлайн NU.",
       "done": false
     }
   ],
@@ -4781,7 +4850,7 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v16",
+    "dashboardRelease": "v17",
     "dataVerified": "2026-11-28",
     "note": "Активные: RWTH Data Science, Paris-Saclay AI, TUM Informatics добавлены как варианты финансирования вне UK. KU Leuven исключён из выбора. Отдельно проверить перечень Bolashak 2027, GRE RWTH, VPD TUM и IDEX Paris-Saclay."
   },
