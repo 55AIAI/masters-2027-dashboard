@@ -231,46 +231,6 @@
       "verified": "2026-11-16"
     },
     {
-      "id": "aiss",
-      "uni": "AISS Erasmus Mundus",
-      "program": "Artificial Intelligence for Sustainable Societies",
-      "region": "Erasmus",
-      "country": "Европа",
-      "track": "Applied AI / Society",
-      "degree": "EMJM",
-      "priority": "P2",
-      "status": "Researching",
-      "deadline": "2027-02-02",
-      "deadlineKind": "official",
-      "deadlineTime": "",
-      "fee": "Подача без стандартного fee Tallinn University",
-      "fund": "full",
-      "funding": "Erasmus Mundus scholarship route — конкурс",
-      "link": "https://aissprogram.eu/how-to-apply/",
-      "action": "С 2 декабря открыть DreamApply; CV, портфолио, motivation video и финансовый план.",
-      "risk": "Проверить выпуск: 10 июня final check и 1 июля встречаются на разных страницах.",
-      "notes": "DreamApply 02.12.2026–02.02.2027. Диплом и транскрипт — до 1 июля.",
-      "topics": [
-        "AI",
-        "ML"
-      ],
-      "evidence": "Официальный AISS 2027 call",
-      "target": "2027-01-15",
-      "english": {
-        "ielts": 6.5,
-        "minBand": 5.5,
-        "moi": false,
-        "note": "",
-        "src": "snapshot"
-      },
-      "cover": {
-        "tuition": "yes",
-        "living": "yes"
-      },
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
       "id": "pisa",
       "uni": "University of Pisa",
       "program": "MSc Artificial Intelligence and Data Engineering",
@@ -1683,16 +1643,6 @@
       "note": "€50 fee; после раннего раунда правила и fee другие."
     },
     {
-      "id": "c-aissopen",
-      "date": "2026-12-02",
-      "title": "AISS — приём заявок открывается",
-      "type": "opening",
-      "confidence": "official",
-      "time": "",
-      "app": "aiss",
-      "note": "DreamApply."
-    },
-    {
       "id": "c-mb",
       "date": "2026-12-15",
       "title": "MBZUAI — MSc AI, ML и др.",
@@ -1723,16 +1673,6 @@
       "note": "Рекомендации и приложения по правилам."
     },
     {
-      "id": "c-aissrec",
-      "date": "2027-01-15",
-      "title": "AISS — рекомендуемая ранняя подача",
-      "type": "milestone",
-      "confidence": "official",
-      "time": "",
-      "app": "aiss",
-      "note": "Ранний срок для получения feedback, не финальный."
-    },
-    {
       "id": "c-deai-refs",
       "date": "2027-01-18",
       "title": "DEAI — рекомендации",
@@ -1761,16 +1701,6 @@
       "time": "23:59 GMT",
       "app": "pisa",
       "note": "€30, все файлы до дедлайна."
-    },
-    {
-      "id": "c-aiss",
-      "date": "2027-02-02",
-      "title": "AISS — final application deadline",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "",
-      "app": "aiss",
-      "note": "Заявка DreamApply."
     },
     {
       "id": "c-polyu",
@@ -2132,16 +2062,6 @@
       "category": "Декабрь",
       "priority": "P1",
       "detail": "Цель: полный пакет к середине декабря.",
-      "done": false
-    },
-    {
-      "id": "aiss-start",
-      "title": "AISS: с 2 декабря открыть заявку и требования портфолио",
-      "app": "aiss",
-      "due": "2026-12-05",
-      "category": "Декабрь",
-      "priority": "P2",
-      "detail": "Условия 2027, motivation video, портфолио.",
       "done": false
     },
     {
@@ -4532,39 +4452,6 @@
         "Нельзя считать MOI из Казахстана освобождением от IELTS."
       ],
       "url": "https://www.master-ediss.eu/admission/",
-      "emjm": true,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "aiss",
-      "name": "AISS",
-      "full": "Artificial Intelligence for Sustainable Societies",
-      "label": "AI + Society",
-      "deadline": "2027-02-02",
-      "time": "По порталу DreamApply",
-      "confidence": "official",
-      "secondary": "15.01.2027 — рекомендуемый ранний Submit для feedback",
-      "fee": "Обычно без стандартного fee Tallinn University",
-      "priority": "P2",
-      "chance": "Реалистичное академическое соответствие; больше AI-for-society, чем math-ML",
-      "fund": "Erasmus Mundus €1,400/мес. — конкурс",
-      "language": "IELTS Academic ≥6.5, секции ≥5.5; MOI из Казахстана не заменяет тест",
-      "eligibility": "Бакалавриат до начала. Внимание: final certificate check 10 июня, тогда как предполагаемый выпуск 30 июня — запросить письмо.",
-      "docs": [
-        "CV до 2 страниц",
-        "Портфолио (до 5 релевантных работ)",
-        "Мотивационное видео ~90 секунд",
-        "Self-funding plan",
-        "Паспорт",
-        "Транскрипт и справка об ожидаемом выпуске",
-        "IELTS Academic",
-        "Другие документы DreamApply по стране"
-      ],
-      "warnings": [
-        "Срок финальной проверки диплома 10.06 требует разъяснения для AITU.",
-        "Self-Funding Plan нужен даже при намерении участвовать в конкурсе на грант."
-      ],
-      "url": "https://aissprogram.eu/how-to-apply/",
       "emjm": true,
       "verified": "2026-11-16"
     },
