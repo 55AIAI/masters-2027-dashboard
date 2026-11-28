@@ -488,7 +488,7 @@ const applied=s=>['Submitted','Waiting','Offer','Conditional','Accepted','Reject
 function statusSelect(a){return `<select class="field appStatus" data-status-app="${esc(a.id)}" aria-label="Статус: ${esc(a.uni)}">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${st(a)===k?'selected':''}>${esc(v)}</option>`).join('')}</select>`;}
 function setAppStatus(id,value){if(!appById(id)||!Object.hasOwn(STATUS,value))return;S.appStatuses[id]=value;save();refresh();if(drawerApp===id)openApp(id);toast('Статус сохранён: '+STATUS[value]);}
 const pr=a=>S.appPriorities[a.id]||a.priority;
-const allTasks=()=>[...BASE.tasks,...S.customTasks];
+const allTasks=()=>[...BASE.tasks.filter(t=>!t.paused),...S.customTasks];
 const taskDone=t=>S.tasksDone[t.id]??t.done??false;
 const docSt=d=>S.docsStatus[d.id]||d.status;
 function myIelts(){const p=S.profile||{};const o=parseFloat(p.ieltsOverall);const prev=parseFloat(p.IELTSPrev);const bands=['ieltsL','ieltsR','ieltsW','ieltsS'].map(k=>parseFloat(p[k])).filter(x=>!isNaN(x));
@@ -548,9 +548,9 @@ document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g
 /* ---------- overview ---------- */
 let boardMode='deadline';
 function events(){
-  const ev=BASE.calendar.map(e=>({...e}));
+  const ev=BASE.calendar.filter(e=>!e.app||!appById(e.app)?.paused).map(e=>({...e}));
   const have=new Set(ev.map(e=>e.date+'|'+e.app));
-  apps.forEach(a=>{if(a.deadline&&!have.has(a.deadline+'|'+a.id))ev.push({id:'auto-'+a.id,date:a.deadline,title:`${a.uni} — дедлайн`,type:'deadline',confidence:a.deadlineKind,time:a.deadlineTime||'',app:a.id});});
+  apps.filter(a=>!a.paused).forEach(a=>{if(a.deadline&&!have.has(a.deadline+'|'+a.id))ev.push({id:'auto-'+a.id,date:a.deadline,title:`${a.uni} — дедлайн`,type:'deadline',confidence:a.deadlineKind,time:a.deadlineTime||'',app:a.id});});
   return ev.sort((a,b)=>a.date.localeCompare(b.date));
 }
 function renderOverview(){
@@ -641,9 +641,9 @@ function initPrograms(){
 }
 function filtered(){
   const q=$('q').value.trim().toLowerCase(),c=$('fCountry').value,s=$('fStatus').value,so=$('fSort').value;
-  let l=apps.filter(a=>(!q||[a.uni,a.program,a.country,a.track,(a.topics||[]).join(' ')].join(' ').toLowerCase().includes(q))&&(!c||a.country===c)&&(!s||st(a)===s));
+  let l=apps.filter(a=>(!a.paused||quick==='hold'||quick==='all'||s==='Hold')&&(!q||[a.uni,a.program,a.country,a.track,(a.topics||[]).join(' ')].join(' ').toLowerCase().includes(q))&&(!c||a.country===c)&&(!s||st(a)===s));
   const f={full:fullCover,ielts:a=>['ok','pending'].includes(ieltsCheck(a).state),em:a=>a.emjm,soon:a=>a.deadline&&days(a.deadline)>=0&&days(a.deadline)<=45&&!applied(st(a)),submitted:a=>st(a)==='Submitted',stale:a=>stale(a)||a.deadlineKind!=='official'&&a.deadlineKind!=='completed',hold:a=>st(a)==='Hold'}[quick];
-  if(f)l=l.filter(f);else l=l.filter(a=>st(a)!=='Hold'||quick==='all');
+  if(f)l=l.filter(f);else l=l.filter(a=>(!a.paused&&st(a)!=='Hold')||(s==='Hold'&&a.paused));
   const key={deadline:a=>(a.deadline&&days(a.deadline)>=0?a.deadline:'9999'),priority:a=>(PRIO_ORDER[pr(a)]||9)+(a.deadline||'9999'),name:a=>a.uni,verified:a=>a.verified||'0'}[so];
   return l.sort((x,y)=>so==='verified'?key(y).localeCompare(key(x)):String(key(x)).localeCompare(String(key(y))));
 }
