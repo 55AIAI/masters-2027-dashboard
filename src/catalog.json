@@ -1671,6 +1671,118 @@
       },
       "emjm": false,
       "verified": "2026-11-28"
+    },
+    {
+      "id": "rwth-ds",
+      "uni": "RWTH Aachen University",
+      "program": "MSc Data Science",
+      "region": "Europe",
+      "country": "Германия",
+      "track": "Data Science / CS / Mathematics",
+      "degree": "MSc",
+      "priority": "P1",
+      "status": "Researching",
+      "deadline": "2027-03-01",
+      "deadlineKind": "official",
+      "deadlineTime": "",
+      "fee": "€0 (RWTHonline)",
+      "fund": "external",
+      "funding": "Без tuition; расходы на жизнь не покрываются. Рассмотреть «Болашак» только после проверки утверждённого перечня вузов на 2027.",
+      "link": "https://sc.informatik.rwth-aachen.de/en/studium/master/master-data-science/application-for-admission/",
+      "action": "Проверить обязательный GRE для non-EU, ECTS/описания курсов CS и математики, признание 3-летнего бакалавриата. Далее подаваться в RWTHonline.",
+      "risk": "Требуется GRE для non-EU; строгие prerequisites по ECTS и course descriptions; стипендия на жизнь не предоставляется автоматически.",
+      "notes": "В активной группе «Болашак — вне Великобритании». Дата 1 марта указана для non-EU winter intake; перепроверить перед отправкой. Сопоставить кредиты AITU и математические курсы. Подтверждение соответствия «Болашаку» 2027 ещё отсутствует.",
+      "topics": [
+        "DS",
+        "ML",
+        "Math",
+        "CS"
+      ],
+      "evidence": "RWTH Aachen official Data Science admissions and FAQ (checked 28.11.2026)",
+      "target": "2027-02-15",
+      "english": {
+        "ielts": null,
+        "moi": null,
+        "note": "Проверить языковую форму/порог для MSc Data Science",
+        "src": "official"
+      },
+      "cover": {
+        "tuition": "yes",
+        "living": "no"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
+    },
+    {
+      "id": "paris-saclay-ai",
+      "uni": "Université Paris-Saclay",
+      "program": "Master Informatique — Artificial Intelligence track (M1/M2 eligibility to confirm)",
+      "region": "Europe",
+      "country": "Франция",
+      "track": "Artificial Intelligence / Computer Science",
+      "degree": "MSc",
+      "priority": "P2",
+      "status": "Researching",
+      "deadline": null,
+      "deadlineKind": "unconfirmed",
+      "deadlineTime": "",
+      "fee": "Проверить в Inception, обычно без взноса",
+      "fund": "potential",
+      "funding": "Конкурс на IDEX или другие гранты; IDEX не гарантирован. «Болашак» — только при подтверждении перечня 2027.",
+      "link": "https://ai-master.lisn.upsaclay.fr/admissions/details-about-the-application/",
+      "action": "Проверить Inception и 2027 окно подачи, M1/M2 entry с 3-летним бакалавриатом AITU, eligibility IDEX и требования Campus France для Казахстана.",
+      "risk": "2027 дедлайн не объявлен; IDEX конкурсная и не обязательно покрывает весь бюджет; M1/M2 могут иметь разные требования.",
+      "notes": "Активная группа «Болашак — вне Великобритании». Официальная страница прямо говорит, что даты 2026 лишь ориентир для 2027. Уточнить подачу через Inception, eligibility IDEX, Campus France.",
+      "topics": [
+        "AI",
+        "ML",
+        "NLP",
+        "DS",
+        "CS"
+      ],
+      "evidence": "Université Paris-Saclay AI Master official site (checked 28.11.2026)",
+      "target": "2027-01-20",
+      "cover": {
+        "tuition": "cond",
+        "living": "cond"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
+    },
+    {
+      "id": "tum-informatics",
+      "uni": "Technical University of Munich (TUM)",
+      "program": "MSc Informatics",
+      "region": "Europe",
+      "country": "Германия",
+      "track": "Computer Science / Machine Learning",
+      "degree": "MSc",
+      "priority": "P2",
+      "status": "Researching",
+      "deadline": "2027-05-31",
+      "deadlineKind": "official",
+      "deadlineTime": "",
+      "fee": "Проверить VPD через uni-assist (не считать €75 гарантированными)",
+      "fund": "external",
+      "funding": "Для non-EU tuition €6 000/семестр плюс проживание; финансирование — через внешние гранты, включая «Болашак» при подтверждении eligibility.",
+      "link": "https://www.tum.de/en/studies/degree-programs/detail/informatics-master-of-science-msc",
+      "action": "Проверить предметные требования и VPD uni-assist, языковые документы, возможность признания 3-летнего бакалавриата и покрытие tuition через «Болашак».",
+      "risk": "Высокая стоимость без гранта, строгая проверка предметного соответствия, двухэтапный admission. Для 2027/28 актуальные fees и VPD проверить до оплаты.",
+      "notes": "Активная группа «Болашак — вне Великобритании». Зимняя подача 01.02–31.05 по официальной странице; non-EU tuition на странице программы €6 000/семестр. При отсутствии внешнего финансирования не оплачивать лишние взносы.",
+      "topics": [
+        "AI",
+        "ML",
+        "CS",
+        "DS"
+      ],
+      "evidence": "TUM MSc Informatics official program page and tuition page (checked 28.11.2026)",
+      "target": "2027-04-15",
+      "cover": {
+        "tuition": "no",
+        "living": "no"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
     }
   ],
   "profile": {},
@@ -2692,6 +2804,56 @@
       "category": "Декабрь",
       "priority": "P1",
       "detail": "Отдельно уточнить требования MSc DS или CS и срок подачи на финансирование; внутренний срок подготовки к 12 декабря.",
+      "done": false
+    },
+    {
+      "id": "rwth-gre",
+      "title": "RWTH MSc Data Science: проверить GRE для non-EU и пороги",
+      "app": "rwth-ds",
+      "due": "2026-12-06",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Официальный RWTH FAQ требует GRE для non-EU. Проверить допустимость результатов и возможные исключения для граждан Казахстана до подготовки платных документов.",
+      "done": false
+    },
+    {
+      "id": "rwth-courses",
+      "title": "RWTH: составить таблицу соответствия ECTS и course descriptions",
+      "app": "rwth-ds",
+      "due": "2026-12-14",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Сверить AITU transcript c prerequisites RWTH Data Science: programming, algorithms, databases, mathematics, theoretical CS; запросить syllabi при необходимости.",
+      "done": false
+    },
+    {
+      "id": "paris-2027",
+      "title": "Paris-Saclay AI: проверить Inception 2027, IDEX и поступление в M1",
+      "app": "paris-saclay-ai",
+      "due": "2026-12-12",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "Проверить 2027 сроки (на сайте пока ориентир 2026), IDEX funding eligibility и необходимость Campus France/Études en France из Казахстана.",
+      "done": false
+    },
+    {
+      "id": "tum-vpd",
+      "title": "TUM Informatics: проверить VPD/uni-assist, credits и бюджет с «Болашаком»",
+      "app": "tum-informatics",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "Проверить требования VPD, стоимость и порядок оплаты, предметные prerequisites, tuition для non-EU €6000/семестр и список вузов «Болашак» 2027.",
+      "done": false
+    },
+    {
+      "id": "bolashak-nonuk",
+      "title": "Болашак вне UK: проверить RWTH, Paris-Saclay и TUM по перечню 2027",
+      "app": "bolashak",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "Не считать QS CS Top-100 автоматическим подтверждением eligibility: нужен утверждённый список 2027 и правила конкурса.",
       "done": false
     }
   ],
@@ -4816,9 +4978,9 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v13",
+    "dashboardRelease": "v14",
     "dataVerified": "2026-11-28",
-    "note": "Стратегия 28.11.2026: PolyU MPhil P1, 17 резервных программ на паузе, NU отдельно, Seoul Tech Scholarship и CSC Kazakhstan Type A — проверка. Не публиковать персональные статусы/IELTS."
+    "note": "Активные: RWTH Data Science, Paris-Saclay AI, TUM Informatics добавлены как варианты финансирования вне UK. KU Leuven исключён из выбора. Отдельно проверить перечень Bolashak 2027, GRE RWTH, VPD TUM и IDEX Paris-Saclay."
   },
   "erasmus": [
     {
