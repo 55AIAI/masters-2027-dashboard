@@ -120,7 +120,7 @@
       "fund": "potential",
       "funding": "MSc по умолчанию платный; финансирование — через вуз и научного руководителя, не автоматически",
       "link": "https://mbzuai.ac.ae/admissions/graduate-masters-admissions/",
-      "action": "Уточнить точную программу в портале, SOP, 2 рекомендации, screening exam и submit.",
+      "action": "Срочно: выбрать ОДНУ исследовательскую MSc-программу, SOP, рекомендации, IELTS 7.5 и screening. Предварительное согласие руководителя не считать обязательным без требования программы.",
       "risk": "Одна программа за цикл. Финансирование MSc не гарантировано при поступлении.",
       "notes": "Результата IELTS пока нет; экзамен 27.11.2026.",
       "topics": [
@@ -361,7 +361,7 @@
       "country": "Гонконг",
       "track": "AI / Computer Science Research",
       "degree": "MPhil",
-      "priority": "P1",
+      "priority": "P2",
       "status": "Researching",
       "deadline": "2027-06-01",
       "deadlineKind": "official",
@@ -406,7 +406,7 @@
       "track": "Data Science & AI Research",
       "degree": "MPhil",
       "priority": "P1",
-      "status": "Researching",
+      "status": "Preparing",
       "deadline": "2027-05-31",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -414,9 +414,9 @@
       "fund": "studentship",
       "funding": "PRPgS studentship; tuition обычно оплачивается отдельно",
       "link": "https://www.polyu.edu.hk/study/pg/research-postgraduate",
-      "action": "Только MPhil: связаться с Zixing Song и Wen Hua, уточнить финансирование PRPgS и подготовить Research Proposal GSB/1A; HKPFS относится к PhD.",
+      "action": "P1 MPhil 2027: написать Zixing Song и Wen Hua, уточнить место и финансирование PRPgS; подготовить research proposal. НЕ HKPFS/PhD.",
       "risk": "Признание трёхлетнего бакалавриата не подтверждено.",
-      "notes": "План: до 15 декабря письма профессорам и research concept; затем MPhil application. HKPFS 1 декабря не относится к MPhil. Признание 3-летнего AITU уточнить.",
+      "notes": "План: до 15 декабря письма профессорам и research concept; затем MPhil application. HKPFS 1 декабря не относится к MPhil. Признание 3-летнего AITU уточнить. | PolyU MPhil не дублирует HKUST; приоритет на основе Graph RAG research fit. Положительный ответ профессора усилит заявку, но грант не гарантирован.",
       "topics": [
         "AI",
         "ML",
@@ -519,8 +519,8 @@
       "country": "Италия",
       "track": "Artificial Intelligence",
       "degree": "MSc",
-      "priority": "P1",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
@@ -530,7 +530,7 @@
       "link": "https://www.unibo.it/en",
       "action": "Изучить call 2027/28, eligibility и ER.GO документы о доходах.",
       "risk": "",
-      "notes": "Call 2027/28 для иностранцев (Overseas call) ещё не опубликован — на сайте программы есть только анонс информационной встречи.",
+      "notes": "Call 2027/28 для иностранцев (Overseas call) ещё не опубликован — на сайте программы есть только анонс информационной встречи. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "ML",
@@ -545,7 +545,8 @@
         "living": "cond"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "polito",
@@ -590,8 +591,8 @@
       "country": "Германия",
       "track": "Data Science / AI",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-05-15",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -601,7 +602,7 @@
       "link": "https://www.uni-saarland.de/en/study/programmes/master/data-science.html",
       "action": "Проверить C1 English proof, курс/кредиты и поздний раунд.",
       "risk": "По предыдущей проверке MOI не заменяет язык.",
-      "notes": "Ранний дедлайн 15.11.2026 (решение к февралю) уже прошёл; обычный — 15.05.2027. Подача через портал факультета CS.",
+      "notes": "Ранний дедлайн 15.11.2026 (решение к февралю) уже прошёл; обычный — 15.05.2027. Подача через портал факультета CS. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "ML",
@@ -621,7 +622,8 @@
         "moi": null,
         "note": "Требуется C1 (GER: C1)",
         "src": "official"
-      }
+      },
+      "paused": true
     },
     {
       "id": "saarlst",
@@ -631,8 +633,8 @@
       "country": "Германия",
       "track": "NLP / Language Technology",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-02-15",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -642,7 +644,7 @@
       "link": "https://www.uni-saarland.de/en/study/programmes/master/lst.html",
       "action": "Проверить NLP prerequisites и точный дедлайн.",
       "risk": "",
-      "notes": "Только зимний набор, дедлайн 15 февраля. Без ограничения мест (restricted entry: no).",
+      "notes": "Только зимний набор, дедлайн 15 февраля. Без ограничения мест (restricted entry: no). | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "NLP",
         "LLM",
@@ -661,7 +663,8 @@
         "moi": null,
         "note": "TOEFL iBT 79 или IELTS 6.5",
         "src": "official"
-      }
+      },
+      "paused": true
     },
     {
       "id": "tubingen",
@@ -671,8 +674,8 @@
       "country": "Германия",
       "track": "Machine Learning Research",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-04-30",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -682,7 +685,7 @@
       "link": "https://uni-tuebingen.de/en/166353",
       "action": "Сопоставить математические ECTS; IELTS 7.0.",
       "risk": "",
-      "notes": "Подача через ALMA с февраля 2027. ≥27 ECTS математики, ≥18 CS (6 — алгоритмы и структуры данных), оценка не хуже 2.0.",
+      "notes": "Подача через ALMA с февраля 2027. ≥27 ECTS математики, ≥18 CS (6 — алгоритмы и структуры данных), оценка не хуже 2.0. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "ML",
         "DL",
@@ -701,7 +704,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "stuttgart",
@@ -711,8 +715,8 @@
       "country": "Германия",
       "track": "Computational Linguistics / NLP",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-07-15",
       "deadlineKind": "secondary",
       "deadlineTime": "",
@@ -722,7 +726,7 @@
       "link": "https://www.uni-stuttgart.de/en/study/study-programs/Computational-Linguistics-M.Sc./",
       "action": "Уточнить C1, соответствие курсов и стоимость.",
       "risk": "",
-      "notes": "Зимний набор — до 15 июля, летний — до 15 января (по данным портала myGuide).",
+      "notes": "Зимний набор — до 15 июля, летний — до 15 января (по данным портала myGuide). | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "NLP",
         "LLM",
@@ -742,7 +746,8 @@
         "moi": null,
         "note": "C1 (IELTS 7 — по вторичным источникам)",
         "src": "secondary"
-      }
+      },
+      "paused": true
     },
     {
       "id": "hamburg",
@@ -752,8 +757,8 @@
       "country": "Германия",
       "track": "Data Science & AI",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-03-31",
       "deadlineKind": "official",
       "deadlineTime": "23:59 CEST",
@@ -763,7 +768,7 @@
       "link": "https://www.inf.uni-hamburg.de/en/studies/master/dsai.html",
       "action": "Подсчитать math/stat CS ECTS и срок.",
       "risk": "",
-      "notes": "Окно 15.02–31.03.2027 через STiNE (не uni-assist). Нужно ≥24 ECTS математики (из них 6 — стохастика) и 60 ECTS CS.",
+      "notes": "Окно 15.02–31.03.2027 через STiNE (не uni-assist). Нужно ≥24 ECTS математики (из них 6 — стохастика) и 60 ECTS CS. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "DS",
         "ML",
@@ -782,7 +787,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "jku",
@@ -792,8 +798,8 @@
       "country": "Австрия",
       "track": "Artificial Intelligence",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "secondary",
       "deadlineTime": "",
@@ -803,7 +809,7 @@
       "link": "https://www.jku.at/en/degree-programs/types-of-degree-programs/masters-degree-programs/",
       "action": "Проверить B2, дату и prerequisites.",
       "risk": "",
-      "notes": "Non-EU обычно подают за ~6 месяцев до старта (общие окна JKU: 6 февраля–31 марта для зимнего семестра) — уточнить для магистратуры.",
+      "notes": "Non-EU обычно подают за ~6 месяцев до старта (общие окна JKU: 6 февраля–31 марта для зимнего семестра) — уточнить для магистратуры. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "ML",
@@ -818,7 +824,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "elte",
@@ -873,7 +880,7 @@
       "link": "https://masterschool.28digital.eu/artificial-intelligence-with-affective-computing",
       "action": "Рассматривать только после подтверждения финансирования проживания; изучить альтернативные EIT-треки на странице Erasmus.",
       "risk": "Без стипендии 28DIGITAL обучение платное.",
-      "notes": "",
+      "notes": "| Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "CV",
@@ -895,7 +902,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "emai",
@@ -905,7 +913,7 @@
       "country": "Европа",
       "track": "Artificial Intelligence",
       "degree": "EMJM",
-      "priority": "P2",
+      "priority": "P3",
       "status": "Hold",
       "deadline": "2027-06-05",
       "deadlineKind": "official",
@@ -916,7 +924,7 @@
       "link": "https://www.upf.edu/web/emai/access-admission",
       "action": "Возобновлять только при появлении funded round.",
       "risk": "Academic fit сильный, но без подтверждённой full scholarship финансирование не соответствует цели.",
-      "notes": "",
+      "notes": "| Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "ML",
@@ -938,7 +946,8 @@
         "living": "?"
       },
       "emjm": true,
-      "verified": "2026-11-13"
+      "verified": "2026-11-13",
+      "paused": true
     },
     {
       "id": "sapienza",
@@ -948,8 +957,8 @@
       "country": "Италия",
       "track": "AI & Robotics",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-05-15",
       "deadlineKind": "provisional",
       "deadlineTime": "",
@@ -959,7 +968,7 @@
       "link": "https://www.uniroma1.it/en/admissions",
       "action": "Проверить 2027 dates и admission requirements.",
       "risk": "",
-      "notes": "Для визы нужен pre-acceptance через MoveIN. В 2026: открытие 22.12.2025, дедлайн для non-EU 15.05.2026. Даты 2027/28 не опубликованы.",
+      "notes": "Для визы нужен pre-acceptance через MoveIN. В 2026: открытие 22.12.2025, дедлайн для non-EU 15.05.2026. Даты 2027/28 не опубликованы. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "CV",
@@ -973,7 +982,8 @@
         "living": "cond"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "milan",
@@ -984,7 +994,7 @@
       "track": "Data Science",
       "degree": "MSc",
       "priority": "P3",
-      "status": "Researching",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
@@ -994,7 +1004,7 @@
       "link": "https://www.unimi.it/en",
       "action": "Уточнить fit и требования по курсам.",
       "risk": "",
-      "notes": "Информации о приёме 2027/28 на официальных страницах пока нет.",
+      "notes": "Информации о приёме 2027/28 на официальных страницах пока нет. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "DS",
         "ML"
@@ -1006,7 +1016,8 @@
         "living": "cond"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "manchester",
@@ -1100,8 +1111,8 @@
       "country": "Южная Корея",
       "track": "AI / Computer Science",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2026-12-16",
       "deadlineKind": "provisional",
       "deadlineTime": "",
@@ -1111,7 +1122,7 @@
       "link": "https://admission.kaist.ac.kr/intl-graduate/",
       "action": "Уточнить funding и program matching; IELTS 6.5.",
       "risk": "Если Early track как в прошлом году — дедлайн через месяц.",
-      "notes": "Fall 2027: Early track — ориентир середина декабря 2026 (в прошлом цикле 16.12.2025), Regular — ~март 2027. Стипендия выбирается в самой заявке. Официальный guide Fall 2027 проверить.",
+      "notes": "Fall 2027: Early track — ориентир середина декабря 2026 (в прошлом цикле 16.12.2025), Regular — ~март 2027. Стипендия выбирается в самой заявке. Официальный guide Fall 2027 проверить. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "AI",
         "ML",
@@ -1125,7 +1136,8 @@
         "living": "?"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "gks",
@@ -1178,9 +1190,9 @@
       "fund": "potential",
       "funding": "Гос. финансирование по актуальным правилам/списку 2027",
       "link": "https://bolashak.gov.kz/",
-      "action": "Сверить официальный список 2027, требования стажа и конкурс.",
+      "action": "Проверить утверждённый перечень вузов на 2027 год и правила конкурса; QS by subject Top-100 — критерий формирования списка, а не самостоятельное доказательство права/запрета для конкретного offer.",
       "risk": "",
-      "notes": "",
+      "notes": "Нельзя исключать вуз только на основании примерного места QS; проверить 2027 официальный перечень и направление подготовки.",
       "topics": [
         "AI",
         "ML",
@@ -1246,8 +1258,8 @@
       "country": "Европа",
       "track": "Applied Mathematics / Optimization",
       "degree": "EMJM",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-02-17",
       "deadlineKind": "official",
       "deadlineTime": "13:00 CET",
@@ -1257,7 +1269,7 @@
       "link": "https://www.intermaths.eu/apply",
       "action": "Проверить количество math credits и заполнить специальный шаблон математических курсов; рефери до 3 марта.",
       "risk": "Может не хватать углублённых mathematical analysis/differential equations. Нельзя считать автоматически подходящим CS bachelor.",
-      "notes": "Письма до 03.03.2027 13:00 CET. Нужна выписка математических курсов.",
+      "notes": "Письма до 03.03.2027 13:00 CET. Нужна выписка математических курсов. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
       "topics": [
         "ML",
         "Maths",
@@ -1276,7 +1288,8 @@
         "living": "yes"
       },
       "emjm": true,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "vilniustech",
@@ -1361,8 +1374,8 @@
       "country": "Великобритания",
       "track": "AI / Data Science",
       "degree": "MSc",
-      "priority": "P1",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-08-18",
       "deadlineKind": "official",
       "deadlineTime": "12:00 UK",
@@ -1372,7 +1385,7 @@
       "link": "https://www.southampton.ac.uk/courses/artificial-intelligence-masters-msc",
       "action": "Проверить признание диплома и условия финансирования, подготовить заявку.",
       "risk": "2:1; эквивалент казахстанского GPA и признание диплома уточнить.",
-      "notes": "Набор September 2027; полное финансирование не подтверждено.",
+      "notes": "Набор September 2027; полное финансирование не подтверждено. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility. Допуск через Bolashak зависит от утверждённого перечня вузов на 2027, не делать окончательный вывод только по QS Subject.",
       "topics": [
         "AI",
         "ML",
@@ -1392,7 +1405,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-22"
+      "verified": "2026-11-22",
+      "paused": true
     },
     {
       "id": "qmul",
@@ -1402,7 +1416,7 @@
       "country": "Великобритания",
       "track": "AI / Data Science",
       "degree": "MSc",
-      "priority": "P1",
+      "priority": "P2",
       "status": "Researching",
       "deadline": "2027-09-01",
       "deadlineKind": "official",
@@ -1443,8 +1457,8 @@
       "country": "Великобритания",
       "track": "AI / Data Science",
       "degree": "MSc",
-      "priority": "P1",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
@@ -1454,7 +1468,7 @@
       "link": "https://www.sussex.ac.uk/study/masters/courses/data-science-msc",
       "action": "Проверить признание диплома и условия финансирования, подготовить заявку.",
       "risk": "GPA 3.0/4.0; точный дедлайн 2027 уточнить (на странице старая дата).",
-      "notes": "Набор September 2027; полное финансирование не подтверждено.",
+      "notes": "Набор September 2027; полное финансирование не подтверждено. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility. Допуск через Bolashak зависит от утверждённого перечня вузов на 2027, не делать окончательный вывод только по QS Subject.",
       "topics": [
         "AI",
         "ML",
@@ -1474,7 +1488,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-22"
+      "verified": "2026-11-22",
+      "paused": true
     },
     {
       "id": "sheffield",
@@ -1484,8 +1499,8 @@
       "country": "Великобритания",
       "track": "AI / Data Science",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-08-26",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -1495,7 +1510,7 @@
       "link": "https://sheffield.ac.uk/postgraduate/taught/courses/2027/artificial-intelligence-msc",
       "action": "Проверить признание диплома и условия финансирования, подготовить заявку.",
       "risk": "2:1 = GPA 3.0/4.0; обычно бакалавриат 4–6 лет. Дедлайн общий для визовых заявителей.",
-      "notes": "Набор September 2027; полное финансирование не подтверждено.",
+      "notes": "Набор September 2027; полное финансирование не подтверждено. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility. Допуск через Bolashak зависит от утверждённого перечня вузов на 2027, не делать окончательный вывод только по QS Subject.",
       "topics": [
         "AI",
         "ML",
@@ -1515,7 +1530,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-22"
+      "verified": "2026-11-22",
+      "paused": true
     },
     {
       "id": "liverpool",
@@ -1525,8 +1541,8 @@
       "country": "Великобритания",
       "track": "AI / Data Science",
       "degree": "MSc",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-08-23",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -1536,7 +1552,7 @@
       "link": "https://www.liverpool.ac.uk/courses/advanced-data-science-and-artificial-intelligence-msc/2027",
       "action": "Проверить признание диплома и условия финансирования, подготовить заявку.",
       "risk": "Для Казахстана стандартно 4-летний диплом и GPA 2.9; уточнить признание трёхлетнего диплома.",
-      "notes": "Набор September 2027; полное финансирование не подтверждено.",
+      "notes": "Набор September 2027; полное финансирование не подтверждено. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility. Допуск через Bolashak зависит от утверждённого перечня вузов на 2027, не делать окончательный вывод только по QS Subject.",
       "topics": [
         "AI",
         "ML",
@@ -1549,7 +1565,112 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-22"
+      "verified": "2026-11-22",
+      "paused": true
+    },
+    {
+      "id": "nu",
+      "uni": "Nazarbayev University",
+      "program": "MSc Data Science / Computer Science — выбрать в портале",
+      "region": "Kazakhstan",
+      "country": "Казахстан",
+      "track": "Data Science / Computer Science",
+      "degree": "MSc",
+      "priority": "P1",
+      "status": "Preparing",
+      "deadline": null,
+      "deadlineKind": "unconfirmed",
+      "deadlineTime": "",
+      "fee": "Уточнить на портале NU",
+      "fund": "potential",
+      "funding": "Конкурсный государственный грант NU на обучение и ежемесячную стипендию; условия 2027 уточнить",
+      "link": "https://admissions.nu.edu.kz/",
+      "action": "Завершить CV, IELTS 7.5, cumulative GPA statement, подтверждение принятой RAG-статьи и рекомендации; проверить точный грантовый дедлайн 2027.",
+      "risk": "Точный грантовый дедлайн 2027 и требования каждой программы ещё проверить.",
+      "notes": "Одна карточка для MSc DS / CS, вместо дублей. Внутренняя цель по документам 12 декабря, ориентир подачи до 20 декабря; это не официальный дедлайн.",
+      "topics": [
+        "DS",
+        "AI",
+        "ML",
+        "CS"
+      ],
+      "evidence": "NU admissions portal; грантовые условия и программа уточняются",
+      "target": "2026-12-20",
+      "cover": {
+        "tuition": "cond",
+        "living": "cond"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
+    },
+    {
+      "id": "seoultech-scholarship",
+      "uni": "Seoul Tech Scholarship — Seoul Future Foundation",
+      "program": "Scholarship for STEM Master's in participating Seoul universities",
+      "region": "Scholarships",
+      "country": "Южная Корея",
+      "track": "STEM / AI / CS, выбор университета",
+      "degree": "Scholarship",
+      "priority": "P2",
+      "status": "Researching",
+      "deadline": null,
+      "deadlineKind": "unconfirmed",
+      "deadlineTime": "",
+      "fee": "Проверить условия конкурса",
+      "fund": "potential",
+      "funding": "Конкурсная поддержка обучения и проживания; точные суммы, доступность и 2027 call уточнить",
+      "link": "https://www.seoulfuture.or.kr/home/eng/M485787335/contents.do",
+      "action": "Проверить официальное объявление Seoul Tech Scholarship 2027, eligibility Казахстана, участвующие университеты и программу AI/CS.",
+      "risk": "Конкурс на 2027 не подтверждён; не путать с отдельной стипендией SeoulTech University.",
+      "notes": "На официальном сайте фонд сообщает о 30 местах в год; 2026 условия не переносить автоматически на 2027. Добавлено как грантовая возможность, не подтверждённая заявка.",
+      "topics": [
+        "AI",
+        "ML",
+        "CS",
+        "STEM"
+      ],
+      "evidence": "Seoul Future Foundation official scholarship page (2026 rules)",
+      "target": null,
+      "cover": {
+        "tuition": "cond",
+        "living": "cond"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
+    },
+    {
+      "id": "csc-type-a-kz",
+      "uni": "CSC Type A — конкурс через Казахстан / ЦМП",
+      "program": "Chinese Government Scholarship 2027/28 (Type A, Kazakhstan route)",
+      "region": "Scholarships",
+      "country": "Китай",
+      "track": "Government funding — university choice required",
+      "degree": "Scholarship",
+      "priority": "P2",
+      "status": "Researching",
+      "deadline": null,
+      "deadlineKind": "unconfirmed",
+      "deadlineTime": "",
+      "fee": "Уточнить для Казахстана",
+      "fund": "potential",
+      "funding": "Конкурс CSC: обучение и средства на проживание по правилам 2027/28, возможные дополнительные условия Казахстана",
+      "link": "https://www.campuschina.org/",
+      "action": "Найти официальное объявление ЦМП/Посольства КНР для граждан Казахстана: квота, agency number, срок и требования; сравнить Type A и BIT Type B.",
+      "risk": "Срок 15 января и agency number не подтверждены для Казахстана; не использовать даты других стран.",
+      "notes": "Отдельная грантовая возможность, не вуз. Не применять сроки CSC Type A других стран к заявке из Казахстана.",
+      "topics": [
+        "CS",
+        "AI",
+        "ML"
+      ],
+      "evidence": "CSC official portal + foreign embassies 2027/28; казахстанские сроки не подтверждены",
+      "target": null,
+      "cover": {
+        "tuition": "cond",
+        "living": "cond"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
     }
   ],
   "profile": {},
@@ -2325,9 +2446,10 @@
       "app": "intermaths",
       "due": "2026-12-28",
       "category": "Декабрь",
-      "priority": "P2",
+      "priority": "P3",
       "detail": "Проверить Analysis, Linear Algebra, Calculus, Differential Equations и Probability.",
-      "done": false
+      "done": false,
+      "paused": true
     },
     {
       "id": "deai-reference-hindex",
@@ -2530,6 +2652,46 @@
       "due": "2026-12-15",
       "category": "Декабрь",
       "priority": "Проверить MBZUAI submitted, NU документы, Glasgow решение, Manchester IELTS, PolyU письма/ответы, Erasmus подготовку. Ничего не считать отправленным без подтверждения.",
+      "done": false
+    },
+    {
+      "id": "seoul-scholarship-verify",
+      "title": "Seoul Tech Scholarship: проверить официальный конкурс 2027 и AI/CS университеты",
+      "app": "seoultech-scholarship",
+      "due": "2026-12-12",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "На сайте Seoul Future Foundation проверить право граждан Казахстана, документы, funding и публикацию дат 2027; не использовать даты 2026.",
+      "done": false
+    },
+    {
+      "id": "csc-kazakhstan-verify",
+      "title": "CSC Type A через Казахстан: найти официальный call 2027/28",
+      "app": "csc-type-a-kz",
+      "due": "2026-12-08",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "Проверить ЦМП/Посольство КНР: квоты, agency number, Kazakhstan deadline, pre-admission и возможную отработку. Не переносить сроки других стран.",
+      "done": false
+    },
+    {
+      "id": "bolashak-2027-list",
+      "title": "Болашак: сверить список вузов 2027 и допустимость UK MSc",
+      "app": "bolashak",
+      "due": "2026-12-14",
+      "category": "Декабрь",
+      "priority": "P2",
+      "detail": "Правило QS Subject Top-100 учитывается при формировании перечня; сверить утверждённый список 2027, Manchester, QMUL, Glasgow и другие. Пока не удалять программы.",
+      "done": false
+    },
+    {
+      "id": "nu-grant-audit",
+      "title": "NU: проверить сроки 2027 на грант и комплект документов",
+      "app": "nu",
+      "due": "2026-12-10",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Отдельно уточнить требования MSc DS или CS и срок подачи на финансирование; внутренний срок подготовки к 12 декабря.",
       "done": false
     }
   ],
@@ -4654,9 +4816,9 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v12",
-    "dataVerified": "2026-11-22",
-    "note": "Публичный каталог и общие задачи по заявкам; личные статусы и персональные данные хранить только локально."
+    "dashboardRelease": "v13",
+    "dataVerified": "2026-11-28",
+    "note": "Стратегия 28.11.2026: PolyU MPhil P1, 17 резервных программ на паузе, NU отдельно, Seoul Tech Scholarship и CSC Kazakhstan Type A — проверка. Не публиковать персональные статусы/IELTS."
   },
   "erasmus": [
     {
