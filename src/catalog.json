@@ -1680,8 +1680,8 @@
       "country": "Германия",
       "track": "Data Science / CS / Mathematics",
       "degree": "MSc",
-      "priority": "P1",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": "2027-03-01",
       "deadlineKind": "official",
       "deadlineTime": "",
@@ -1689,9 +1689,9 @@
       "fund": "external",
       "funding": "Без tuition; расходы на жизнь не покрываются. Рассмотреть «Болашак» только после проверки утверждённого перечня вузов на 2027.",
       "link": "https://sc.informatik.rwth-aachen.de/en/studium/master/master-data-science/application-for-admission/",
-      "action": "Проверить обязательный GRE для non-EU, ECTS/описания курсов CS и математики, признание 3-летнего бакалавриата. Далее подаваться в RWTHonline.",
-      "risk": "Требуется GRE для non-EU; строгие prerequisites по ECTS и course descriptions; стипендия на жизнь не предоставляется автоматически.",
-      "notes": "В активной группе «Болашак — вне Великобритании». Дата 1 марта указана для non-EU winter intake; перепроверить перед отправкой. Сопоставить кредиты AITU и математические курсы. Подтверждение соответствия «Болашаку» 2027 ещё отсутствует.",
+      "action": "Не подаваться: GRE General Test обязателен для non-EU; кандидат не планирует сдавать GRE. Можно вернуть в активный список только если изменятся требования.",
+      "risk": "Обязателен GRE: Quantitative >75th percentile, Verbal >15th percentile, Analytical Writing ≥3.5. Исключения: EU/EEA или немецкое среднее образование.",
+      "notes": "В активной группе «Болашак — вне Великобритании». Дата 1 марта указана для non-EU winter intake; перепроверить перед отправкой. Сопоставить кредиты AITU и математические курсы. Подтверждение соответствия «Болашаку» 2027 ещё отсутствует. | 28.11.2026: исключён из активных по решению пользователя из-за обязательного GRE. В резерве на случай изменения правил.",
       "topics": [
         "DS",
         "ML",
@@ -1711,7 +1711,8 @@
         "living": "no"
       },
       "emjm": false,
-      "verified": "2026-11-28"
+      "verified": "2026-11-28",
+      "paused": true
     },
     {
       "id": "paris-saclay-ai",
@@ -2814,7 +2815,8 @@
       "category": "Декабрь",
       "priority": "P1",
       "detail": "Официальный RWTH FAQ требует GRE для non-EU. Проверить допустимость результатов и возможные исключения для граждан Казахстана до подготовки платных документов.",
-      "done": false
+      "done": false,
+      "paused": true
     },
     {
       "id": "rwth-courses",
@@ -2824,7 +2826,8 @@
       "category": "Декабрь",
       "priority": "P1",
       "detail": "Сверить AITU transcript c prerequisites RWTH Data Science: programming, algorithms, databases, mathematics, theoretical CS; запросить syllabi при необходимости.",
-      "done": false
+      "done": false,
+      "paused": true
     },
     {
       "id": "paris-2027",
@@ -4978,7 +4981,7 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v14",
+    "dashboardRelease": "v15",
     "dataVerified": "2026-11-28",
     "note": "Активные: RWTH Data Science, Paris-Saclay AI, TUM Informatics добавлены как варианты финансирования вне UK. KU Leuven исключён из выбора. Отдельно проверить перечень Bolashak 2027, GRE RWTH, VPD TUM и IDEX Paris-Saclay."
   },
