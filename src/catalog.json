@@ -1196,83 +1196,6 @@
       "verified": "2026-11-13"
     },
     {
-      "id": "hkucuhk",
-      "uni": "CUHK",
-      "program": "MPhil Computer Science and Engineering",
-      "region": "Hong Kong",
-      "country": "Гонконг",
-      "track": "Computer Science Research",
-      "degree": "MPhil",
-      "priority": "P3",
-      "status": "Hold",
-      "deadline": "2026-12-01",
-      "deadlineKind": "official",
-      "deadlineTime": "",
-      "fee": "HK$500",
-      "fund": "studentship",
-      "funding": "Postgraduate Studentship ~HK$229 200/год (ставка 2025/26) при зачислении; обучение HK$49 500/год (2027/28) оплачивается из неё",
-      "link": "https://www.gs.cuhk.edu.hk/programmes/engineering/mphil-phd-computer-science-and-engineering",
-      "action": "Резерв; при готовом Research Proposal проверить дополнительную систему CSE.",
-      "risk": "Main round через 15 дней; без научного руководителя и research proposal шансы низкие.",
-      "notes": "Main round CUHK — 1 декабря 2026, clearing round — 31 марта 2027 (только при наличии мест). Кафедра CSE просит дублировать заявку в своей системе.",
-      "topics": [
-        "AI",
-        "ML",
-        "CS",
-        "NLP",
-        "CV"
-      ],
-      "evidence": "Поздний раунд из прошлой проверки; уточнить",
-      "target": null,
-      "cover": {
-        "tuition": "partial",
-        "living": "yes"
-      },
-      "emjm": false,
-      "verified": "2026-11-16"
-    },
-    {
-      "id": "hku",
-      "uni": "University of Hong Kong (HKU)",
-      "program": "MPhil Computing and Data Science",
-      "region": "Hong Kong",
-      "country": "Гонконг",
-      "track": "AI / Data Science Research",
-      "degree": "MPhil",
-      "priority": "P3",
-      "status": "Hold",
-      "deadline": "2026-12-01",
-      "deadlineKind": "official",
-      "deadlineTime": "",
-      "fee": "HK$780",
-      "fund": "studentship",
-      "funding": "HKU Postgraduate Scholarship — не менее HK$225 120/год; обучение оплачивается отдельно",
-      "link": "https://cs.hku.hk/programmes/research-based/mphil-phd-admission",
-      "action": "Резерв, если будет готова сильная академическая работа.",
-      "risk": "Main round через 15 дней; требуется honours-эквивалент (MPhil обычно: Second Class Honours Div. I).",
-      "notes": "Main round 01.09–01.12.2026; clearing — 30.04.2027 (сентябрь) и 31.08.2027 (январский набор). Нужен research proposal.",
-      "topics": [
-        "AI",
-        "ML",
-        "DS",
-        "NLP"
-      ],
-      "evidence": "Поздний раунд; уточнить",
-      "target": null,
-      "cover": {
-        "tuition": "partial",
-        "living": "yes"
-      },
-      "emjm": false,
-      "verified": "2026-11-16",
-      "english": {
-        "ielts": null,
-        "moi": true,
-        "note": "Тест не нужен при дипломе вуза с английским языком обучения; иначе TOEFL iBT 85",
-        "src": "official"
-      }
-    },
-    {
       "id": "codas",
       "uni": "CoDaS — Erasmus Mundus",
       "program": "MSc Communications Engineering and Data Science",
@@ -2082,46 +2005,6 @@
       "confidence": "official",
       "time": "",
       "app": "kaust",
-      "note": ""
-    },
-    {
-      "id": "cuhk-main",
-      "date": "2026-12-01",
-      "title": "CUHK MPhil — main round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "",
-      "app": "hkucuhk",
-      "note": ""
-    },
-    {
-      "id": "hku-main",
-      "date": "2026-12-01",
-      "title": "HKU MPhil — main round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "",
-      "app": "hku",
-      "note": ""
-    },
-    {
-      "id": "hku-clear",
-      "date": "2027-04-30",
-      "title": "HKU MPhil — clearing round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "",
-      "app": "hku",
-      "note": ""
-    },
-    {
-      "id": "cuhk-clear",
-      "date": "2027-03-31",
-      "title": "CUHK MPhil — clearing round",
-      "type": "deadline",
-      "confidence": "official",
-      "time": "",
-      "app": "hkucuhk",
       "note": ""
     },
     {
