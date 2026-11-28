@@ -1034,7 +1034,7 @@
       "link": "https://admission.kaist.ac.kr/intl-graduate/",
       "action": "Уточнить funding и program matching; IELTS 6.5.",
       "risk": "Если Early track как в прошлом году — дедлайн через месяц.",
-      "notes": "Fall 2027: Early track — ориентир середина декабря 2026 (в прошлом цикле 16.12.2025), Regular — ~март 2027. Стипендия выбирается в самой заявке. Официальный guide Fall 2027 проверить. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility.",
+      "notes": "Fall 2027: Early track — ориентир середина декабря 2026 (в прошлом цикле 16.12.2025), Regular — ~март 2027. Стипендия выбирается в самой заявке. Официальный guide Fall 2027 проверить. | Пауза 28.11.2026: резерв, не удалено; восстановить при появлении полного финансирования/подтверждении eligibility. | 28.11.2026: корейский трек отложен по решению пользователя. Не поднимать приоритет без отдельного запроса.",
       "topics": [
         "AI",
         "ML",
@@ -1059,8 +1059,8 @@
       "country": "Южная Корея",
       "track": "AI / CS",
       "degree": "Scholarship",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
@@ -1070,7 +1070,7 @@
       "link": "https://www.studyinkorea.go.kr/",
       "action": "Проверить сроки, список университетов и embassy/university routes.",
       "risk": "",
-      "notes": "GKS-G 2027 ещё не объявлен; обычно guidelines выходят в феврале. Выбрать один трек (посольство или университет).",
+      "notes": "GKS-G 2027 ещё не объявлен; обычно guidelines выходят в феврале. Выбрать один трек (посольство или университет). | 28.11.2026: корейский трек отложен по решению пользователя. Не поднимать приоритет без отдельного запроса.",
       "topics": [
         "AI",
         "ML",
@@ -1083,7 +1083,8 @@
         "living": "yes"
       },
       "emjm": false,
-      "verified": "2026-11-16"
+      "verified": "2026-11-16",
+      "paused": true
     },
     {
       "id": "bolashak",
@@ -1490,8 +1491,8 @@
       "country": "Южная Корея",
       "track": "STEM / AI / CS, выбор университета",
       "degree": "Scholarship",
-      "priority": "P2",
-      "status": "Researching",
+      "priority": "P3",
+      "status": "Hold",
       "deadline": null,
       "deadlineKind": "unconfirmed",
       "deadlineTime": "",
@@ -1501,7 +1502,7 @@
       "link": "https://www.seoulfuture.or.kr/home/eng/M485787335/contents.do",
       "action": "Проверить официальное объявление Seoul Tech Scholarship 2027, eligibility Казахстана, участвующие университеты и программу AI/CS.",
       "risk": "Конкурс на 2027 не подтверждён; не путать с отдельной стипендией SeoulTech University.",
-      "notes": "На официальном сайте фонд сообщает о 30 местах в год; 2026 условия не переносить автоматически на 2027. Добавлено как грантовая возможность, не подтверждённая заявка.",
+      "notes": "На официальном сайте фонд сообщает о 30 местах в год; 2026 условия не переносить автоматически на 2027. Добавлено как грантовая возможность, не подтверждённая заявка. | 28.11.2026: корейский трек отложен по решению пользователя. Не поднимать приоритет без отдельного запроса.",
       "topics": [
         "AI",
         "ML",
@@ -1515,7 +1516,8 @@
         "living": "cond"
       },
       "emjm": false,
-      "verified": "2026-11-28"
+      "verified": "2026-11-28",
+      "paused": true
     },
     {
       "id": "csc-type-a-kz",
@@ -1660,6 +1662,41 @@
       "cover": {
         "tuition": "no",
         "living": "no"
+      },
+      "emjm": false,
+      "verified": "2026-11-28"
+    },
+    {
+      "id": "gist",
+      "uni": "Gwangju Institute of Science and Technology (GIST)",
+      "program": "MSc — AI / Electrical Engineering and Computer Science (специализацию проверить)",
+      "region": "Asia",
+      "country": "Южная Корея",
+      "track": "AI / Machine Learning Research",
+      "degree": "MSc",
+      "priority": "P3",
+      "status": "Hold",
+      "paused": true,
+      "deadline": null,
+      "deadlineKind": "unconfirmed",
+      "deadlineTime": "",
+      "fee": "Уточнить актуальные admission и registration fees",
+      "fund": "potential",
+      "funding": "Институциональная поддержка магистрантов: tuition waiver и ежемесячные выплаты, условия набора 2027 проверить",
+      "link": "https://www.gist.ac.kr/iadm/main.html",
+      "action": "Отложено по решению пользователя. При возвращении к корейскому треку проверить Fall 2027 admission, academic fit и финансирование.",
+      "risk": "Дедлайны, доступность MSc AI/CS и стипендиальные условия 2027 требуют проверки.",
+      "notes": "Добавлено сразу в резерв по запросу пользователя 28.11.2026; не отображать в активных дедлайнах и задачах.",
+      "topics": [
+        "AI",
+        "ML",
+        "CS"
+      ],
+      "evidence": "GIST international admissions; детали 2027 не подтверждены в этой редакции",
+      "target": null,
+      "cover": {
+        "tuition": "cond",
+        "living": "cond"
       },
       "emjm": false,
       "verified": "2026-11-28"
@@ -2584,7 +2621,8 @@
       "category": "Декабрь",
       "priority": "P2",
       "detail": "На сайте Seoul Future Foundation проверить право граждан Казахстана, документы, funding и публикацию дат 2027; не использовать даты 2026.",
-      "done": false
+      "done": false,
+      "paused": true
     },
     {
       "id": "csc-kazakhstan-verify",
@@ -4850,9 +4888,9 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v17",
+    "dashboardRelease": "v18",
     "dataVerified": "2026-11-28",
-    "note": "Активные: RWTH Data Science, Paris-Saclay AI, TUM Informatics добавлены как варианты финансирования вне UK. KU Leuven исключён из выбора. Отдельно проверить перечень Bolashak 2027, GRE RWTH, VPD TUM и IDEX Paris-Saclay."
+    "note": "Корея KAIST/GIST/Seoul Tech Scholarship/GKS в резерве (P3/Hold); не поднимать без запроса. Активные дедлайны и задачи для отложенных скрываются."
   },
   "erasmus": [
     {
