@@ -414,9 +414,9 @@
       "fund": "studentship",
       "funding": "PRPgS studentship; tuition обычно оплачивается отдельно",
       "link": "https://www.polyu.edu.hk/study/pg/research-postgraduate",
-      "action": "Проверить admission eligibility и подготовить Research Proposal GSB/1A и Personal Statement.",
+      "action": "Только MPhil: связаться с Zixing Song и Wen Hua, уточнить финансирование PRPgS и подготовить Research Proposal GSB/1A; HKPFS относится к PhD.",
       "risk": "Признание трёхлетнего бакалавриата не подтверждено.",
-      "notes": "Уточнить допустимость диплома.",
+      "notes": "План: до 15 декабря письма профессорам и research concept; затем MPhil application. HKPFS 1 декабря не относится к MPhil. Признание 3-летнего AITU уточнить.",
       "topics": [
         "AI",
         "ML",
@@ -426,7 +426,7 @@
         "DL"
       ],
       "evidence": "PolyU official application periods 2027/28",
-      "target": "2027-01-31",
+      "target": "2026-12-25",
       "cover": {
         "tuition": "partial",
         "living": "yes"
@@ -2208,32 +2208,32 @@
     },
     {
       "id": "mb-program",
-      "title": "MBZUAI: проверить точное название программы в портале",
-      "app": "mbzuai",
-      "due": "2026-11-18",
-      "category": "Ноябрь",
-      "priority": "P1",
-      "detail": "В скриншоте была MSc Artificial Intelligence; ML отображается отдельным пунктом.",
-      "done": false
-    },
-    {
-      "id": "mb-sop",
-      "title": "MBZUAI: написать и вычитать Statement of Purpose",
-      "app": "mbzuai",
-      "due": "2026-11-26",
-      "category": "Ноябрь",
-      "priority": "P1",
-      "detail": "Почему AI/ML, опыт проектов и математическая подготовка.",
-      "done": false
-    },
-    {
-      "id": "mb-refs",
-      "title": "MBZUAI: согласовать двух рекомендателей",
+      "title": "MBZUAI MSc: окончательно выбрать одну программу",
       "app": "mbzuai",
       "due": "2026-11-30",
       "category": "Ноябрь",
       "priority": "P1",
-      "detail": "Проверить согласие рекомендателей.",
+      "detail": "Выбрать один исследовательский MSc AI/ML/NLP в портале; не путать с платным Applied AI. Проверить правила 2027.",
+      "done": false
+    },
+    {
+      "id": "mb-sop",
+      "title": "MBZUAI: написать и вычитать SOP с упором на исследовательский вклад",
+      "app": "mbzuai",
+      "due": "2026-12-05",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Объяснить исследования Graph RAG и AMR, свой вклад и мотивы выбора направления; адаптировать к выбранной MSc.",
+      "done": false
+    },
+    {
+      "id": "mb-refs",
+      "title": "MBZUAI: согласовать 2 рекомендации и проверить приглашения",
+      "app": "mbzuai",
+      "due": "2026-12-03",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Попросить BIT и преподавателя AITU; проверить требования портала и дедлайны рекомендателей.",
       "done": false
     },
     {
@@ -2338,12 +2338,12 @@
     },
     {
       "id": "glsg-check",
-      "title": "Glasgow: проверить To Do и новые письма",
+      "title": "Glasgow: загрузить IELTS и проверить условия Conditional Offer",
       "app": "glasgow",
-      "due": "2026-11-16",
-      "category": "Контроль",
-      "priority": "P2",
-      "detail": "Необязательные Additional Supporting Documents не блокируют рассмотрение.",
+      "due": "2026-12-02",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Загрузить официальный eTRF, проверить Outstanding Conditions. Срок принятия из письма (4 недели с 20 ноября) ориентировочно 18 декабря; сверить портал.",
       "done": false
     },
     {
@@ -2358,32 +2358,32 @@
     },
     {
       "id": "hk-wait",
-      "title": "HKUST и PolyU: проверить ответы про 3-летний диплом AITU",
+      "title": "PolyU / HKUST MPhil: уточнить признание 3-летнего бакалавриата AITU",
       "app": "hkust",
-      "due": "2026-11-25",
-      "category": "Контроль",
-      "priority": "P2",
-      "detail": "Уточнить признание трёхлетнего диплома.",
+      "due": "2026-12-06",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Запросить у graduate admissions признание 3-летнего диплома AITU, подготовить транскрипт и подтверждение ожидаемого выпуска.",
       "done": false
     },
     {
       "id": "hk-prof",
-      "title": "HKUST / PolyU: выбрать по 2–3 подходящих профессора",
+      "title": "HKUST MPhil: выбрать 2–3 профессоров и подготовить письма",
       "app": "hkust",
-      "due": "2026-12-05",
+      "due": "2026-12-12",
       "category": "Декабрь",
-      "priority": "P1",
-      "detail": "Graph ML, NLP, retrieval, optimization, DL.",
+      "priority": "P2",
+      "detail": "Отдельный исследовательский MPhil; подбирать руководителей по RAG, ML и AI for health. Не HKPFS/PhD.",
       "done": false
     },
     {
       "id": "polyu-submit",
-      "title": "PolyU: внутренняя цель отправки MPhil",
+      "title": "PolyU MPhil DSAI: подготовить заявку к отправке (без HKPFS)",
       "app": "polyu",
-      "due": "2027-01-31",
-      "category": "Январь",
-      "priority": "P2",
-      "detail": "HK$600, Personal Statement + GSB/1A, официальный дедлайн 31 мая.",
+      "due": "2026-12-25",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Внутренний срок 25 декабря, официальный в каталоге 31 мая 2027. MPhil и университетский studentship, без PhD/HKPFS; проверить подтверждение руководителя.",
       "done": false
     },
     {
@@ -2514,6 +2514,139 @@
       "category": "Подача",
       "priority": "P2",
       "detail": "Отдельная заявка; лимит 10 мест на Казахстан.",
+      "done": false
+    },
+    {
+      "id": "ielts-etrf",
+      "title": "IELTS: скачать eTRF и сохранить официальный сертификат",
+      "app": "glasgow",
+      "due": "2026-11-30",
+      "category": "Ноябрь",
+      "priority": "P1",
+      "detail": "IELTS завершён: никаких задач по пересдаче. Сохранить документ для всех заявок.",
+      "done": false
+    },
+    {
+      "id": "manchester-ielts",
+      "title": "Manchester: добавить официальный IELTS в поданную заявку",
+      "app": "manchester",
+      "due": "2026-12-03",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Проверить возможность загрузки в портал Stage 1; если недоступно, обратиться в admissions с номером заявки.",
+      "done": false
+    },
+    {
+      "id": "common-cv-2027",
+      "title": "Обновить академический CV для MPhil и MSc",
+      "app": "polyu",
+      "due": "2026-12-02",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Добавить IELTS и accepted conference paper (не Published), исследования RAG/AMR, топ-5% рейтинг. Сохранить персональные данные только локально.",
+      "done": false
+    },
+    {
+      "id": "refs-aitu",
+      "title": "Вторая академическая рекомендация: запросить преподавателя AITU",
+      "app": "mbzuai",
+      "due": "2026-12-04",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Согласовать рекомендателя, отправить CV, транскрипт и тезисы личного вклада. Проверить требования каждого вуза.",
+      "done": false
+    },
+    {
+      "id": "polyu-song",
+      "title": "PolyU MPhil: написать Zixing Song о Fall 2027 studentship",
+      "app": "polyu",
+      "due": "2026-12-05",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Уточнить, набирает ли MPhil в DSAI, есть ли funded studentship, приложить CV и краткий research fit по Graph RAG. НЕ подавать HKPFS, если выбираешь MPhil.",
+      "done": false
+    },
+    {
+      "id": "polyu-hua",
+      "title": "PolyU MPhil: написать Wen Hua как второму руководителю",
+      "app": "polyu",
+      "due": "2026-12-07",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Персональное письмо о графовом RAG, evidence completeness и multi-hop retrieval, со ссылкой на accepted paper.",
+      "done": false
+    },
+    {
+      "id": "polyu-proposal",
+      "title": "PolyU MPhil: подготовить research concept 1 страница",
+      "app": "polyu",
+      "due": "2026-12-10",
+      "category": "Декабрь",
+      "priority": "Тема Trustworthy Graph-Assisted RAG; research gap, 2–3 вопроса, метод, метрики, план. Далее расширить под GSB/1A после проверки шаблона.",
+      "done": false
+    },
+    {
+      "id": "polyu-followup",
+      "title": "PolyU MPhil: проверить ответы профессоров и подготовить форму",
+      "app": "polyu",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "Отметить ответы Zixing Song/Wen Hua; проверить admission eligibility, research proposal GSB/1A и personal statement; дедлайн MPhil отдельно от HKPFS.",
+      "done": false
+    },
+    {
+      "id": "nu-uploads",
+      "title": "Nazarbayev University: загрузить IELTS, CV и академические документы",
+      "app": "nu",
+      "due": "2026-12-08",
+      "category": "Декабрь",
+      "priority": "P1",
+      "detail": "Транскрипт с cumulative GPA, CV, IELTS, принятую статью с подтверждением; подтвердить актуальные правила выбранной программы.",
+      "done": false
+    },
+    {
+      "id": "nu-motivation",
+      "title": "Nazarbayev University: закончить мотивационное письмо и проверить грант",
+      "app": "nu",
+      "due": "2026-12-12",
+      "category": "Декабрь",
+      "priority": "Подстроить под MSc Data Science/Computer Science; проверить официальные дедлайны 2027 и необходимые рекомендации.",
+      "done": false
+    },
+    {
+      "id": "glsg-offer-decision",
+      "title": "Glasgow: принять решение по Conditional Offer до истечения срока",
+      "app": "glasgow",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "Контрольная дата. Офер от 20 ноября: 4 недели, ориентировочно 18 декабря. Не путать принятие с оплатой депозита; проверить портал.",
+      "done": false
+    },
+    {
+      "id": "glsg-bolashak-email",
+      "title": "Glasgow: запросить условия отсрочки депозита из-за Bolashak",
+      "app": "glasgow",
+      "due": "2026-12-11",
+      "category": "Декабрь",
+      "priority": "Уточнить письменно, какие подтверждения внешнего гранта принимают до депозита 31 марта 2027.",
+      "done": false
+    },
+    {
+      "id": "research-portfolio",
+      "title": "Собрать research portfolio: Graph RAG + AMR по одной странице",
+      "app": "polyu",
+      "due": "2026-12-09",
+      "category": "Декабрь",
+      "priority": "Проблема, методы, 2–3 результата, личный вклад, ссылки и ограничения; отдельно для исследовательских MPhil.",
+      "done": false
+    },
+    {
+      "id": "dec15-audit",
+      "title": "15 декабря: аудит заявок и контроль финансирования",
+      "app": "polyu",
+      "due": "2026-12-15",
+      "category": "Декабрь",
+      "priority": "Проверить MBZUAI submitted, NU документы, Glasgow решение, Manchester IELTS, PolyU письма/ответы, Erasmus подготовку. Ничего не считать отправленным без подтверждения.",
       "done": false
     }
   ],
@@ -4638,9 +4771,9 @@
     "bolashakSheetLastEdited": "2026-11-09",
     "sourceProfileMismatch": true,
     "verifiedEitDate": "2026-11-13",
-    "dashboardRelease": "v11",
+    "dashboardRelease": "v12",
     "dataVerified": "2026-11-22",
-    "note": "Публичный каталог. Личные данные — только в браузере (localStorage) и в личном JSON-файле."
+    "note": "Публичный каталог и общие задачи по заявкам; личные статусы и персональные данные хранить только локально."
   },
   "erasmus": [
     {
